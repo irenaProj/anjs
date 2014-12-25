@@ -1,0 +1,5 @@
+[{"action": "Learn CSS", "done": true},
+{"action": "Learn Sass", "done": true},
+{"action": "Learn AngularJs", "done": false},
+{"action": "Go to Manly", "done": false},
+{"action": "Find job", "done": false}]
