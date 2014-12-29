@@ -1,0 +1,34 @@
+.topics {
+    @media #{$small-only} {
+        border-bottom: 1px solid #000;
+        margin-bottom: 24px;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.learning-tickets {
+    .lt-content {
+        background-color: rgb(204, 227, 234);
+    }
+
+    .lt-answer, .lt-code {
+        min-height: 100px;
+        background-color: #fff;
+        border: 1px solid black;
+        margin: 12px;
+    }
+
+    @media #{$medium-up} {
+        border-left: 1px solid #000;
+    }
+
+    .top-link {
+        background-color: #fff;
+        text-align: right;
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
+}
