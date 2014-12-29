@@ -1,0 +1,240 @@
+[{
+    "question": "How to embed JavaScript in HTML page?",
+    "answer": "If the code is short and sweet, embed it between < script > and < /script > tags, otherwise use the following code:",
+    "code": "<script src=\\\"code.js\\\"&gt;\\r\\n</script&gt;",
+    "topic": "HTML",
+    "level": "Easy",
+    "id": "00da2ad5796129a3"
+}, {
+    "question": "How do you submit a form using Javascript?",
+    "code": "document.form.login.submit();\\r\\n\\r\\n// or (less preferable due to its dependency on page structure): \\r\\n\\r\\ndocument.form[0].submit();",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "8c8ba3775773cb50"
+}, {
+    "question": "What is DOM?",
+    "answer": "The Document Object Model, or DOM, is the fundamental API for representing and manipulating the content of HTML and XML documents.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "d3400173562fd877"
+}, {
+    "code": "var content = Array.prototype.map.call( document.getElementsByTagName(\\\"h1\\\"), \\r\\n                   function(e) { return e.innerHTML; });",
+    "level": "Easy",
+    "question": "How to get a content of all specified elements?",
+    "topic": "JavaScript",
+    "id": "1636497c22fbfa3f"
+}, {
+    "question": "Set style border property on all page images.",
+    "code": "for( var i = 0; i < document.images.length; i ++) // Loop through all images\\r\\n   document.images[ i]. style.border = \\\"none\\\";",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "fc8340dbc6750951"
+}, {
+    "question": "How to read and write a file using JavaScript?",
+    "answer": "By coding Java applet to accommodate the script. Cannot be done using JavaScript.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "6d6963e65ad39808"
+}, {
+    "question": "What are JavaScript types?",
+    "answer": "Number, String, Boolean, Function, Object, Null, Undefined.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "c32fb0e5188adbe6"
+}, {
+    "question": "How do you convert numbers between different bases in JavaScript?",
+    "answer": "Use the parseInt() function, that takes a string as the first parameter, and the base as a second parameter. So to convert hexadecimal 3F to decimal, use parseInt (\\\"3F\\\", 16); ",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "b4680738475218ca"
+}, {
+    "question": "How to create arrays in JavaScript?",
+    "code": "//Create array of size 10          \\r\\nvar arr = new Array(10);           \\r\\n                                   \\r\\n// Create two dimentional array    \\r\\nvar mat = new Array(len);          \\r\\n                                   \\r\\nfor(var i = 0; i < len; i++){      \\r\\n    mat[i] = new Array(len);       \\r\\n}                                  \\r\\n                                   \\r\\nfor(var i = 0; i < len; i++){      \\r\\n    for(var k = 0; k < len; k++){  \\r\\n        mat[i][k] = 0;             \\r\\n    }                              \\r\\n} ",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "7e8c8e0a501f08ab"
+}, {
+    "question": "What is negative infinity?",
+    "answer": "The Number.NEGATIVE_INFINITY property represents the negative Infinity value, derived by dividing negative number by zero.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "33698082fd927bd7"
+}, {
+    "question": "In a pop-up browser window, how do you refer to the main browser window that opened it?",
+    "answer": "Use window.opener to refer to the main window from pop-ups.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "f0484b0af3416893"
+}, {
+    "question": "What is the data type of variables in JavaScript?",
+    "answer": "All variables are of object type in JavaScript.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "81041ab767a7789f"
+}, {
+    "question": "What is a fixed-width table and its advantages?",
+    "answer": "Fixed width tables are rendered by the browser based on the widths of the columns in the first row, resulting in a faster display in case of large tables. Use the CSS style table-layout:fixed to specify a fixed width table. If the table is not specified to be of fixed width, the browser has to wait till all data is downloaded and then infer the best width for each of the columns. This process can be very slow for large tables. ",
+    "topic": "HTML",
+    "level": "Easy",
+    "id": "8c0d2f86ec0838ae"
+}, {
+    "question": "Methods GET and POST in HTML forms - what\\'s the difference?",
+    "answer": "GET: Parameters are passed in the querystring. Maximum amount of data that can be sent via the GET method is limited to about 2kb.\\r\\nPOST: Parameters are passed in the request body. There is no limit to the amount of data that can be transferred using POST. However, there are limits on the maximum amount of data that can be transferred in one name/value pair.",
+    "topic": "HTML",
+    "level": "Intermediate",
+    "id": "3255784b4daea8ad"
+}, {
+    "question": "How do you target a specific frame from a hyperlink?",
+    "answer": "Include the name of the frame in the target attribute of the hyperlink.",
+    "code": "&lt;a href=&quot;mypage.htm&quot; target=&quot;myframe&quot;&gt;My Page&lt;/a&gt;",
+    "topic": "HTML",
+    "level": "Intermediate",
+    "id": "287d8bec7dfc799b"
+}, {
+    "question": "What is a programmatic timer and how is it used?",
+    "answer": "Enterprise bean timers are either programmatic timers or automatic timers. When a programmatic timer expires (goes off), the container calls the method\\r\\nannotated @Timeout in the bean\\'s implementation class. The @Timeout method contains\\r\\nthe business logic that handles the timed event. Methods annotated @Timeout in the enterprise bean class must return void and optionally take a javax.ejb.Timer object as the only parameter. They may not throw application exceptions.",
+    "code": "@Timeout\\r\\npublic void timeout(Timer timer) {\\r\\n    System.out.println(\\\"TimerBean: timeout occurred\\\");\\r\\n}",
+    "topic": "J2EE",
+    "level": "Intermediate",
+    "id": "0e0462aade9ea8ba"
+}, {
+    "question": "How to create and use function in Java that takes variable number of parameters?",
+    "code": "    public double max(int... params) {\\r\\n        int localMax = Integer.MIN_VALUE;\\r\\n        \\r\\n        for (int p : params){\\r\\n            if (p > localMax){\\r\\n                localMax = p;\\r\\n            }\\r\\n        }\\r\\n        \\r\\n        return localMax;\\r\\n    }",
+    "topic": "Java",
+    "level": "Intermediate",
+    "id": "6b0134458ec7681a"
+}, {
+    "question": "What is default method?",
+    "answer": "Default method is a method implemented in an interface class, declared with keyword \\\"default\\\". It allows adding new functionality to the existing interfaces while ensuring backward compatibility.",
+    "topic": "Java",
+    "level": "Easy",
+    "id": "a86f47966d8c3b7c"
+}, {
+    "question": "What is anonymous inner class and how to use it?",
+    "answer": "Anonymous class is an expression that allows declaration and instantiation of a class at the same time:",
+    "code": "button.addActionListener(new ActionListener() {\\r\\n    public void actionPerformed(ActionEvent e)\\r\\n    {\\r\\n        // perform the required operation\\r\\n    }\\r\\n});",
+    "topic": "Java",
+    "level": "Easy",
+    "id": "ac4934b4f1b7986c"
+}, {
+    "question": "Explain method references.",
+    "answer": "If lambda expression consists of a call to one method , it is possible to replace it by reference to this method:",
+    "code": "\tprivate class Book {\\r\\n        private double price;\\r\\n\\r\\n        public double getPrice() {\\r\\n            return price;\\r\\n        }\\r\\n\\r\\n        public void setPrice(double price) {\\r\\n            this.price = price;\\r\\n        }\\r\\n        \\r\\n        public int compareByPrice(Book b1, Book b2){\\r\\n            double diff = b2.getPrice() - b1.getPrice();\\r\\n            \\r\\n            if (diff == 0) return (int)diff;\\r\\n            \\r\\n            return (diff > 0 ? 1 : -1);\\r\\n        }\\r\\n    }\\r\\n    \\r\\n    \\r\\n    Arrays.sort(library, (b1, b2) -> {\\r\\n            return Book.compareByPrice(b1, b2);\\r\\n        }\\r\\n    );\\r\\n    \\r\\n    // Can be replaced by \\r\\n    \\r\\n    Arrays.sort(library, Book::compareByPrice);\\r\\n",
+    "topic": "Java",
+    "level": "Intermediate",
+    "id": "67878ff2934aaa3b"
+}, {
+    "question": "What is functional interface?",
+    "answer": "A functional interface is any interface that contains only one abstract method.",
+    "topic": "Java",
+    "level": "Easy",
+    "id": "36fc1d02f9d9a8cb"
+}, {
+    "question": "How to use JEE resource library contracts?",
+    "answer": "1. Create a \\\"contracts\\\" section under Web Pages. \\r\\n2. Create directory for each required contract. \\r\\n3. Put HTML and CSS files specific for each contract in an appropriate directory.\\r\\n4. In faces-config.xml file create section that describes where each contract is used (see code below).",
+    "code": "<application>\\r\\n\t<resource-library-contracts>\\r\\n\t\t<contract-mapping>\\r\\n\t\t\t<url-pattern>*</url-pattern>\\r\\n\t\t\t<contracts>basic</contracts>\\r\\n\t\t</contract-mapping>\\r\\n\t</resource-library-contracts>\\r\\n</application>",
+    "topic": "J2EE",
+    "level": "Intermediate",
+    "id": "4cd560c67231c8e0"
+}, {
+    "question": "What are pass-through elements and attributes?",
+    "answer": "Pass-through elements allow you to use HTML5 tags and attributes but to treat them as equivalent to JavaServer Faces components, for example, EL expressions can be used with them to retrieve managed bean properties (see example 1 below). Pass-through attributes allow to pass attributes that are not JavaServer Faces attributes through to the browser without interpretation (see example 2 below).",
+    "code": "// Example 1\\r\\n<html ... xmlns:jsf=\\\"http://xmlns.jcp.org/jsf\\\"\\r\\n...\\r\\n    <input type=\\\"email\\\" jsf:id=\\\"email\\\" name=\\\"email\\\"\\r\\n           value=\\\"#{reservationBean.email}\\\" required=\\\"required\\\"/>\\r\\n\\r\\n// Example 2\\r\\n<html ... xmlns:p=\\\"http://xmlns.jcp.org/jsf/passthrough\\\"\\r\\n...\\r\\n    \\r\\n<h:form prependId=\\\"false\\\">\\r\\n<h:inputText id=\\\"nights\\\" p:type=\\\"number\\\" value=\\\"#{bean.nights}\\\" \\r\\n             p:min=\\\"1\\\" p:max=\\\"30\\\" p:required=\\\"required\\\" \\r\\n             p:title=\\\"Enter a number between 1 and 30 inclusive.\\\">\\r\\n        ...\\r\\n\\r\\nWill be rendered as:\\r\\n\\r\\n<input id=\\\"nights\\\" type=\\\"number\\\" value=\\\"1\\\" min=\\\"1\\\" max=\\\"30\\\"\\r\\n       required=\\\"required\\\" \\r\\n       title=\\\"Enter a number between 1 and 30 inclusive.\\\">\\r\\n\\r\\n",
+    "topic": "J2EE",
+    "level": "Easy",
+    "id": "9e4a1976c205b848"
+}, {
+    "question": "What is renderer?",
+    "answer": "Renderer generates the markup to display a component on a web page.",
+    "topic": "J2EE",
+    "level": "Easy",
+    "id": "6894cc669e1728a9"
+}, {
+    "question": "Write code to track service requests.",
+    "answer": "Count the number of service methods that are running:",
+    "code": "public class ShutdownExample extends HttpServlet {\\r\\n    private int serviceCounter = 0;\\r\\n    ...\\r\\n    // Access methods for serviceCounter\\r\\n    protected synchronized void enteringServiceMethod() {\\r\\n        serviceCounter++;\\r\\n    }\\r\\n    protected synchronized void leavingServiceMethod() {\\r\\n        serviceCounter--;\\r\\n    }\\r\\n    protected synchronized int numServices() {\\r\\n        return serviceCounter;\\r\\n    }\\r\\n}\\r\\n\\r\\nprotected void service(HttpServletRequest req,\\r\\n                       HttpServletResponse resp)\\r\\n                       throws ServletException,IOException {\\r\\n    enteringServiceMethod();\\r\\n    try {\\r\\n        super.service(req, resp);\\r\\n    } finally {\\r\\n        leavingServiceMethod();\\r\\n    }\\r\\n}",
+    "topic": "J2EE",
+    "level": "Intermediate",
+    "id": "ae817aa6ac8bb837"
+}, {
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a platform-independent,event-driven, interpreted client-side scripting and programming language developed by Netscape Communications Corp. and Sun Microsystems.",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "95b115b54bacdb2e"
+}, {
+    "question": "Create polite long-running methods for clean shutdown",
+    "code": "public class ShutdownExample extends HttpServlet {\\r\\n    private boolean shuttingDown;\\r\\n    ...\\r\\n    //Access methods for shuttingDown\\r\\n    protected synchronized void setShuttingDown(boolean flag) {\\r\\n        shuttingDown = flag;\\r\\n    }\\r\\n    protected synchronized boolean isShuttingDown() {\\r\\n        return shuttingDown;\\r\\n    }\\r\\n}\\r\\n\\r\\npublic void destroy() {\\r\\n    /* Check to see whether there are still service methods /*\\r\\n    /* running, and if there are, tell them to stop. */\\r\\n    if (numServices()> 0) {\\r\\n        setShuttingDown(true);\\r\\n    }\\r\\n\\r\\n    /* Wait for the service methods to stop. */\\r\\n    while (numServices()> 0) {\\r\\n        try {\\r\\n            Thread.sleep(interval);\\r\\n        } catch (InterruptedException e) {\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\r\\n// Methods that might run for a long time should check the value of the field that notifies them of shutdowns and should interrupt their work, if necessary\\r\\npublic void doPost(...) {\\r\\n    ...\\r\\n    for(i = 0; ((i < lotsOfStuffToDo) &&\\r\\n         !isShuttingDown()); i++) {\\r\\n        try {\\r\\n            partOfLongRunningOperation(i);\\r\\n        } catch (InterruptedException e) {\\r\\n            ...\\r\\n        }\\r\\n    }\\r\\n}",
+    "topic": "J2EE",
+    "level": "Intermediate",
+    "id": "4e6802a501fc4aeb"
+}, {
+    "question": "How to asynchronously process HTTP long request (access to database for example)?",
+    "code": "@WebServlet(urlPatterns={\\\"/asyncservlet\\\"}, asyncSupported=true)\\r\\npublic class AsyncServlet extends HttpServlet {\\r\\n   /* ... Same variables and init method as in SyncServlet ... */\\r\\n\\r\\n   @Override\\r\\n   public void doGet(HttpServletRequest request, \\r\\n                     HttpServletResponse response) {\\r\\n      response.setContentType(\\\"text/html;charset=UTF-8\\\");\\r\\n      final AsyncContext acontext = request.startAsync();\\r\\n      acontext.start(new Runnable() {\\r\\n         public void run() {\\r\\n            String param = acontext.getRequest().getParameter(\\\"param\\\");\\r\\n            String result = resource.process(param);\\r\\n            HttpServletResponse response = acontext.getResponse();\\r\\n            /* ... print to the response ... */\\r\\n            acontext.complete();\\r\\n   }\\r\\n}",
+    "topic": "J2EE",
+    "level": "Intermediate",
+    "id": "2efeed6091e468b4"
+}, {
+    "question": "Reading a large HTTP POST request using nonblocking I/O",
+    "code": "@WebServlet(urlPatterns={\\\"/asyncioservlet\\\"}, asyncSupported=true)\\r\\npublic class AsyncIOServlet extends HttpServlet {\\r\\n   @Override\\r\\n   public void doPost(HttpServletRequest request, \\r\\n                      HttpServletResponse response)\\r\\n                      throws IOException {\\r\\n      final AsyncContext acontext = request.startAsync();\\r\\n      final ServletInputStream input = request.getInputStream();\\r\\n      \\r\\n      input.setReadListener(new ReadListener() {\\r\\n         byte buffer[] = new byte[4*1024];\\r\\n         StringBuilder sbuilder = new StringBuilder();\\r\\n         @Override\\r\\n         public void onDataAvailable() {\\r\\n            try {\\r\\n               do {\\r\\n                  int length = input.read(buffer);\\r\\n                  sbuilder.append(new String(buffer, 0, length));\\r\\n               } while(input.isReady());\\r\\n            } catch (IOException ex) { ... }\\r\\n         }\\r\\n         @Override\\r\\n         public void onAllDataRead() {\\r\\n            try {\\r\\n               acontext.getResponse().getWriter()\\r\\n                                     .write(\\\"...the response...\\\");\\r\\n            } catch (IOException ex) { ... }\\r\\n            acontext.complete();\\r\\n         }\\r\\n         @Override\\r\\n         public void onError(Throwable t) { ... }\\r\\n      });\\r\\n   }\\r\\n}",
+    "topic": "J2EE",
+    "level": "Intermediate",
+    "id": "918e5091f404290a"
+}, {
+    "question": "What is prototype-based programming?",
+    "answer": "From Wikipedia, the free encyclopedia:\\r\\nPrototype-based programming is a style of object-oriented programming in which inheritance is performed via a process of cloning existing objects that serve as prototypes.\\r\\nJavaScript supports prototype-based programming.",
+    "code": "var foo = {one: 1, two: 2};\\r\\n \\r\\n// bar.[[prototype]] = foo\\r\\nvar bar = Object.create( foo );\\r\\n \\r\\nbar.three = 3;\\r\\n \\r\\nbar.one; // 1\\r\\nbar.two; // 2\\r\\nbar.three; // 3",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "e8056fddf0f7db12"
+}, {
+    "question": "Explain imperative vs. declarative programming.",
+    "answer": "From Wikipedia, the free encyclopedia:\\r\\nImperative programming is a programming paradigm that describes computation in terms of statements that change a program state.\\r\\nDeclarative programming expresses what the program should accomplish without prescribing how to do it in terms of sequences of actions to be taken.",
+    "topic": "General",
+    "level": "Easy",
+    "id": "5141435e052e18e8"
+}, {
+    "question": "Explain the same-origin policy",
+    "answer": "From Wikipedia, the free encyclopedia:\\r\\n\\r\\nThe policy permits scripts running on pages originating from the same site Ã¢Â€Â“ a combination of scheme, hostname, and port number[1] Ã¢Â€Â“ to access each other\\'s DOM with no specific restrictions, but prevents access to DOM on different sites.",
+    "topic": "General",
+    "level": "Easy",
+    "id": "fe08d86c41091aa5"
+}, {
+    "question": "Explain cross-cite scripting.",
+    "answer": "From Wikipedia, the free encyclopedia\\r\\n\\r\\nCross-site scripting (XSS) is a type of computer security vulnerability typically found in Web applications. XSS enables attackers to inject client-side script into Web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same origin policy.",
+    "topic": "General",
+    "level": "Easy",
+    "id": "b949fea89f37c87c"
+}, {
+    "answer": "Using as example <h1> tag:",
+    "code": " h1 { display: inline }",
+    "level": "Easy",
+    "question": "How to remove line breaks after header tags?",
+    "topic": "CSS",
+    "id": "207b43fabd6009f9"
+}, {
+    "question": "Explain async/defer attributes for <script> tag.",
+    "answer": "Async - indicate to the browser to execute script asynchronously, as soon as it is available.\\r\\nDefer - execute script as soon as the page is ready.\\r\\n\\r\\nIf no async/defer attribute is specified, script is executed immediately.",
+    "topic": "JavaScript",
+    "level": "Intermediate",
+    "id": "49a270a73795d818"
+}, {
+    "question": "What is the difference between == and ===?",
+    "answer": "\\\"==\\\" checks for equality only (type casting is performed if necessary), \\\"===\\\" checks for type as well.",
+    "code": "false ==  0; // true\\r\\nfalse === 0; // false",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "cb07439311935a7d"
+}, {
+    "question": "What is hoisting?",
+    "answer": "Hoisting is silently moving functions and variables declarations to the top of the scope.",
+    "topic": "JavaScript",
+    "level": "Intermediate",
+    "id": "ed3e5693c40ea831"
+}, {
+    "question": "Explain NaN.",
+    "answer": "NaN is of type Number and represents not a number value.\\r\\n\\r\\nIn addition, NaN compared to anything (including NaN) is false. To check if something is a number, use: isNaN()",
+    "topic": "JavaScript",
+    "level": "Easy",
+    "id": "3e21e5643552ab65"
+}]

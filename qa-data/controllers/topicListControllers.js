@@ -3,9 +3,9 @@ angular.module("qa")
     .controller("topicListCtrl", function($scope, $filter, activeTopicClass) {
         var selectedTopic= null;
 
-        $scope.ticketsPerPage = 2;
+        $scope.ticketsPerPage = 10;
         $scope.selectedPage = 1;
-        $scope.pageCnt = Math.ceil($scope.data.qa.length / $scope.ticketsPerPage);
+        $scope.pageCnt = $scope.data.qa ? Math.ceil($scope.data.qa.length / $scope.ticketsPerPage) : 2;
 
         console.log("Number of pages is " + $scope.pageCnt);
 
