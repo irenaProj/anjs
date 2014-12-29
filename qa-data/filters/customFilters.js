@@ -15,8 +15,40 @@ angular.module("customFilters", [])
                 }
 
                 return results;
-            } else {
-                return  data;
+            } 
+
+            return  data;
+        }
+    })
+    .filter("range", function($filter) {
+        return function(data, page, size) {
+
+            if (angular.isArray(data) && angular.isNumber(page) && angular.isNumber(size)) {
+                var start_index = (page - 1) * size;
+
+                if (data.length < start_index) {
+                    return [];
+                } 
+
+                return $filter("limitTo")(data.splice(start_index), size);
             }
+
+            return data;
+        }
+    })
+    .filter("pageCount", function() {
+        return function(data, size) {
+            if (angular.isArray(data) && angular.isNumber(size)) {
+                var result = [];
+                var cnt = Math.ceil(data.length / size);
+
+                for (var i = 0; i < cnt; i++ ) {
+                    result.push(i);
+                }
+
+                return result;
+            }
+
+            return data;
         }
     });

@@ -113,7 +113,7 @@
         </div>
         <div class="small-12 medium-8 large-9 columns end learning-tickets">
             <div class="small-12 columns end" 
-                ng-repeat="item in data.qa | filter:topicFilterFn">
+                ng-repeat="item in data.qa | filter:topicFilterFn | range:selectedPage:ticketsPerPage">
                 <div class="small-12 columns lt-content">
                     <div class="small-12 columns lt-question">
                         <h3>{{item.question}}</h3>
@@ -135,6 +135,16 @@
                     <a href="#top">Back to Top</a>
                 </div>
             </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <ul class="right button-group">
+                        <li ng-repeat="page in data.qa | filter:topicFilterFn | pageCount:ticketsPerPage"
+                            ng-click="selectPage($index + 1)">
+                            <a href="#" class="button" ng-class="getPageClass($index + 1)">{{$index + 1}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
         </div>
     </div>
 

@@ -9090,23 +9090,27 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 1, ../scss/qa/_qa-main.scss */
+.topics {
+  border-right: 1px dotted #000;
+}
 @media only screen and (max-width: 40em) {
   /* line 1, ../scss/qa/_qa-main.scss */
   .topics {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px dotted #000;
     margin-bottom: 24px;
   }
 }
-/* line 7, ../scss/qa/_qa-main.scss */
+/* line 9, ../scss/qa/_qa-main.scss */
 .topics a {
   display: block;
 }
 
-/* line 13, ../scss/qa/_qa-main.scss */
+/* line 15, ../scss/qa/_qa-main.scss */
 .learning-tickets .lt-content {
   background-color: #cce3ea;
 }
-/* line 17, ../scss/qa/_qa-main.scss */
+/* line 19, ../scss/qa/_qa-main.scss */
 .learning-tickets .lt-answer, .learning-tickets .lt-code {
   min-height: 100px;
   background-color: #fff;
@@ -9114,12 +9118,12 @@ th.hide-for-touch {
   margin: 12px;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 12, ../scss/qa/_qa-main.scss */
+  /* line 14, ../scss/qa/_qa-main.scss */
   .learning-tickets {
-    border-left: 1px solid #000;
+    border-left: 1px dotted #000;
   }
 }
-/* line 28, ../scss/qa/_qa-main.scss */
+/* line 30, ../scss/qa/_qa-main.scss */
 .learning-tickets .top-link {
   background-color: #fff;
   text-align: right;

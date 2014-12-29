@@ -1,6 +1,8 @@
 .topics {
+    border-right: 1px dotted #000;
+
     @media #{$small-only} {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px dotted #000;
         margin-bottom: 24px;
     }
 
@@ -22,7 +24,7 @@
     }
 
     @media #{$medium-up} {
-        border-left: 1px solid #000;
+        border-left: 1px dotted #000;
     }
 
     .top-link {
