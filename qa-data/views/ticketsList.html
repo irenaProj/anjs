@@ -1,0 +1,41 @@
+    <div class="row" ng-controller="topicListCtrl" ng-hide="data.error">
+        <div class="small-12 medium-4 large-3 columns topics">
+            <h3>Topics</h3>
+            <a ng-click="selectTopic()" class="button radius" class="select-topic">All Tickets</a>
+            <a ng-repeat="item in data.qa | orderBy: 'topic' | unique: 'topic'" 
+               ng-click="selectTopic(item)" class="button radius" class="select-topic" ng-class="getTopicClass(item)">{{item}}</a>
+        </div>
+        <div class="small-12 medium-8 large-9 columns end learning-tickets">
+            <div class="small-12 columns end" 
+                ng-repeat="item in data.qa | filter:topicFilterFn | range:selectedPage:ticketsPerPage">
+                <div class="small-12 columns lt-content">
+                    <div class="small-12 columns lt-question">
+                        <h3>{{item.question}}</h3>
+                    </div>
+                    <div class="small-11 end columns lt-answer">
+                       {{item.answer}}
+                       <br/><pre hljs source="item.code" ng-show="item.code" class="code"></pre><br/>
+                    </div>
+                    <div class="small-6 columns lt-topic">
+                        {{item.topic}}
+                    </div>
+                    <div class="small-6 columns end lt-level">
+                        {{item.level}}
+                    </div>
+                </div>
+                <div class="small-12 columns top-link">
+                    <a href="#top">Back to Top</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <ul class="right button-group">
+                        <li ng-repeat="page in data.qa | filter:topicFilterFn | pageCount:ticketsPerPage"
+                            ng-click="selectPage($index + 1)">
+                            <a href="#" class="button" ng-class="getPageClass($index + 1)">{{$index + 1}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+    </div>
