@@ -9111,7 +9111,7 @@ th.hide-for-touch {
   background-color: #cce3ea;
 }
 /* line 19, ../scss/qa/_qa-main.scss */
-.learning-tickets .lt-answer, .learning-tickets .lt-code {
+.learning-tickets .lt-answer {
   min-height: 100px;
   background-color: #fff;
   border: 1px solid black;

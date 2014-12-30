@@ -1,15 +1,15 @@
 [{
-    "question": "How to embed JavaScript in HTML page?",
     "answer": "If the code is short and sweet, embed it between < script > and < /script > tags, otherwise use the following code:",
-    "code": "<script src=\\\"code.js\\\"&gt;\\r\\n</script&gt;",
-    "topic": "HTML",
+    "code": "<script src=\"code.js\"><br></script>",
     "level": "Easy",
+    "question": "How to embed JavaScript in HTML page?",
+    "topic": "HTML",
     "id": "00da2ad5796129a3"
 }, {
-    "question": "How do you submit a form using Javascript?",
-    "code": "document.form.login.submit();\\r\\n\\r\\n// or (less preferable due to its dependency on page structure): \\r\\n\\r\\ndocument.form[0].submit();",
-    "topic": "JavaScript",
+    "code": "document.form.login.submit(); // or (less preferable due to its dependency on page structure): document.form[0].submit();",
     "level": "Easy",
+    "question": "How do you submit a form using Javascript?",
+    "topic": "JavaScript",
     "id": "8c8ba3775773cb50"
 }, {
     "question": "What is DOM?",
@@ -18,17 +18,11 @@
     "level": "Easy",
     "id": "d3400173562fd877"
 }, {
-    "code": "var content = Array.prototype.map.call( document.getElementsByTagName(\\\"h1\\\"), \\r\\n                   function(e) { return e.innerHTML; });",
+    "code": "var content = Array.prototype.map.call(                 document.getElementsByTagName(\"h1\"),                  function(e) { return e.innerHTML; });",
     "level": "Easy",
     "question": "How to get a content of all specified elements?",
     "topic": "JavaScript",
     "id": "1636497c22fbfa3f"
-}, {
-    "question": "Set style border property on all page images.",
-    "code": "for( var i = 0; i < document.images.length; i ++) // Loop through all images\\r\\n   document.images[ i]. style.border = \\\"none\\\";",
-    "topic": "JavaScript",
-    "level": "Easy",
-    "id": "fc8340dbc6750951"
 }, {
     "question": "How to read and write a file using JavaScript?",
     "answer": "By coding Java applet to accommodate the script. Cannot be done using JavaScript.",
@@ -48,10 +42,10 @@
     "level": "Easy",
     "id": "b4680738475218ca"
 }, {
-    "question": "How to create arrays in JavaScript?",
-    "code": "//Create array of size 10          \\r\\nvar arr = new Array(10);           \\r\\n                                   \\r\\n// Create two dimentional array    \\r\\nvar mat = new Array(len);          \\r\\n                                   \\r\\nfor(var i = 0; i < len; i++){      \\r\\n    mat[i] = new Array(len);       \\r\\n}                                  \\r\\n                                   \\r\\nfor(var i = 0; i < len; i++){      \\r\\n    for(var k = 0; k < len; k++){  \\r\\n        mat[i][k] = 0;             \\r\\n    }                              \\r\\n} ",
-    "topic": "JavaScript",
+    "code": "//Create array of size 10 var arr = new Array(10);  // Create two dimentional array var mat = new Array(len);  for(var i = 0; i < len; i++) {     mat[i] = new Array(len); }  for(var i = 0; i < len; i++) {     for(var k = 0; k < len; k++) {         mat[i][k] = 0;     } } ",
     "level": "Easy",
+    "question": "How to create arrays in JavaScript?",
+    "topic": "JavaScript",
     "id": "7e8c8e0a501f08ab"
 }, {
     "question": "What is negative infinity?",
@@ -84,24 +78,24 @@
     "level": "Intermediate",
     "id": "3255784b4daea8ad"
 }, {
-    "question": "How do you target a specific frame from a hyperlink?",
     "answer": "Include the name of the frame in the target attribute of the hyperlink.",
-    "code": "&lt;a href=&quot;mypage.htm&quot; target=&quot;myframe&quot;&gt;My Page&lt;/a&gt;",
-    "topic": "HTML",
+    "code": "<a href=\"mypage.htm\" target\"myframe\">My Page</a>",
     "level": "Intermediate",
+    "question": "How do you target a specific frame from a hyperlink?",
+    "topic": "HTML",
     "id": "287d8bec7dfc799b"
 }, {
-    "question": "What is a programmatic timer and how is it used?",
     "answer": "Enterprise bean timers are either programmatic timers or automatic timers. When a programmatic timer expires (goes off), the container calls the method\\r\\nannotated @Timeout in the bean\\'s implementation class. The @Timeout method contains\\r\\nthe business logic that handles the timed event. Methods annotated @Timeout in the enterprise bean class must return void and optionally take a javax.ejb.Timer object as the only parameter. They may not throw application exceptions.",
-    "code": "@Timeout\\r\\npublic void timeout(Timer timer) {\\r\\n    System.out.println(\\\"TimerBean: timeout occurred\\\");\\r\\n}",
-    "topic": "J2EE",
+    "code": "@Timeout public void timeout(Timer timer) {     System.out.println(\"TimerBean: timeout occurred\"); }",
     "level": "Intermediate",
+    "question": "What is a programmatic timer and how is it used?",
+    "topic": "J2EE",
     "id": "0e0462aade9ea8ba"
 }, {
-    "question": "How to create and use function in Java that takes variable number of parameters?",
-    "code": "    public double max(int... params) {\\r\\n        int localMax = Integer.MIN_VALUE;\\r\\n        \\r\\n        for (int p : params){\\r\\n            if (p > localMax){\\r\\n                localMax = p;\\r\\n            }\\r\\n        }\\r\\n        \\r\\n        return localMax;\\r\\n    }",
-    "topic": "Java",
+    "code": "public double max(int... params) {     int localMax = Integer.MIN_VALUE;      for (int p : params) {         if (p > localMax){             localMax = p;         }     }      return localMax; }",
     "level": "Intermediate",
+    "question": "How to create and use function in Java that takes variable number of parameters?",
+    "topic": "Java",
     "id": "6b0134458ec7681a"
 }, {
     "question": "What is default method?",
@@ -110,18 +104,18 @@
     "level": "Easy",
     "id": "a86f47966d8c3b7c"
 }, {
-    "question": "What is anonymous inner class and how to use it?",
     "answer": "Anonymous class is an expression that allows declaration and instantiation of a class at the same time:",
-    "code": "button.addActionListener(new ActionListener() {\\r\\n    public void actionPerformed(ActionEvent e)\\r\\n    {\\r\\n        // perform the required operation\\r\\n    }\\r\\n});",
-    "topic": "Java",
+    "code": "button.addActionListener(new ActionListener() {     public void actionPerformed(ActionEvent e) {         // perform the required operation     } });",
     "level": "Easy",
+    "question": "What is anonymous inner class and how to use it?",
+    "topic": "Java",
     "id": "ac4934b4f1b7986c"
 }, {
-    "question": "Explain method references.",
     "answer": "If lambda expression consists of a call to one method , it is possible to replace it by reference to this method:",
-    "code": "\tprivate class Book {\\r\\n        private double price;\\r\\n\\r\\n        public double getPrice() {\\r\\n            return price;\\r\\n        }\\r\\n\\r\\n        public void setPrice(double price) {\\r\\n            this.price = price;\\r\\n        }\\r\\n        \\r\\n        public int compareByPrice(Book b1, Book b2){\\r\\n            double diff = b2.getPrice() - b1.getPrice();\\r\\n            \\r\\n            if (diff == 0) return (int)diff;\\r\\n            \\r\\n            return (diff > 0 ? 1 : -1);\\r\\n        }\\r\\n    }\\r\\n    \\r\\n    \\r\\n    Arrays.sort(library, (b1, b2) -> {\\r\\n            return Book.compareByPrice(b1, b2);\\r\\n        }\\r\\n    );\\r\\n    \\r\\n    // Can be replaced by \\r\\n    \\r\\n    Arrays.sort(library, Book::compareByPrice);\\r\\n",
-    "topic": "Java",
+    "code": "private class Book {     private double price;      public double getPrice() {         return price;     }      public void setPrice(double price) {         this.price = price;     }      public int compareByPrice(Book b1, Book b2){         double diff = b2.getPrice() - b1.getPrice();          if (diff == 0) return (int)diff;          return (diff > 0 ? 1 : -1);     } }  Arrays.sort(library, (b1, b2) -> {     return Book.compareByPrice(b1, b2); });  // Can be replaced by Arrays.sort(library, Book::compareByPrice);",
     "level": "Intermediate",
+    "question": "Explain method references.",
+    "topic": "Java",
     "id": "67878ff2934aaa3b"
 }, {
     "question": "What is functional interface?",
@@ -130,18 +124,11 @@
     "level": "Easy",
     "id": "36fc1d02f9d9a8cb"
 }, {
-    "question": "How to use JEE resource library contracts?",
-    "answer": "1. Create a \\\"contracts\\\" section under Web Pages. \\r\\n2. Create directory for each required contract. \\r\\n3. Put HTML and CSS files specific for each contract in an appropriate directory.\\r\\n4. In faces-config.xml file create section that describes where each contract is used (see code below).",
-    "code": "<application>\\r\\n\t<resource-library-contracts>\\r\\n\t\t<contract-mapping>\\r\\n\t\t\t<url-pattern>*</url-pattern>\\r\\n\t\t\t<contracts>basic</contracts>\\r\\n\t\t</contract-mapping>\\r\\n\t</resource-library-contracts>\\r\\n</application>",
-    "topic": "J2EE",
-    "level": "Intermediate",
-    "id": "4cd560c67231c8e0"
-}, {
-    "question": "What are pass-through elements and attributes?",
     "answer": "Pass-through elements allow you to use HTML5 tags and attributes but to treat them as equivalent to JavaServer Faces components, for example, EL expressions can be used with them to retrieve managed bean properties (see example 1 below). Pass-through attributes allow to pass attributes that are not JavaServer Faces attributes through to the browser without interpretation (see example 2 below).",
-    "code": "// Example 1\\r\\n<html ... xmlns:jsf=\\\"http://xmlns.jcp.org/jsf\\\"\\r\\n...\\r\\n    <input type=\\\"email\\\" jsf:id=\\\"email\\\" name=\\\"email\\\"\\r\\n           value=\\\"#{reservationBean.email}\\\" required=\\\"required\\\"/>\\r\\n\\r\\n// Example 2\\r\\n<html ... xmlns:p=\\\"http://xmlns.jcp.org/jsf/passthrough\\\"\\r\\n...\\r\\n    \\r\\n<h:form prependId=\\\"false\\\">\\r\\n<h:inputText id=\\\"nights\\\" p:type=\\\"number\\\" value=\\\"#{bean.nights}\\\" \\r\\n             p:min=\\\"1\\\" p:max=\\\"30\\\" p:required=\\\"required\\\" \\r\\n             p:title=\\\"Enter a number between 1 and 30 inclusive.\\\">\\r\\n        ...\\r\\n\\r\\nWill be rendered as:\\r\\n\\r\\n<input id=\\\"nights\\\" type=\\\"number\\\" value=\\\"1\\\" min=\\\"1\\\" max=\\\"30\\\"\\r\\n       required=\\\"required\\\" \\r\\n       title=\\\"Enter a number between 1 and 30 inclusive.\\\">\\r\\n\\r\\n",
-    "topic": "J2EE",
+    "code": "// Example 1 <html ... xmlns:jsf=\"http://xmlns.jcp.org/jsf\"     ...     <input type=\"email\" jsf:id=\"email\" name=\"email\"            value=\"#{reservationBean.email}\" required=\"required\"/>  // Example 2 <html ... xmlns:p=\"http://xmlns.jcp.org/jsf/passthrough\"     ...     <h:form prependId=\"false\">         <h:inputText id=\"nights\" p:type=\"number\" value=\"#{bean.nights}\"              p:min=\"1\" p:max=\"30\" p:required=\"required\"             p:title=\"Enter a number between 1 and 30 inclusive.\">              ...  Will be rendered as:     <input id=\"nights\" type=\"number\" value=\"1\" min=\"1\" max=\"30\"         required=\"required\" title=\"Enter a number between 1 and 30 inclusive.\">",
     "level": "Easy",
+    "question": "What are pass-through elements and attributes?",
+    "topic": "J2EE",
     "id": "9e4a1976c205b848"
 }, {
     "question": "What is renderer?",
@@ -150,11 +137,11 @@
     "level": "Easy",
     "id": "6894cc669e1728a9"
 }, {
-    "question": "Write code to track service requests.",
     "answer": "Count the number of service methods that are running:",
-    "code": "public class ShutdownExample extends HttpServlet {\\r\\n    private int serviceCounter = 0;\\r\\n    ...\\r\\n    // Access methods for serviceCounter\\r\\n    protected synchronized void enteringServiceMethod() {\\r\\n        serviceCounter++;\\r\\n    }\\r\\n    protected synchronized void leavingServiceMethod() {\\r\\n        serviceCounter--;\\r\\n    }\\r\\n    protected synchronized int numServices() {\\r\\n        return serviceCounter;\\r\\n    }\\r\\n}\\r\\n\\r\\nprotected void service(HttpServletRequest req,\\r\\n                       HttpServletResponse resp)\\r\\n                       throws ServletException,IOException {\\r\\n    enteringServiceMethod();\\r\\n    try {\\r\\n        super.service(req, resp);\\r\\n    } finally {\\r\\n        leavingServiceMethod();\\r\\n    }\\r\\n}",
-    "topic": "J2EE",
+    "code": "public class ShutdownExample extends HttpServlet {     private int serviceCounter = 0;      ...      // Access methods for serviceCounter     protected synchronized void enteringServiceMethod() {         serviceCounter++;     }      protected synchronized void leavingServiceMethod() {         serviceCounter--;     }      protected synchronized int numServices() {         return serviceCounter;     }      protected void service(HttpServletRequest req,                              HttpServletResponse resp) throws ServletException,IOException {         enteringServiceMethod();          try {             super.service(req, resp);         } finally {             leavingServiceMethod();         }     }",
     "level": "Intermediate",
+    "question": "Write code to track service requests.",
+    "topic": "J2EE",
     "id": "ae817aa6ac8bb837"
 }, {
     "question": "What is JavaScript?",
@@ -163,29 +150,29 @@
     "level": "Easy",
     "id": "95b115b54bacdb2e"
 }, {
-    "question": "Create polite long-running methods for clean shutdown",
-    "code": "public class ShutdownExample extends HttpServlet {\\r\\n    private boolean shuttingDown;\\r\\n    ...\\r\\n    //Access methods for shuttingDown\\r\\n    protected synchronized void setShuttingDown(boolean flag) {\\r\\n        shuttingDown = flag;\\r\\n    }\\r\\n    protected synchronized boolean isShuttingDown() {\\r\\n        return shuttingDown;\\r\\n    }\\r\\n}\\r\\n\\r\\npublic void destroy() {\\r\\n    /* Check to see whether there are still service methods /*\\r\\n    /* running, and if there are, tell them to stop. */\\r\\n    if (numServices()> 0) {\\r\\n        setShuttingDown(true);\\r\\n    }\\r\\n\\r\\n    /* Wait for the service methods to stop. */\\r\\n    while (numServices()> 0) {\\r\\n        try {\\r\\n            Thread.sleep(interval);\\r\\n        } catch (InterruptedException e) {\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\r\\n// Methods that might run for a long time should check the value of the field that notifies them of shutdowns and should interrupt their work, if necessary\\r\\npublic void doPost(...) {\\r\\n    ...\\r\\n    for(i = 0; ((i < lotsOfStuffToDo) &&\\r\\n         !isShuttingDown()); i++) {\\r\\n        try {\\r\\n            partOfLongRunningOperation(i);\\r\\n        } catch (InterruptedException e) {\\r\\n            ...\\r\\n        }\\r\\n    }\\r\\n}",
-    "topic": "J2EE",
+    "code": "for( var i = 0; i < document.images.length; i ++) {     // Loop through all images    document.images[ i]. style.border = \"none\"; }",
+    "level": "Easy",
+    "question": "Set style border property on all page images.",
+    "topic": "JavaScript",
+    "id": "fc8340dbc6750951"
+}, {
+    "code": "public class ShutdownExample extends HttpServlet {     private boolean shuttingDown;      ...      //Access methods for shuttingDown     protected synchronized void setShuttingDown(boolean flag) {         shuttingDown = flag;     }      protected synchronized boolean isShuttingDown() {         return shuttingDown;     }      public void destroy() {         /* Check to see whether there are still service methods /*         /* running, and if there are, tell them to stop. */         if (numServices()> 0) {             setShuttingDown(true);         }          /* Wait for the service methods to stop. */         while (numServices() > 0) {             try {                 Thread.sleep(interval);             } catch (InterruptedException e) {}         }     }      // Methods that might run for a long time should check the value of the field that      // notifies them of shutdowns and should interrupt their work, if necessary     public void doPost(...) {         ...         for(i = 0; ((i < lotsOfStuffToDo) && !isShuttingDown()); i++) {             try {                 partOfLongRunningOperation(i);             } catch (InterruptedException e) {                 ...             }         }     }",
     "level": "Intermediate",
+    "question": "Create polite long-running methods for clean shutdown",
+    "topic": "J2EE",
     "id": "4e6802a501fc4aeb"
 }, {
-    "question": "How to asynchronously process HTTP long request (access to database for example)?",
-    "code": "@WebServlet(urlPatterns={\\\"/asyncservlet\\\"}, asyncSupported=true)\\r\\npublic class AsyncServlet extends HttpServlet {\\r\\n   /* ... Same variables and init method as in SyncServlet ... */\\r\\n\\r\\n   @Override\\r\\n   public void doGet(HttpServletRequest request, \\r\\n                     HttpServletResponse response) {\\r\\n      response.setContentType(\\\"text/html;charset=UTF-8\\\");\\r\\n      final AsyncContext acontext = request.startAsync();\\r\\n      acontext.start(new Runnable() {\\r\\n         public void run() {\\r\\n            String param = acontext.getRequest().getParameter(\\\"param\\\");\\r\\n            String result = resource.process(param);\\r\\n            HttpServletResponse response = acontext.getResponse();\\r\\n            /* ... print to the response ... */\\r\\n            acontext.complete();\\r\\n   }\\r\\n}",
-    "topic": "J2EE",
+    "code": "@WebServlet(urlPatterns={\"/asyncioservlet\"}, asyncSupported=true) public class AsyncIOServlet extends HttpServlet {     @Override     public void doPost(HttpServletRequest request,                          HttpServletResponse response) throws IOException {         final AsyncContext acontext = request.startAsync();         final ServletInputStream input = request.getInputStream();         input.setReadListener(new ReadListener() {             byte buffer[] = new byte[4*1024];             StringBuilder sbuilder = new StringBuilder();              @Override             public void onDataAvailable() {                 try {                     do {                         int length = input.read(buffer);                         sbuilder.append(new String(buffer, 0, length));                     } while(input.isReady());                 } catch (IOException ex) { ... }             }              @Override             public void onAllDataRead() {                 try {                     acontext.getResponse().getWriter()                     .write(\"...the response...\");                 } catch (IOException ex) { ... }                 acontext.complete();             }              @Override             public void onError(Throwable t) { ... }         });     } }",
     "level": "Intermediate",
-    "id": "2efeed6091e468b4"
-}, {
     "question": "Reading a large HTTP POST request using nonblocking I/O",
-    "code": "@WebServlet(urlPatterns={\\\"/asyncioservlet\\\"}, asyncSupported=true)\\r\\npublic class AsyncIOServlet extends HttpServlet {\\r\\n   @Override\\r\\n   public void doPost(HttpServletRequest request, \\r\\n                      HttpServletResponse response)\\r\\n                      throws IOException {\\r\\n      final AsyncContext acontext = request.startAsync();\\r\\n      final ServletInputStream input = request.getInputStream();\\r\\n      \\r\\n      input.setReadListener(new ReadListener() {\\r\\n         byte buffer[] = new byte[4*1024];\\r\\n         StringBuilder sbuilder = new StringBuilder();\\r\\n         @Override\\r\\n         public void onDataAvailable() {\\r\\n            try {\\r\\n               do {\\r\\n                  int length = input.read(buffer);\\r\\n                  sbuilder.append(new String(buffer, 0, length));\\r\\n               } while(input.isReady());\\r\\n            } catch (IOException ex) { ... }\\r\\n         }\\r\\n         @Override\\r\\n         public void onAllDataRead() {\\r\\n            try {\\r\\n               acontext.getResponse().getWriter()\\r\\n                                     .write(\\\"...the response...\\\");\\r\\n            } catch (IOException ex) { ... }\\r\\n            acontext.complete();\\r\\n         }\\r\\n         @Override\\r\\n         public void onError(Throwable t) { ... }\\r\\n      });\\r\\n   }\\r\\n}",
     "topic": "J2EE",
-    "level": "Intermediate",
     "id": "918e5091f404290a"
 }, {
-    "question": "What is prototype-based programming?",
     "answer": "From Wikipedia, the free encyclopedia:\\r\\nPrototype-based programming is a style of object-oriented programming in which inheritance is performed via a process of cloning existing objects that serve as prototypes.\\r\\nJavaScript supports prototype-based programming.",
-    "code": "var foo = {one: 1, two: 2};\\r\\n \\r\\n// bar.[[prototype]] = foo\\r\\nvar bar = Object.create( foo );\\r\\n \\r\\nbar.three = 3;\\r\\n \\r\\nbar.one; // 1\\r\\nbar.two; // 2\\r\\nbar.three; // 3",
-    "topic": "JavaScript",
+    "code": "var foo = {one: 1, two: 2}; // bar.[[prototype]] = foo var bar = Object.create( foo ); bar.three = 3; bar.one; // 1 bar.two; // 2 bar.three; // 3",
     "level": "Easy",
+    "question": "What is prototype-based programming?",
+    "topic": "JavaScript",
     "id": "e8056fddf0f7db12"
 }, {
     "question": "Explain imperative vs. declarative programming.",
@@ -219,11 +206,11 @@
     "level": "Intermediate",
     "id": "49a270a73795d818"
 }, {
-    "question": "What is the difference between == and ===?",
     "answer": "\\\"==\\\" checks for equality only (type casting is performed if necessary), \\\"===\\\" checks for type as well.",
-    "code": "false ==  0; // true\\r\\nfalse === 0; // false",
-    "topic": "JavaScript",
+    "code": "false ==  0; // true false === 0; // false",
     "level": "Easy",
+    "question": "What is the difference between == and ===?",
+    "topic": "JavaScript",
     "id": "cb07439311935a7d"
 }, {
     "question": "What is hoisting?",
@@ -237,4 +224,17 @@
     "topic": "JavaScript",
     "level": "Easy",
     "id": "3e21e5643552ab65"
+}, {
+    "code": "@WebServlet(urlPatterns={\"asyncservlet\"}, asyncSupported=true)     public class AsyncServlet extends HttpServlet {         /* ... Same variables and init method as in SyncServlet ... */         @Override            public void doGet(HttpServletRequest request, HttpServletResponse response) {             response.setContentType(\"text/html;charset=UTF-8\");             final AsyncContext acontext = request.startAsync();             acontext.start(new Runnable() {                 public void run() {                     String param = acontext.getRequest().getParameter(\"param\");                     String result = resource.process(param);                     HttpServletResponse response = acontext.getResponse();                      /* ... print to the response ... */                     acontext.complete();                 }             }",
+    "level": "Intermediate",
+    "question": "How to asynchronously process HTTP long request (access to database for example)?",
+    "topic": "J2EE",
+    "id": "2efeed6091e468b4"
+}, {
+    "answer": "1. Create a \\\"contracts\\\" section under Web Pages. \\r\\n2. Create directory for each required contract. \\r\\n3. Put HTML and CSS files specific for each contract in an appropriate directory.\\r\\n4. In faces-config.xml file create section that describes where each contract is used (see code below).",
+    "code": "<application>     <resource-library-contracts>         <contract-mapping>             <url-pattern>*</url-pattern>             <contracts>basic</contracts>         </contract-mapping>     </resource-library-contracts> </application>",
+    "level": "Intermediate",
+    "question": "How to use JEE resource library contracts?",
+    "topic": "J2EE",
+    "id": "4cd560c67231c8e0"
 }]
