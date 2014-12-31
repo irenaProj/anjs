@@ -19,12 +19,35 @@
     <!-- Code highlighting, see:  http://ngmodules.org/modules/angular-highlightjs -->
     <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
     <script>
-        angular.module("qa", ["hljs", "customFilters", "quiz"]);
+        angular.module("qa", ["hljs", "customFilters", "quiz", "ngRoute"])
+            .config(function($routeProvider) {
+                $routeProvider.when("/quiz", {
+                    templateUrl: "/qa-data/views/quizReview.html"
+                });
+
+                $routeProvider.when("/qa", {
+                    templateUrl: "/qa-data/views/ticketsList.html"
+                });
+
+                $routeProvider.when("/complete", {
+                    templateUrl: "/qa-data/views/thankYou.html"
+                });
+
+                $routeProvider.when("/doQuiz", {
+                    templateUrl: "/qa-data/views/doQuiz.html"
+                });
+
+                $routeProvider.otherwise("/qa", {
+                    templateUrl: "/qa-data/views/ticketsList.html"
+                });
+            });
     </script>
     <script type="text/javascript" src="controllers/qa.js"></script>
     <script type="text/javascript" src="filters/customFilters.js"></script>
     <script type="text/javascript" src="controllers/topicListControllers.js"></script>
+    <script type="text/javascript" src="controllers/quizReviewControllers.js"></script>
     <script type="text/javascript" src="components/quiz/quiz.js"></script>
+    <script type="text/javascript" src="/js/angular-route.min.js"></script>
 </head>
 
 <body ng-controller="qaCtrl">
@@ -123,7 +146,7 @@
         </div>
     </div>
 
-    <ng-include src="'views/ticketsList.html'"></ng-include>
+    <ng-view />
 
     <script src="/js/jquery-2.1.3.min.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>

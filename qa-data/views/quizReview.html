@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="small-12 columns end">
+        <h2>Your Quiz Content</h2>
+    </div>
+</div>
+<div class="row" ng-controller="quizReviewController">
+    <div class="small-12 columns end info empty-quiz-info" ng-show="quizData.length == 0">
+        <div class="small-12 columns end">
+            The quiz is empty
+        </div>  
+        <div class="small-12 columns end">
+            <a href="#/qa" class="button tiny info">Return to questions</a>
+        </div>  
+    </div>
+    
+    <div class="small-12 columns end" ng-hide="quizData.length == 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in quizData">
+                    <td class="text-center">{{item.question}}</td>
+                    <td class="text-center">{{item.level}}</td>
+                    <td><button ng-click="remove(item.id)" class="button tiny radius">Remove</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="text-right">Quiz Level: </td>
+                    <td class="text-right">{{level()}} </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="small-2 medium-1 columns end">
+        <a href="#/qa" class="button tiny radius">Return to questions</a>
+        <a href="#/doQuiz" class="button tiny radius">Start Quiz</a>
+    </div>
+</div>

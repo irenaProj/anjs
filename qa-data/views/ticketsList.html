@@ -32,7 +32,7 @@
                     <ul class="right button-group">
                         <li ng-repeat="page in data.qa | filter:topicFilterFn | pageCount:ticketsPerPage"
                             ng-click="selectPage($index + 1)">
-                            <a href="#" class="button" ng-class="getPageClass($index + 1)">{{$index + 1}}</a>
+                            <a href="#/qa" class="button" ng-class="getPageClass($index + 1)">{{$index + 1}}</a>
                         </li>
                     </ul>
                 </div>
