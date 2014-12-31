@@ -4,185 +4,185 @@
     "level": "Easy",
     "question": "How to embed JavaScript in HTML page?",
     "topic": "HTML",
-    "id": "00da2ad5796129a3"
+    "id": "1"
 }, {
     "code": "document.form.login.submit();\n// or (less preferable due to its dependency on page structure):\ndocument.form[0].submit();",
     "level": "Easy",
     "question": "How do you submit a form using Javascript?",
     "topic": "JavaScript",
-    "id": "8c8ba3775773cb50"
+    "id": "2"
 }, {
     "question": "What is DOM?",
     "answer": "The Document Object Model, or DOM, is the fundamental API for representing and manipulating the content of HTML and XML documents.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "d3400173562fd877"
+    "id": "3"
 }, {
     "code": "var content = Array.prototype.map.call(\n                document.getElementsByTagName(\"h1\"),\n                function(e) { return e.innerHTML; });",
     "level": "Easy",
     "question": "How to get a content of all specified elements?",
     "topic": "JavaScript",
-    "id": "1636497c22fbfa3f"
+    "id": "4"
 }, {
     "question": "How to read and write a file using JavaScript?",
     "answer": "By coding Java applet to accommodate the script. Cannot be done using JavaScript.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "6d6963e65ad39808"
+    "id": "5"
 }, {
     "question": "What are JavaScript types?",
     "answer": "Number, String, Boolean, Function, Object, Null, Undefined.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "c32fb0e5188adbe6"
+    "id": "6"
 }, {
     "question": "How do you convert numbers between different bases in JavaScript?",
     "answer": "Use the parseInt() function, that takes a string as the first parameter, and the base as a second parameter. So to convert hexadecimal 3F to decimal, use parseInt (\\\"3F\\\", 16); ",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "b4680738475218ca"
+    "id": "7"
 }, {
     "code": "//Create array of size 10\nvar arr = new Array(10);\n// Create two dimentional array\nvar mat = new Array(len);  \nfor(var i = 0; i < len; i++) {\n    mat[i] = new Array(len);\n}\nfor (var i = 0; i < len; i++) {\n    for (var k = 0; k < len; k++) {\n        mat[i][k] = 0;     \n    }\n} ",
     "level": "Easy",
     "question": "How to create arrays in JavaScript?",
     "topic": "JavaScript",
-    "id": "7e8c8e0a501f08ab"
+    "id": "8"
 }, {
     "question": "What is negative infinity?",
     "answer": "The Number.NEGATIVE_INFINITY property represents the negative Infinity value, derived by dividing negative number by zero.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "33698082fd927bd7"
+    "id": "9"
 }, {
     "question": "In a pop-up browser window, how do you refer to the main browser window that opened it?",
     "answer": "Use window.opener to refer to the main window from pop-ups.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "f0484b0af3416893"
+    "id": "10"
 }, {
     "question": "What is the data type of variables in JavaScript?",
     "answer": "All variables are of object type in JavaScript.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "81041ab767a7789f"
+    "id": "11"
 }, {
     "question": "What is a fixed-width table and its advantages?",
     "answer": "Fixed width tables are rendered by the browser based on the widths of the columns in the first row, resulting in a faster display in case of large tables. Use the CSS style table-layout:fixed to specify a fixed width table. If the table is not specified to be of fixed width, the browser has to wait till all data is downloaded and then infer the best width for each of the columns. This process can be very slow for large tables. ",
     "topic": "HTML",
     "level": "Easy",
-    "id": "8c0d2f86ec0838ae"
+    "id": "12"
 }, {
     "question": "Methods GET and POST in HTML forms - what\\'s the difference?",
     "answer": "GET: Parameters are passed in the querystring. Maximum amount of data that can be sent via the GET method is limited to about 2kb.\nPOST: Parameters are passed in the request body. There is no limit to the amount of data that can be transferred using POST. However, there are limits on the maximum amount of data that can be transferred in one name/value pair.",
     "topic": "HTML",
     "level": "Intermediate",
-    "id": "3255784b4daea8ad"
+    "id": "13"
 }, {
     "answer": "Include the name of the frame in the target attribute of the hyperlink.",
     "code": "<a href=\"mypage.htm\" target\"myframe\">My Page</a>",
     "level": "Intermediate",
     "question": "How do you target a specific frame from a hyperlink?",
     "topic": "HTML",
-    "id": "287d8bec7dfc799b"
+    "id": "14"
 }, {
     "code": "public double max(int... params) {\n    int localMax = Integer.MIN_VALUE;\n    for (int p : params) {\n        if (p > localMax){\n            localMax = p;\n        }\n    }\n    return localMax;\n}",
     "level": "Intermediate",
     "question": "How to create and use function in Java that takes variable number of parameters?",
     "topic": "Java",
-    "id": "6b0134458ec7681a"
+    "id": "15"
 }, {
     "question": "What is default method?",
     "answer": "Default method is a method implemented in an interface class, declared with keyword \\\"default\\\". It allows adding new functionality to the existing interfaces while ensuring backward compatibility.",
     "topic": "Java",
     "level": "Easy",
-    "id": "a86f47966d8c3b7c"
+    "id": "16"
 }, {
     "answer": "Anonymous class is an expression that allows declaration and instantiation of a class at the same time:",
     "code": "button.addActionListener(new ActionListener() {\n    public void actionPerformed(ActionEvent e) {\n        // perform the required operation\n    }\n});",
     "level": "Easy",
     "question": "What is anonymous inner class and how to use it?",
     "topic": "Java",
-    "id": "ac4934b4f1b7986c"
+    "id": "17"
 }, {
     "answer": "If lambda expression consists of a call to one method , it is possible to replace it by reference to this method:",
     "code": "private class Book {\n    private double price;\n     public double getPrice() {\n         return price;\n    } \n     public void setPrice(double price) {\n         this.price = price;\n     }\n     public int compareByPrice(Book b1, Book b2){ \n        double diff = b2.getPrice() - b1.getPrice();\n         if (diff == 0) return (int)diff;\n         return (diff > 0 ? 1 : -1);\n    }\n}\nArrays.sort(library, (b1, b2) -> {\n    return Book.compareByPrice(b1, b2); });\n// Can be replaced by\nArrays.sort(library, Book::compareByPrice);",
     "level": "Intermediate",
     "question": "Explain method references.",
     "topic": "Java",
-    "id": "67878ff2934aaa3b"
+    "id": "18"
 }, {
     "question": "What is functional interface?",
     "answer": "A functional interface is any interface that contains only one abstract method.",
     "topic": "Java",
     "level": "Easy",
-    "id": "36fc1d02f9d9a8cb"
+    "id": "19"
 }, {
     "question": "What is JavaScript?",
     "answer": "JavaScript is a platform-independent,event-driven, interpreted client-side scripting and programming language developed by Netscape Communications Corp. and Sun Microsystems.",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "95b115b54bacdb2e"
+    "id": "20"
 }, {
     "code": "for( var i = 0; i < document.images.length; i ++) {\n    // Loop through all images\n    document.images[ i]. style.border = \"none\";\n}",
     "level": "Easy",
     "question": "Set style border property on all page images.",
     "topic": "JavaScript",
-    "id": "fc8340dbc6750951"
+    "id": "21"
 }, {
     "answer": "From Wikipedia, the free encyclopedia:\nPrototype-based programming is a style of object-oriented programming in which inheritance is performed via a process of cloning existing objects that serve as prototypes.\nJavaScript supports prototype-based programming.",
     "code": "var foo = {one: 1, two: 2};\n// bar.[[prototype]] = foo\nvar bar = Object.create( foo );\nbar.three = 3;\nbar.one; // 1\nbar.two; // 2\nbar.three; // 3",
     "level": "Easy",
     "question": "What is prototype-based programming?",
     "topic": "JavaScript",
-    "id": "e8056fddf0f7db12"
+    "id": "22"
 }, {
     "question": "Explain imperative vs. declarative programming.",
     "answer": "From Wikipedia, the free encyclopedia:\nImperative programming is a programming paradigm that describes computation in terms of statements that change a program state.\nDeclarative programming expresses what the program should accomplish without prescribing how to do it in terms of sequences of actions to be taken.",
     "topic": "General",
     "level": "Easy",
-    "id": "5141435e052e18e8"
+    "id": "23"
 }, {
     "question": "Explain the same-origin policy",
     "answer": "From Wikipedia, the free encyclopedia:\n\nThe policy permits scripts running on pages originating from the same site - a combination of scheme, hostname, and port number - to access each other's DOM with no specific restrictions, but prevents access to DOM on different sites.",
     "topic": "General",
     "level": "Easy",
-    "id": "fe08d86c41091aa5"
+    "id": "24"
 }, {
     "question": "Explain cross-cite scripting.",
     "answer": "From Wikipedia, the free encyclopedia\n\nCross-site scripting (XSS) is a type of computer security vulnerability typically found in Web applications. XSS enables attackers to inject client-side script into Web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same origin policy.",
     "topic": "General",
     "level": "Easy",
-    "id": "b949fea89f37c87c"
+    "id": "25"
 }, {
     "answer": "Using as example <h1> tag:",
     "code": " h1 { display: inline }",
     "level": "Easy",
     "question": "How to remove line breaks after header tags?",
     "topic": "CSS",
-    "id": "207b43fabd6009f9"
+    "id": "26"
 }, {
     "question": "Explain async/defer attributes for <script> tag.",
     "answer": "Async - indicate to the browser to execute script asynchronously, as soon as it is available.\nDefer - execute script as soon as the page is ready.\n\nIf no async/defer attribute is specified, script is executed immediately.",
     "topic": "JavaScript",
     "level": "Intermediate",
-    "id": "49a270a73795d818"
+    "id": "27"
 }, {
     "answer": " '==' checks for equality only (type casting is performed if necessary), '===' checks for type as well.",
     "code": "false ==  0; // true\nfalse === 0; // false",
     "level": "Easy",
     "question": "What is the difference between == and ===?",
     "topic": "JavaScript",
-    "id": "cb07439311935a7d"
+    "id": "28"
 }, {
     "question": "What is hoisting?",
     "answer": "Hoisting is silently moving functions and variables declarations to the top of the scope.",
     "topic": "JavaScript",
     "level": "Intermediate",
-    "id": "ed3e5693c40ea831"
+    "id": "29"
 }, {
     "question": "Explain NaN.",
     "answer": "NaN is of type Number and represents not a number value.\n\nIn addition, NaN compared to anything (including NaN) is false. To check if something is a number, use: isNaN()",
     "topic": "JavaScript",
     "level": "Easy",
-    "id": "3e21e5643552ab65"
+    "id": "30"
 }]

@@ -9124,9 +9124,6 @@ th.hide-for-touch {
   }
 }
 /* line 30, ../scss/qa/_qa-main.scss */
-.learning-tickets .top-link {
-  background-color: #fff;
-  text-align: right;
-  margin-top: 16px;
+.learning-tickets .question-ticket {
   margin-bottom: 24px;
 }

@@ -1,6 +1,6 @@
 angular.module("qa")
     .constant("activeTopicClass", "info")
-    .controller("topicListCtrl", function($scope, $filter, activeTopicClass) {
+    .controller("topicListCtrl", function($scope, $filter, activeTopicClass, quiz) {
         var selectedTopic= null;
 
         $scope.ticketsPerPage = 10;
@@ -28,5 +28,9 @@ angular.module("qa")
 
         $scope.getPageClass = function(page) {
             return $scope.selectedPage == page ? activeTopicClass : "";
+        }
+
+        $scope.addToQuiz = function(ticket) {
+            quiz.addTicket(ticket.id, ticket.question, ticket.level);
         }
     });
