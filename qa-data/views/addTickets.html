@@ -1,0 +1,59 @@
+<style type="text/css">
+    .ng-invalid { background-color: rgb(255, 205, 212); }
+    .ng-valid { background-color: rgb(194, 242, 194); }
+    span.error { font-weight: bold; }
+</style>
+
+<div class="row add-tickets">
+    <div class="small-12 columns end">
+        <h2>Add new ticket</h2>
+    </div>
+    <div class="small-12 columns end">
+        <form class="small-9 columns" name="newTicketForm" novalidate>
+            <div class="row">
+                <div class="small-12 columns">
+                    <label>Question</label>
+                    <input name="question" placeholder="Enter question" ng-model="data.newTicket.question" required />
+                    
+                    <span class="error" ng-show="newTicketForm.question.$error.required">
+                        Please enter a question
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <label>Answer</label>
+                    <input name="answer" placeholder="Enter answer" ng-model="data.newTicket.answer" />
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <label>Code</label>
+                    <input name="code" placeholder="Enter code" ng-model="data.newTicket.code" />
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-6 columns">
+                    <label>Topic</label>
+                    <input name="topic" placeholder="Enter topic" ng-model="data.newTicket.topic" required />
+                    
+                    <span class="error" ng-show="newTicketForm.topic.$error.required">
+                        Please enter a topic
+                    </span>
+                </div>
+                <div class="small-6 columns end">
+                    <label>Level</label>
+                    <input name="level" placeholder="Enter level" ng-model="data.newTicket.level" required />
+                    
+                    <span class="error" ng-show="newTicketForm.level.$error.required">
+                        Please enter a level
+                    </span>
+                </div>
+            </div>
+
+            <button class="button" ng-disabled="newTicketForm.$invalid">Add ticket</button>
+        <form>
+    </div>
+</div>

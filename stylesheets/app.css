@@ -9127,3 +9127,24 @@ th.hide-for-touch {
 .learning-tickets .question-ticket {
   margin-bottom: 24px;
 }
+
+/* line 2, ../scss/qa/_qa-add-ticket.scss */
+.add-tickets form {
+  background-color: #EFEFEF;
+}
+/* line 6, ../scss/qa/_qa-add-ticket.scss */
+.add-tickets [name=question] {
+  min-height: 50px;
+}
+/* line 7, ../scss/qa/_qa-add-ticket.scss */
+.add-tickets [name=answer], .add-tickets [name=code] {
+  min-height: 100px;
+}
+/* line 8, ../scss/qa/_qa-add-ticket.scss */
+.add-tickets [name=topic], .add-tickets [name=level] {
+  min-height: 50px;
+}
+/* line 9, ../scss/qa/_qa-add-ticket.scss */
+.add-tickets input {
+  width: 100%;
+}

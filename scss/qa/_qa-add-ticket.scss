@@ -1,0 +1,10 @@
+.add-tickets {
+    form {
+        background-color: #EFEFEF;
+    }
+
+    [name=question] {min-height: 50px; }
+    [name=answer], [name=code] {min-height: 100px; }
+    [name=topic], [name=level] {min-height: 50px; }
+    input { width: 100%; }
+}
