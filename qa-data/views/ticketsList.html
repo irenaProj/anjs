@@ -4,9 +4,6 @@
             <a ng-click="selectTopic()" class="button radius" class="select-topic">All Tickets</a>
             <a ng-repeat="item in data.qa | orderBy: 'topic' | unique: 'topic'" 
                ng-click="selectTopic(item)" class="button radius" class="select-topic" ng-class="getTopicClass(item)">{{item}}</a>
-            <div class="small-12 columns end">
-                <a href="#/qaAdd" class="button tiny">Add new ticket</a>
-            </div>          
         </div>
         <div class="small-12 medium-8 large-9 columns end learning-tickets">
             <div class="small-12 columns end question-ticket" 

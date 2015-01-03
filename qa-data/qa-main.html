@@ -19,7 +19,7 @@
     <!-- Firebase support -->
     <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
     <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
-    
+
     <!-- Code highlighting, see:  http://ngmodules.org/modules/angular-highlightjs -->
     <script src="/js/angular-highlightjs.min.js"></script>
     <script>
@@ -41,8 +41,12 @@
                     templateUrl: "/qa-data/views/doQuiz.html"
                 });
 
+                $routeProvider.when("/qaMgmt", {
+                    templateUrl: "/qa-data/views/mgmt/ticketsManagement.html"
+                });
+
                 $routeProvider.when("/qaAdd", {
-                    templateUrl: "/qa-data/views/addTickets.html"
+                    templateUrl: "/qa-data/views/mgmt/addTickets.html"
                 });
 
                 $routeProvider.otherwise("/qa", {
@@ -133,7 +137,7 @@
                     <!-- Right Nav Section -->
                     <ul class="right">
                         <li class="divider"></li>
-                        <li><a href="#">Item 2</a>
+                        <li><a href="#/qaMgmt">Manage Q&amp;A Tickets</a>
                         </li>
                     </ul>
                 </section>
