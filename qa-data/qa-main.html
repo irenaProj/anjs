@@ -16,10 +16,14 @@
     <script src="/js/modernizr.js"></script>
     <script src="/js/angular.js"></script>
 
+    <!-- Firebase support -->
+    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
+    
     <!-- Code highlighting, see:  http://ngmodules.org/modules/angular-highlightjs -->
-    <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+    <script src="/js/angular-highlightjs.min.js"></script>
     <script>
-        angular.module("qa", ["hljs", "customFilters", "quiz", "ngRoute"])
+        angular.module("qa", ["hljs", "customFilters", "quiz", "ngRoute", "firebase"])
             .config(function($routeProvider) {
                 $routeProvider.when("/quiz", {
                     templateUrl: "/qa-data/views/quizReview.html"
