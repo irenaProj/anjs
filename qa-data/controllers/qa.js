@@ -2,7 +2,7 @@ angular.module("qa")
     .controller("qaCtrl", function ($scope, $http, $firebase) {
         $scope.data = {};
 
-        var ref = new Firebase("https://amber-heat-6599.firebaseio.com/");
+        var ref = new Firebase("https://amber-heat-6599.firebaseio.com/qa");
         $scope.data.qa = $firebase(ref).$asArray();
 
         $scope.addTicket = function () {
