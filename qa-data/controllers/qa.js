@@ -1,5 +1,5 @@
 angular.module("qa")
-    .controller("qaCtrl", function ($scope, $http, $firebase) {
+    .controller("qaCtrl", function ($scope, $http, $location, $firebase) {
         $scope.data = {};
 
         var ref = new Firebase("https://amber-heat-6599.firebaseio.com/qa");
@@ -23,5 +23,10 @@ angular.module("qa")
 
             $scope.data.newTicket = '';
         };
+
+        $scope.isTicketsMgmtActive = ($location.path() == "/qaMgmt") ? true : false;
+        $scope.setTicketsMgmtActive = function(isActive) {
+            $scope.isTicketsMgmtActive = isActive;
+        }
 
     });

@@ -135,9 +135,14 @@
                         <li class="divider"></li>
                     </ul>
                     <!-- Right Nav Section -->
-                    <ul class="right">
+                    <ul class="right" ng-hide="isTicketsMgmtActive">
                         <li class="divider"></li>
-                        <li><a href="#/qaMgmt">Manage Q&amp;A Tickets</a>
+                        <li><a href="#/qaMgmt" ng-click="setTicketsMgmtActive(true)">Manage Q&amp;A Tickets</a>
+                        </li>
+                    </ul>
+                    <ul class="right" ng-show="isTicketsMgmtActive">
+                        <li class="divider"></li>
+                        <li><a href="#/qa" ng-click="setTicketsMgmtActive(false)">Back to Tickets</a>
                         </li>
                     </ul>
                 </section>
