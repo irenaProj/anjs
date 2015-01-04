@@ -41,6 +41,10 @@
                     templateUrl: "/qa-data/views/doQuiz.html"
                 });
 
+                $routeProvider.when("/login", {
+                    templateUrl: "/qa-data/views/mgmt/login.html"
+                });
+
                 $routeProvider.when("/qaMgmt", {
                     templateUrl: "/qa-data/views/mgmt/ticketsManagement.html"
                 });
@@ -58,6 +62,7 @@
     <script type="text/javascript" src="filters/customFilters.js"></script>
     <script type="text/javascript" src="controllers/topicListControllers.js"></script>
     <script type="text/javascript" src="controllers/quizReviewControllers.js"></script>
+    <script type="text/javascript" src="controllers/mgmtControllers.js"></script>
     <script type="text/javascript" src="components/quiz/quiz.js"></script>
     <script type="text/javascript" src="/js/angular-route.min.js"></script>
 </head>
@@ -137,7 +142,7 @@
                     <!-- Right Nav Section -->
                     <ul class="right" ng-hide="isTicketsMgmtActive">
                         <li class="divider"></li>
-                        <li><a href="#/qaMgmt" ng-click="setTicketsMgmtActive(true)">Manage Q&amp;A Tickets</a>
+                        <li><a href="#/login" ng-click="setTicketsMgmtActive(true)">Manage Q&amp;A Tickets</a>
                         </li>
                     </ul>
                     <ul class="right" ng-show="isTicketsMgmtActive">
