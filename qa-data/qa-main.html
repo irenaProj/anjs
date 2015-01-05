@@ -45,8 +45,8 @@
                     templateUrl: "/qa-data/views/mgmt/login.html"
                 });
 
-                $routeProvider.when("/qaMgmt", {
-                    templateUrl: "/qa-data/views/mgmt/ticketsManagement.html"
+                $routeProvider.when("/qaAdmin", {
+                    templateUrl: "/qa-data/views/mgmt/qaAdmin.html"
                 });
 
                 $routeProvider.when("/qaAdd", {
@@ -65,6 +65,7 @@
     <script type="text/javascript" src="controllers/mgmtControllers.js"></script>
     <script type="text/javascript" src="components/quiz/quiz.js"></script>
     <script type="text/javascript" src="/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="/js/angular-cookies.min.js"></script>
 </head>
 
 <body ng-controller="qaCtrl">
@@ -140,12 +141,12 @@
                         <li class="divider"></li>
                     </ul>
                     <!-- Right Nav Section -->
-                    <ul class="right" ng-hide="isTicketsMgmtActive">
+                    <ul class="right" ng-hide="isAdminActive">
                         <li class="divider"></li>
-                        <li><a href="#/login" ng-click="setTicketsMgmtActive(true)">Manage Q&amp;A Tickets</a>
+                        <li><a href="#/login" ng-click="setTicketsMgmtActive(true)">Q&amp;A Admin</a>
                         </li>
                     </ul>
-                    <ul class="right" ng-show="isTicketsMgmtActive">
+                    <ul class="right" ng-show="isAdminActive">
                         <li class="divider"></li>
                         <li><a href="#/qa" ng-click="setTicketsMgmtActive(false)">Back to Tickets</a>
                         </li>

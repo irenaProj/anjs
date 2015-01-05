@@ -1,5 +1,5 @@
-<form name="authForm">
-    <div class="row login" ng-controller="authCtrl">
+<form name="adminAuthForm">
+    <div class="row login" ng-controller="adminAuthCtrl">
         <div class="small-12 columns end">
             <label>Email
                 <input type="text" placeholder="please insert your email" name="username" ng-model="username" required />
@@ -11,7 +11,7 @@
             </label>    
         </div>
         <div class="small-12 columns end">
-            <button class="button small radius" ng-click="authenticate(username, password)" ng-disabled="authForm.$invalid">Log In</button>
+            <button class="button small radius" ng-click="authenticate(username, password)" ng-disabled="adminAuthForm.$invalid">Log In</button>
         </div>
     </div>
 </form>

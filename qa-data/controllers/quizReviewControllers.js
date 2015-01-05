@@ -23,4 +23,12 @@ angular.module("qa")
         $scope.remove = function(id) {
             quiz.removeTicket(id);
         }
+
+        $scope.saveQuiz = function() {
+            quiz.saveQuiz();
+        }
+
+        $scope.clearQuiz = function() {
+            quiz.clearQuiz();
+        }
     });

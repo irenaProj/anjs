@@ -1,9 +1,13 @@
 angular.module("qa")
-    .controller("qaCtrl", function ($scope, $http, $location, $firebase) {
+    .controller("qaCtrl", function ($scope, $http, $location, $firebase, quiz) {
         $scope.data = {};
 
+        // Read tickes from backend data
         var ref = new Firebase("https://amber-heat-6599.firebaseio.com/qa");
         $scope.data.qa = $firebase(ref).$asArray();
+
+        // Load quiz from cookies
+        quiz.loadQuiz();
 
         $scope.addTicket = function () {
             var newTicket = $scope.data.newTicket;
@@ -24,9 +28,9 @@ angular.module("qa")
             $scope.data.newTicket = '';
         };
 
-        $scope.isTicketsMgmtActive = ($location.path() == "/qaMgmt") ? true : false;
+        $scope.isAdminActive = ($location.path() == "/qaAdmin") ? true : false;
         $scope.setTicketsMgmtActive = function(isActive) {
-            $scope.isTicketsMgmtActive = isActive;
+            $scope.isAdminActive = isActive;
         }
 
     });

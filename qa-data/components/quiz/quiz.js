@@ -1,5 +1,5 @@
-angular.module("quiz", [])
-    .factory("quiz", function() {
+angular.module("quiz", ["ngCookies"])
+    .factory("quiz", function($cookieStore) {
         var quizData = [];
 
         return {
@@ -33,6 +33,29 @@ angular.module("quiz", [])
 
             getTickets: function() {
                 return quizData;
+            },
+
+            saveQuiz: function() {
+                // Put cookie
+                $cookieStore.put('savedQuiz', quizData);
+            },
+
+            loadQuiz: function() {
+                // Get cookie
+                var storedQuiz = $cookieStore.get("savedQuiz");
+
+                if (storedQuiz) {
+                    quizData = storedQuiz;
+                }
+            },
+
+            clearQuiz: function() {
+                while(quizData.length > 0) {
+                    quizData.pop();
+                }
+
+                // Store an empty quiz to overwire what might otherwise be stored
+                $cookieStore.put('savedQuiz', quizData);
             }
         }
     })

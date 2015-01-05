@@ -37,8 +37,18 @@
         </table>
     </div>
 
-    <div class="small-2 medium-1 columns end">
-        <a href="#/qa" class="button tiny radius">Return to questions</a>
-        <a href="#/doQuiz" class="button tiny radius">Start Quiz</a>
+    <div class="small-12 columns end">
+        <div class="small-3 medium-2 columns">
+            <a href="#/qa" class="button tiny radius">Return to questions</a>
+        </div>
+        <div class="small-3 medium-2 columns">
+            <a href="#/doQuiz" class="button tiny radius">Start Quiz</a>
+        </div>
+        <div class="small-3 medium-2 columns">
+            <button ng-click="clearQuiz()" class="button tiny radius">Clear Quiz</button>
+        </div>
+        <div class="small-3 medium-2 columns end">
+            <button ng-click="saveQuiz()" class="button tiny radius">Save Quiz</button>
+        </div>
     </div>
 </div>
