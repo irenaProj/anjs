@@ -12,9 +12,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
-
     <script src="/js/modernizr.js"></script>
     <script src="/js/angular.js"></script>
+
+    <!-- XEditable support -->
+    <link href="/stylesheets/xeditable.css" rel="stylesheet">
+    <script src="/js/xeditable.min.js"></script>
 
     <!-- Firebase support -->
     <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
@@ -23,7 +26,7 @@
     <!-- Code highlighting, see:  http://ngmodules.org/modules/angular-highlightjs -->
     <script src="/js/angular-highlightjs.min.js"></script>
     <script>
-        angular.module("qa", ["hljs", "customFilters", "quiz", "ngRoute", "firebase"])
+        angular.module("qa", ["hljs", "xeditable", "customFilters", "quiz", "ngRoute", "firebase"])
             .config(function($routeProvider) {
                 $routeProvider.when("/quiz", {
                     templateUrl: "/qa-data/views/quizReview.html"
@@ -46,7 +49,7 @@
                 });
 
                 $routeProvider.when("/qaAdmin", {
-                    templateUrl: "/qa-data/views/mgmt/qaAdmin.html"
+                    templateUrl: "/qa-data/views/mgmt/ticketsMgmt.html"
                 });
 
                 $routeProvider.when("/qaAdd", {
@@ -57,6 +60,7 @@
                     templateUrl: "/qa-data/views/ticketsList.html"
                 });
             });
+
     </script>
     <script type="text/javascript" src="controllers/qa.js"></script>
     <script type="text/javascript" src="filters/customFilters.js"></script>

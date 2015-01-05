@@ -21,12 +21,31 @@ angular.module("qa")
             $scope.data.qa.$add(newTicket)
                 .then(function(ref) {
                     console.log("Added new question with id " + ref.key());
+                    $location.path("/qaAdmin");
                 }, function(error) {
                     console.log("Error:", error);
                 });
 
             $scope.data.newTicket = '';
         };
+
+        $scope.removeTicket = function(item) {
+            $scope.data.qa.$remove(item).
+                then(function(ref) {
+                    console.log("Removed item with id: " + ref.key()); 
+                }, function(error) {
+                    console.log("Error:", error);
+                });
+        }
+
+        $scope.editTicket = function(item) {
+            $scope.data.qa.$save(item).
+                then(function(ref) {
+                    console.log("Changed item with id: " + ref.key()); 
+                }, function(error) {
+                    console.log("Error:", error);
+                });
+        }
 
         $scope.isAdminActive = ($location.path() == "/qaAdmin") ? true : false;
         $scope.setTicketsMgmtActive = function(isActive) {

@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="small-12 columns">
                     <label>Question</label>
-                    <input name="question" placeholder="Enter question" ng-model="data.newTicket.question" required />
+                    <textarea rows="2" name="question" placeholder="Enter question" ng-model="data.newTicket.question" required ></textarea>
                     
                     <span class="error" ng-show="newTicketForm.question.$error.required">
                         Please enter a question
@@ -23,14 +23,14 @@
             <div class="row">
                 <div class="small-12 columns">
                     <label>Answer</label>
-                    <input name="answer" placeholder="Enter answer" ng-model="data.newTicket.answer" />
+                    <textarea name="answer" placeholder="Enter answer" ng-model="data.newTicket.answer" ></textarea>
                     
                 </div>
             </div>
             <div class="row">
                 <div class="small-12 columns">
                     <label>Code</label>
-                    <input name="code" placeholder="Enter code" ng-model="data.newTicket.code" />
+                    <textarea name="code" placeholder="Enter code" ng-model="data.newTicket.code" ></textarea>
                     
                 </div>
             </div>

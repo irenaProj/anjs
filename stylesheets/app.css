@@ -9148,3 +9148,20 @@ th.hide-for-touch {
 .add-tickets input {
   width: 100%;
 }
+
+/* line 2, ../scss/qa/_qa-modify-tickets.scss */
+.question-ticket .editable-click:hover, .question-ticket a.editable-click:hover,
+.question-ticket .editable-click, .question-ticket a.editable-click {
+  border-bottom-color: #fff !important;
+  border-bottom: none !important;
+}
+/* line 8, ../scss/qa/_qa-modify-tickets.scss */
+.question-ticket .lt-topic, .question-ticket .lt-level {
+  margin-top: 8px;
+}
+/* line 12, ../scss/qa/_qa-modify-tickets.scss */
+.question-ticket .edit-options {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px dashed #2a6496;
+}

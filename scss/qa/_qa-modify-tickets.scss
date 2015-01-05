@@ -1,0 +1,17 @@
+.question-ticket {
+    .editable-click:hover, a.editable-click:hover, 
+    .editable-click, a.editable-click {
+        border-bottom-color: #fff !important;
+        border-bottom: none !important;
+    }
+
+    .lt-topic, .lt-level {
+        margin-top: 8px;
+    }
+
+    .edit-options {
+        margin-top: 12px;
+        margin-bottom: 24px;
+        border-bottom: 1px dashed #2a6496;
+    }
+}

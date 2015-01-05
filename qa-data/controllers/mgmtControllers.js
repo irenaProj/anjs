@@ -33,4 +33,20 @@ angular.module("qa")
             $scope.setTicketsMgmtActive(false);
             $location.path("/qa");
         }
+    })
+    .constant("activeTopicClass", "info")
+    .controller("mgmtListCtrl", function($scope, $filter, $location, $firebase, activeTopicClass) {
+        var selectedTopic= null;
+
+        $scope.selectTopic = function(newTopic) {
+            selectedTopic = newTopic;
+        }
+
+        $scope.topicFilterFn = function(ticket) {
+            return selectedTopic == null || ticket.topic == selectedTopic;
+        }
+
+        $scope.getTopicClass = function(topic) {
+            return selectedTopic == topic ? activeTopicClass : "";
+        }
     });

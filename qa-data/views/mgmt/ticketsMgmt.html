@@ -12,4 +12,40 @@
         <a href="#/qaAdd" class="button tiny radius right">Add new ticket</a>
     </div>
 </div>
-    
+<div class="row" ng-controller="mgmtListCtrl" ng-hide="data.error">
+    <div class="small-12 medium-4 large-3 columns topics">
+        <h3>Topics</h3>
+        <a ng-click="selectTopic()" class="button radius" class="select-topic">All Tickets</a>
+        <a ng-repeat="item in data.qa | orderBy: 'topic' | unique: 'topic'" 
+           ng-click="selectTopic(item)" class="button radius" class="select-topic" ng-class="getTopicClass(item)">{{item}}</a>
+    </div>
+    <div class="small-12 medium-8 large-9 columns end edit-tickets">
+        <div class="small-12 columns end question-ticket" 
+            ng-repeat="item in data.qa | filter:topicFilterFn">
+            <div class="small-12 columns lt-content">
+                <div class="small-11 columns end lt-question">
+                    <h3 editable-textarea="item.question" e-rows="4" e-cols="70">{{item.question}}</h3>
+                </div>
+                <div class="small-11 end columns lt-answer" editable-textarea="item.answer" e-rows="10" e-cols="70">
+                   {{item.answer}}
+                </div>
+                <div class="small-11 end columns" hljs source="item.code" ng-show="item.code" class="code" editable-textarea="item.code" e-rows="10" e-cols="70">
+                </div>
+                <div class="small-6 columns lt-topic" editable-text="item.topic">
+                    {{item.topic}}
+                </div>
+                <div class="small-6 columns end lt-level" editable-text="item.level">
+                    {{item.level}}
+                </div>
+            </div>
+            <div class="small-12 columns edit-options">
+                <div class="small-6 columns lt-topic">
+                    <button class="button tiny round" ng-click="editTicket(item)">Save ticket</button>
+                </div>
+                <div class="small-6 columns end lt-level">
+                    <button class="button tiny round" ng-click="removeTicket(item)">Remove ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
