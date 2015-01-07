@@ -1,0 +1,14 @@
+#page-content {
+    margin-bottom: 24px;
+
+    #page-content-title {
+        font-family: $header-font-family;
+        font-weight: $header-font-weight;
+        font-color: $header-font-color;
+        line-height: $header-line-height;
+        margin-top: $header-line-height;
+        margin-bottom: $header-bottom-margin;
+        text-rendering: $header-text-rendering;
+        font-size: $h2-font-size;
+    }
+}

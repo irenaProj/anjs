@@ -17,7 +17,7 @@ $lal-menu-text-color: #555658;
 .flat-mega-menu a,
 .flat-mega-menu p,
 .flat-mega-menu img,
-.flat-mega-menu h2 {
+.flat-mega-menu .menu-heading {
 	margin: 0;
 	padding: 0;
 	display: block;
@@ -355,14 +355,14 @@ $lal-menu-text-color: #555658;
 }
 
 /* h2 layout */
-.flat-mega-menu h2 {
+.flat-mega-menu .menu-heading {
 	color: #535456;
 	font-size: 1.2em;
 	font-weight: normal;
 	padding: 15px 5px 0 10%;
 }
 
-.flat-mega-menu	h2:not(:first-child) {
+.flat-mega-menu	.menu-heading:not(:first-child) {
 	margin-top: 2em;
 }
 
