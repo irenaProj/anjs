@@ -1,78 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="qa">
-
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>QA - Do Quizes and Manage Questions | Learn to Live</title>
+        <title>AngularJS - Summary Material and Exercises| Live to Learn</title>
         <link rel="stylesheet" href="/stylesheets/app.css" />
-
-        <!-- Code Highlighter -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
         <script src="/js/modernizr.js"></script>
-        <script src="/js/angular.js"></script>
-
-        <!-- XEditable support -->
-        <link href="/stylesheets/xeditable.css" rel="stylesheet">
-        <script src="/js/xeditable.min.js"></script>
-
-        <!-- Firebase support -->
-        <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
-        <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
-
-        <!-- Code highlighting, see:  http://ngmodules.org/modules/angular-highlightjs -->
-        <script src="/js/angular-highlightjs.min.js"></script>
-        <script>
-            angular.module("qa", ["hljs", "xeditable", "customFilters", "quiz", "ngRoute", "firebase"])
-                .config(function($routeProvider) {
-                    $routeProvider.when("/quiz", {
-                        templateUrl: "/qa-data/views/quizReview.html"
-                    });
-
-                    $routeProvider.when("/qa", {
-                        templateUrl: "/qa-data/views/ticketsList.html"
-                    });
-
-                    $routeProvider.when("/complete", {
-                        templateUrl: "/qa-data/views/thankYou.html"
-                    });
-
-                    $routeProvider.when("/doQuiz", {
-                        templateUrl: "/qa-data/views/doQuiz.html"
-                    });
-
-                    $routeProvider.when("/login", {
-                        templateUrl: "/qa-data/views/mgmt/login.html"
-                    });
-
-                    $routeProvider.when("/qaAdmin", {
-                        templateUrl: "/qa-data/views/mgmt/ticketsMgmt.html"
-                    });
-
-                    $routeProvider.when("/qaAdd", {
-                        templateUrl: "/qa-data/views/mgmt/addTickets.html"
-                    });
-
-                    $routeProvider.otherwise("/qa", {
-                        templateUrl: "/qa-data/views/ticketsList.html"
-                    });
-                });
-
-        </script>
-        <script type="text/javascript" src="controllers/qa.js"></script>
-        <script type="text/javascript" src="filters/customFilters.js"></script>
-        <script type="text/javascript" src="controllers/topicListControllers.js"></script>
-        <script type="text/javascript" src="controllers/quizReviewControllers.js"></script>
-        <script type="text/javascript" src="controllers/mgmtControllers.js"></script>
-        <script type="text/javascript" src="components/quiz/quiz.js"></script>
-        <script type="text/javascript" src="/js/angular-route.min.js"></script>
-        <script type="text/javascript" src="/js/angular-cookies.min.js"></script>
     </head>
-
-    <body ng-controller="qaCtrl">
+    <body>
         <div class="menu-row">
             <div class="row">
                 <div class="large-12 columns menu">
@@ -130,24 +65,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="small-12 medium-8 large-9 columns">
-                <quiz-summary />
-            </div>
-            <div class="small-12 medium-4 large-3 columns end">
-                <a href="#/login" ng-click="setTicketsMgmtActive(true)" ng-hide="isAdminActive" class="button radius small right">Q&amp;A Admin</a>
-                <a href="#/qa" ng-click="setTicketsMgmtActive(false)" ng-show="isAdminActive" class="button radius small right">Back to Tickets</a>
-            </div>
+            <h1>AngularJS Summary Materials</h1>
         </div>
         <div class="row">
-            <div class="alert small-12 columns end" ng-show="data.error">
-                Error: {{data.error}}. Q&amp;A was not loaded.
+            <div class="small-12 medium-8 columns end">
             </div>
         </div>
-
-        <ng-view />
 
         <script src="/js/jquery-2.1.3.min.js"></script>
         <script src="/bower_components/foundation/js/foundation.min.js"></script>
         <script src="/js/app.js"></script>
-     </body>
+    </body>
 </html>
