@@ -9537,7 +9537,7 @@ th.hide-for-touch {
 /* line 293, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width ul li {
   margin: 0;
-  padding: 8px 0;
+  padding: 6px 0;
   float: left;
   width: 100%;
 }
@@ -9612,7 +9612,7 @@ th.hide-for-touch {
   color: #535456;
   font-size: 1.2em;
   font-weight: normal;
-  padding: 15px 5px 5px 10%;
+  padding: 15px 5px 0 10%;
 }
 
 /* line 365, ../scss/components/_menu.scss */
