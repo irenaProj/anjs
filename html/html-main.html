@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AngularJS - Summary Material | Live to Learn</title>
+        <title>HTML - Summary Material | Live to Learn</title>
         <link rel="stylesheet" href="/stylesheets/app.css" />
         <script src="/js/modernizr.js"></script>
     </head>
@@ -66,71 +66,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="small-12 columns end">
-                <h1 class="text-center">AngularJS Summary Materials</h1>
-                <p>
-                    Used sourses:
-                    <ul>
-                        <li>AngularJS Developer Guide, see <a href="https://docs.angularjs.org/guide">here</a> </li>
-                        <li>Pro AngularJS, by Adam Freeman, see <a href="http://www.apress.com/9781430264484">here</a> </li>
-                    </ul>
-                </p>
-            </div>
+            <h1 class="text-center">HTML Summary Materials</h1>
         </div>
         <div class="row">
             <div id="page-content"  class="small-12 medium-4 columns end">
             </div>
             <div class="small-12 medium-8 columns end">
                 <section>
-                    <h2>AngularJS Application Structure</h2>
+                    <h2><code>&lt;section&gt;</code> vs. <code>&lt;div&gt;</code></h2>
                     <p>
-                        AngularJS apps follow the MVC pattern and thus consist of 3 parts:
-                        <ul>
-                            <li>Model - application data, including support for CRUD operations on data via RESTful services. </li>
-                            <li>View - data and logic to present the data to user. </li>
-                            <li>Controllers - business logic - operations on model based on user interactions, including preparing data for the view. </li>
-                        </ul> 
-                    </p>
-                </section>
-                <section>
-                    <h2>Module</h2>
-                    <p>
-                        Module is a container for different app parts: controllers, services, filters, etc.
+                        From the spec: <br />
 
-                        In scalable applications it is recommended that app will be broken into modules like this:
-                        <ul>
-                            <li>A module for each feature</li>
-                            <li>A module for each reusable component (especially directives and filters)</li>
-                            <li>And an application level module which depends on the above modules and contains any initialization code.</li>
-                        </ul>
-                        To set the scope of a module use the <code>ng-app</code> attribute.
+                        The <code>section</code> element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.
                     </p>
-                    <h3>Creation vs Retrieval</h3>
                     <p>
-                        <pre>angular.module('myModule', [])</pre> - will create the module <code>myModule</code> and overwrite any existing <code>myModule</code>.<br /><br />
-                        <pre>angular.module('myModule')</pre> - will retrieve an existing <code>myModule</code>
+                        <strong>Note: The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element's contents would be listed explicitly in the document's outline.</strong>
                     </p>
-                    <h3>Configuration and Run Blocks</h3>
                     <p>
-                        <pre>
-angular.module('myModule', []).
-    config(function(injectables) { // provider-injector
-      // This is an example of config block.
-      // You can have as many of these as you want.
-      // You can only inject Providers (not instances)
-      // into config blocks.
-    }).
-    run(function(injectables) { // instance-injector
-      // This is an example of a run block.
-      // You can have as many of these as you want.
-      // You can only inject instances (not Providers)
-      // into run blocks
-    });
-                        </pre>
-
-                        When bootstrapping, first Angular applies all constant definitions. Then Angular applies configuration blocks in the same order they were registered. <br /><br />
-
-                        A run block is the code which needs to run to kickstart the application. It is executed after all of the services have been configured and the injector has been created.
+                        The <code>div</code> element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.
+                    </p>
+                    <p>
+                        <strong>Note: Authors are strongly encouraged to view the div element as an element of last resort, for when no other element is suitable. Use of the div element instead of more appropriate elements leads to poor accessibility for readers and poor maintainability for authors.</strong>
                     </p>
                 </section>
                 <section>
@@ -143,55 +99,7 @@ angular.module('myModule', []).
                     <p>
                     </p>
                 </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                    </p>
-                </section>
-                <section>
-                    <h2>RESTFul Services</h2>
-                    <p>
-                       From Wikipedia: Representational State Transfer (REST) is an architecture style or design pattern used as a set of guidelines for creating web services which allow anything connected to a network to communicate with one another via HTTP. RESTful web services are assumed to transfer data in XML and/or JSON format.
-
-                       HTTP commands are GET, POST, PUT, DELETE etc.
-                    </p>
-                </section>
-           </div>
+            </div>
         </div>
 
         <script src="/js/jquery-2.1.3.min.js"></script>
