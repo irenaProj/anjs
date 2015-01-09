@@ -305,9 +305,60 @@ angular.module('myApp', [])
                             <li><tt>'AEC'</tt> - match either attribute, element or class</li>
                         </ul>
                     </p>
-                        To associate outer scope with directive's inner scope, create <strong>isolate scope</strong>.
-                        <pre>
-                        </pre>
+                        To associate outer scope with directive's inner scope, create <strong>isolate scope</strong>.<br/><br />
+                        Example:
+
+                        <pre class="brush: js">
+angular.module('docsIsolateScopeDirective', [])
+.controller('Controller', ['$scope', function($scope) {
+  $scope.naomi = { name: 'Naomi', address: '1600 Amphitheatre' };
+  $scope.igor = { name: 'Igor', address: '123 Somewhere' };
+}])
+.directive('myCustomer', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      customerInfo: '=info'
+    },
+    templateUrl: 'my-customer-iso.html'
+  };
+});                        </pre>
+                            <pre class="brush: xml">
+<div ng-controller="Controller">
+  <my-customer info="naomi"></my-customer>
+  <hr>
+  <my-customer info="igor"></my-customer>
+</div>
+                            </pre>
+                            Template content:
+                            <pre class="brush: js">
+                                Name: {{customerInfo.name}} Address: {{customerInfo.address}}
+                            </pre>
+                    <p>
+                        The scope option is an object that contains a property for each isolate scope binding. In this case it has just one property:
+                        <ul>
+                            <li>Its name (customerInfo) corresponds to the directive's isolate scope property customerInfo.</li>
+                            <li>Its value (=info) tells $compile to bind to the info attribute.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Another option is to specify <tt>transclude</tt> on directive:
+                        <pre class="brush: js">
+angular.module('docsTransclusionExample', [])
+.controller('Controller', ['$scope', function($scope) {
+  $scope.name = 'Tobias';
+}])
+.directive('myDialog', function() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    scope: {},
+    templateUrl: 'my-dialog.html'
+    }
+  };
+});                        </pre>
+                    </p>
+                        <iframe src="/angularjs/examples/simple-directive/index.html" name="simple-directive"></iframe>
                     <p>
                     </p>
                     <p>
