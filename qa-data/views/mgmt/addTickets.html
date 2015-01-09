@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="small-6 columns">
                     <label>Topic</label>
-                    <input name="topic" placeholder="Enter topic" ng-model="data.newTicket.topic" required />
+                    <select ng-model="data.newTicket.topic" ng-options="item as item for item in topicsArr" required></select>
                     
                     <span class="error" ng-show="newTicketForm.topic.$error.required">
                         Please enter a topic
@@ -45,7 +45,7 @@
                 </div>
                 <div class="small-6 columns end">
                     <label>Level</label>
-                    <input name="level" placeholder="Enter level" ng-model="data.newTicket.level" required />
+                    <select ng-model="data.newTicket.level" ng-options="item as item for item in levelsArr" required></select>
                     
                     <span class="error" ng-show="newTicketForm.level.$error.required">
                         Please enter a level

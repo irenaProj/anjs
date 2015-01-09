@@ -6,6 +6,18 @@ angular.module("qa")
         var ref = new Firebase("https://amber-heat-6599.firebaseio.com/qa");
         $scope.data.qa = $firebase(ref).$asArray();
 
+        // Define topics and levels
+        $scope.topicsArr = ["AngularJS", "CSS", "General", "HTML", "Java", "JavaScript"];
+
+            // {name: "AngularJS"}, 
+            // {name: "CSS"}, 
+            // {name: "General"}, 
+            // {name: "HTML"}, 
+            // {name: "Java"}, 
+            // {name: "JavaScript"}];
+        
+        $scope.levelsArr = ["Easy", "Intermediate", "Advanced"];
+
         // Load quiz from cookies
         quiz.loadQuiz();
 
