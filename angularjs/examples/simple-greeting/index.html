@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple greeting</title>
+
+        <script src="/js/angular.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body ng-app="scopeExample">
+        <div ng-controller="greetController">
+            Your name:
+            <input type="text" ng-model="username">
+            <button ng-click='sayHello()'>Say Hello</button>
+            <p>{{greeting}}</p>
+        </div>
+    </body>
+</html>
