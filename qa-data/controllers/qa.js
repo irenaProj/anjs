@@ -7,15 +7,7 @@ angular.module("qa")
         $scope.data.qa = $firebase(ref).$asArray();
 
         // Define topics and levels
-        $scope.topicsArr = ["AngularJS", "CSS", "General", "HTML", "Java", "JavaScript"];
-
-            // {name: "AngularJS"}, 
-            // {name: "CSS"}, 
-            // {name: "General"}, 
-            // {name: "HTML"}, 
-            // {name: "Java"}, 
-            // {name: "JavaScript"}];
-        
+        $scope.topicsArr = ["AngularJS", "CSS", "General", "HTML", "Java", "JavaScript"];        
         $scope.levelsArr = ["Easy", "Intermediate", "Advanced"];
 
         // Load quiz from cookies

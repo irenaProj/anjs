@@ -1,117 +1,239 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AngularJS - Exercises| Live to Learn</title>
-        <link rel="stylesheet" href="/stylesheets/app.css" />
-        <script src="/js/modernizr.js"></script>
-    </head>
-    <body>
-        <div class="menu-row">
-            <div class="row">
-                <div class="large-12 columns menu">
-                    <nav>
-                        <!-- container -->
-                        <div class="flat-mega-menu">            <!-- flat-mega-menu class -->
 
-                            <label for="mobile-button">&#9776;</label>         <!-- mobile click button to show menu -->
-                            <input id="mobile-button" type="checkbox">                          
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngularJS - Exercises| Live to Learn</title>
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <script src="/js/modernizr.js"></script>
 
-                            <ul class="collapse">                                       <!-- collapse class for collapse the drop down -->
-                                <li class="title"> <a href=""></a> </li>    
-     
-                                <li> <a href="#">Study Materials</a> 
-                                
-                                    <div class="drop-down full-width hover-fade">              <!-- full width drop down with 4 columns -->
-                                    
-                                        <ul>                                        <!-- column one -->
-                                            <li><span class="menu-heading">CSS</span></li>
-                                            <li> <a href="">Learning Material</a> </li>
-                                        </ul>
-                                        
-                                        <ul>                                        <!-- column two -->
-                                            <li><span class="menu-heading">Less</span></li>
-                                            <li> <a href="">Learning Material</a> </li>
-                                            <li><span class="menu-heading">Sass</span></li>
-                                            <li> <a href="">Learning Material</a> </li>
-                                        </ul>
-                                        
-                                        <ul>                                        <!-- column three -->
-                                            <li><span class="menu-heading">JavaScript</span></li>
-                                            <li> <a href="">Learning Material</a> </li>
-                                            <li><span class="menu-heading">jQuery</span></li> 
-                                            <li> <a href="">Learning Material</a> </li>
-                                        </ul>
-                                        
-                                        <ul>                                        <!-- column four -->
-                                            <li><span class="menu-heading">AngularJS</span></li> 
-                                            <li> <a href="/angularjs/angularjs-main.html">Learning Material</a> </li>
-                                            <li> <a href="/angularjs/angularjs-exercises.html">Exercises</a> </li>
-                                            <li><span class="menu-heading">Node.js</span></li> 
-                                            <li> <a href="">Learning Material</a> </li>
-                                        </ul>
-                                    
-                                    </div>                            
-                                </li>
-                                 <li> <a href="/qa-data/qa-main.html">Q&amp;A</a></li>
-                            </ul>
+        <!--        SyntaxHighlight-->
+        <!-- Include required JS files -->
+        <script type="text/javascript" src="/js/sintaxHighlighter/shCore.js"></script>
 
-                        </div>
-                        <!-- container end -->
-                    </nav>
+       <!--
+            At least one brush. You need to include a brush for every
+            language you want to highlight
+        -->
+        <script type="text/javascript" src="/js/sintaxHighlighter/shBrushJScript.js"></script>
+        <script type="text/javascript" src="/js/sintaxHighlighter/shBrushXml.js"></script>
+</head>
+
+<body>
+    <div class="menu-row">
+        <div class="row">
+            <div class="large-12 columns menu">
+                <nav>
+                    <!-- container -->
+                    <div class="flat-mega-menu">
+                        <!-- flat-mega-menu class -->
+
+                        <label for="mobile-button">&#9776;</label>
+                        <!-- mobile click button to show menu -->
+                        <input id="mobile-button" type="checkbox">
+
+                        <ul class="collapse">
+                            <!-- collapse class for collapse the drop down -->
+                            <li class="title">
+                                <a href=""></a>
+                            </li>
+
+                            <li> <a href="#">Study Materials</a>
+
+                                <div class="drop-down full-width hover-fade">
+                                    <!-- full width drop down with 4 columns -->
+
+                                    <ul>
+                                        <!-- column one -->
+                                        <li><span class="menu-heading">CSS</span>
+                                        </li>
+                                        <li> <a href="">Learning Material</a> </li>
+                                    </ul>
+
+                                    <ul>
+                                        <!-- column two -->
+                                        <li><span class="menu-heading">Less</span>
+                                        </li>
+                                        <li> <a href="">Learning Material</a> </li>
+                                        <li><span class="menu-heading">Sass</span>
+                                        </li>
+                                        <li> <a href="">Learning Material</a> </li>
+                                    </ul>
+
+                                    <ul>
+                                        <!-- column three -->
+                                        <li><span class="menu-heading">JavaScript</span>
+                                        </li>
+                                        <li> <a href="">Learning Material</a> </li>
+                                        <li><span class="menu-heading">jQuery</span>
+                                        </li>
+                                        <li> <a href="">Learning Material</a> </li>
+                                    </ul>
+
+                                    <ul>
+                                        <!-- column four -->
+                                        <li><span class="menu-heading">AngularJS</span>
+                                        </li>
+                                        <li> <a href="/angularjs/angularjs-main.html">Learning Material</a> </li>
+                                        <li> <a href="/angularjs/angularjs-exercises.html">Exercises</a> </li>
+                                        <li><span class="menu-heading">Node.js</span>
+                                        </li>
+                                        <li> <a href="">Learning Material</a> </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li> <a href="/qa-data/qa-main.html">Q&amp;A</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- container end -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="text-center">AngularJS Practical Exercises</h1>
+    </div>
+    <div class="row">
+        <div id="page-content" class="small-12 medium-4 columns end">
+        </div>
+        <div class="small-12 medium-8 columns end">
+            <section>
+                <h2>Simple Greeting</h2>
+                <dl class="tabs" data-tab>
+                    <dd class="active"><a href="#panel1">script.js</a>
+                    </dd>
+                    <dd><a href="#panel2">index.html</a>
+                    </dd>
+                </dl>
+                <div class="tabs-content">
+                    <div class="content active" id="panel1">
+                        <pre class="brush: js">
+                            angular.module('scopeExample', [])
+                              .controller('greetController', ['$scope', function($scope) {
+                                $scope.username = 'World';
+
+                                $scope.sayHello = function() {
+                                  $scope.greeting = 'Hello ' + $scope.username + '!';
+                                };
+                              }]);
+                        </pre>
+                    </div>
+                    <div class="content" id="panel2">
+                        <pre class="brush: xml">
+                            &lt;body ng-app="scopeExample"&gt;
+                                <div ng-controller="greetController">
+                                    Your name:
+                                    <input type="text" ng-model="username">
+                                    <button ng-click='sayHello()'>Say Hello</button>
+                                    <p>{{greeting}}</p>
+                                </div>
+                            &lt;/body&gt;
+                        </pre>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <h1 class="text-center">AngularJS Practical Exercises</h1>
-        </div>
-        <div class="row">
-            <div id="page-content"  class="small-12 medium-4 columns end">
-            </div>
-            <div class="small-12 medium-8 columns end">
-                <section>
-                    <h2>Simple Greeting</h2>
-                    <p>
-                        <iframe src="/angularjs/examples/simple-greeting/index.html" name="simple-greeting"></iframe>
-                    </p>
-                </section>
-                <section>
-                    <h2>Simple Directive</h2>
-                    <p>
-                        <iframe src="/angularjs/examples/simple-directive/index.html" name="simple-directive"></iframe>
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                        
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                        
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                        
-                    </p>
-                </section>
-                <section>
-                    <h2></h2>
-                    <p>
-                        
-                    </p>
-                </section>
-            </div>
-        </div>
+                <p>
+                    <iframe src="/angularjs/examples/simple-greeting/index.html" name="simple-greeting"></iframe>
+                </p>
+            </section>
+            <section>
+                <h2>Simple Directive</h2>
+                <dl class="tabs" data-tab>
+                    <dd class="active"><a href="#panel3">script.js</a>
+                    </dd>
+                    <dd><a href="#panel4">index.html</a>
+                    </dd>
+                    <dd><a href="#panel5">my-dialog-close.html</a>
+                    </dd>
+                </dl>
+                <div class="tabs-content">
+                    <div class="content active" id="panel3">
+                        <pre class="brush: js">
+                            angular.module('docsIsoFnBindExample', [])
+                            .controller('Controller', ['$scope', '$timeout', function($scope, $timeout) {
+                              $scope.name = 'Tobias';
+                              $scope.hideDialog = function () {
+                                $scope.dialogIsHidden = true;
+                                $timeout(function () {
+                                  $scope.dialogIsHidden = false;
+                                }, 2000);
+                              };
+                            }])
+                            .directive('myDialog', function() {
+                              return {
+                                restrict: 'E',
+                                transclude: true,
+                                scope: {
+                                  'close': '&onClose'
+                                },
+                                templateUrl: 'my-dialog-close.html'
+                              };
+                            });                        
+                        </pre>
+                    </div>
+                    <div class="content" id="panel4">
+                        <pre class="brush: xml">
+                            &lt;body ng-app="docsIsoFnBindExample"&gt;
+                                <div ng-controller="Controller">
+                                  <my-dialog ng-hide="dialogIsHidden" on-close="hideDialog()">
+                                    Check out the contents, {{name}}!
+                                  </my-dialog>
+                                </div>
+                            &lt;/body&gt;
+                        </pre>
+                    </div>
+                    <div class="content" id="panel5">
+                        <pre class="brush: xml">
+                            <div class="alert">
+                              <a href class="close" ng-click="close()">&times;</a>
+                              <div ng-transclude></div>
+                            </div>                        
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    <iframe src="/angularjs/examples/simple-directive/index.html" name="simple-directive"></iframe>
+                </p>
+            </section>
+            <section>
+                <h2></h2>
+                <p>
 
-        <script src="/js/jquery-2.1.3.min.js"></script>
-        <script src="/bower_components/foundation/js/foundation.min.js"></script>
-        <script src="/js/app.js"></script>
-        <script src="/js/toc.js"></script>
-    </body>
+                </p>
+            </section>
+            <section>
+                <h2></h2>
+                <p>
+
+                </p>
+            </section>
+            <section>
+                <h2></h2>
+                <p>
+
+                </p>
+            </section>
+            <section>
+                <h2></h2>
+                <p>
+
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="/js/jquery-2.1.3.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/toc.js"></script>
+        
+    <!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+    <script type="text/javascript">
+         SyntaxHighlighter.all();
+    </script>    
+</body>
+
 </html>
