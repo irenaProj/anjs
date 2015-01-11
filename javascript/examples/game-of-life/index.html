@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <script src="/js/modernizr.js"></script>
+    <script src="the-game-of-life-const.js"></script>
+    <script src="the-game-of-life-patterns.js"></script>
+    <script src="the-game-of-life.js"></script>
+</head>
+
+<body>
+    <div class="row game-of-life">
+        <div class="small-12 columns end">
+            <h2>Still live forms</h2>
+        </div>
+        <div class="small-6 medium-3 columns">
+            <div class="gol-canvas-small">
+                <canvas class="frame" id="lifeCanvas_block" width="48" height="48" onclick="setSelectedLife('block')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Block</span>
+        </div>
+        <div class="small-6 medium-3 columns">
+            <div class="gol-canvas-small">
+                <canvas class="frame" id="lifeCanvas_integral" width="56" height="56" onclick="setSelectedLife('integral')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Integral</span>
+        </div>
+        <div class="small-6 medium-3 columns">
+            <div class="gol-canvas-small">
+                <canvas class="frame" id="lifeCanvas_long_boat" width="64" height="64" onclick="setSelectedLife('long_boat')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Long Boat</span>
+        </div>
+        <div class="small-6 medium-3 columns end">
+            <div class="gol-canvas-small">
+                <canvas class="frame" id="lifeCanvas_boat_tie" width="64" height="64" onclick="setSelectedLife('boat_tie')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Boat Tie</span>
+        </div>
+        <div class="small-12 columns end">
+            <h2>Oscillators</h2>
+        </div>
+        <div class="small-6 large-3 columns">
+            <div class="gol-canvas">
+                <canvas class="frame" id="lifeCanvas_blinker" width="56" height="56" onclick="setSelectedLife('blinker')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Blinker</span>
+        </div>
+        <div class="small-6 large-3 columns">
+            <div class="gol-canvas">
+                <canvas class="frame" id="lifeCanvas_pulsar" width="136" height="136" onclick="setSelectedLife('pulsar')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Pulsar</span>
+        </div>
+        <div class="small-6 large-3 columns">
+            <div class="gol-canvas">
+                <canvas class="frame" id="lifeCanvas_worker_bee" width="144" height="144" onclick="setSelectedLife('worker_bee')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Worker bee</span>
+        </div>
+        <div class="small-6 large-3 columns end">
+            <div class="gol-canvas">
+                <canvas class="frame" id="lifeCanvas_pentadecathlon" width="144" height="144" onclick="setSelectedLife('pentadecathlon')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Pentadecathlon</span>
+        </div>
+        <button id="playOscillators" class="button tiny radius" onclick="playOscillators()">Play Oscillators</button>
+        <div class="small-12 columns end">
+            <h2>Complex forms</h2>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <div class="gol-canvas-large">
+                <canvas class="frame" id="lifeCanvas_gourmet" width="248" height="210" onclick="setSelectedLife('gourmet')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Gourmet</span>
+        </div>
+        <div class="small-12 medium-6 columns end">
+            <div class="gol-canvas-large">
+                <canvas class="frame" id="lifeCanvas_gosper_gun" width="296" height="210" onclick="setSelectedLife('gosper_gun')"></canvas>
+            </div>
+            
+            <span class="canvas-description">Gosper gun</span>
+        </div>
+        <div class="small-12 columns end">
+            <h2>Life Playground</h2>
+            <p>
+                <ol>
+                    <li>Select a pattern above by clicking on it</li>
+                    <li>Click on canvas below to insert the pattern</li>
+                    <li>Press "Start" to initiate life development</li>
+                </ol>
+                Note: you can insert multiple patterns into the canvas.
+            </p>
+            <canvas class="gol-canvas-large" id="lifeCanvas_main" width="400" height="400" onmousedown="copyPattern(event)" />
+        </div>
+        <div class="small-12 columns end">
+            <button id="btnPlayMain" class="button tiny radius" onclick="playMain()">Start</button>
+            <button id="btnClearmain" class="button tiny radius" onclick="clearMain()">Reset</button>
+        </div>
+    </div>
+
+    <script src="/js/jquery-2.1.3.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        displayInit();
+    </script>              
+</body>
+
+</html>
