@@ -10608,6 +10608,11 @@ th.hide-for-touch {
   border-bottom: 1px dashed #2a6496;
 }
 
+/* line 1, ../scss/examples/_examples-common.scss */
+.example-iframe {
+  min-width: 100%;
+}
+
 /* line 2, ../scss/examples/game-of-life/_styles.scss */
 .game-of-life .canvas-description {
   display: block;
@@ -10634,4 +10639,25 @@ th.hide-for-touch {
 .game-of-life-example {
   min-width: 100%;
   min-height: 500px;
+}
+
+/* line 1, ../scss/examples/_examples-css.scss */
+.lettering-example {
+  height: 40em;
+}
+
+/* line 5, ../scss/examples/_examples-css.scss */
+.css-example-1 {
+  height: 250px;
+}
+
+/* line 9, ../scss/examples/_examples-css.scss */
+.css-example-2 {
+  height: 30em;
+}
+
+/* line 13, ../scss/examples/_examples-css.scss */
+.css-example-3 {
+  height: 20em;
+  width: 100%;
 }
