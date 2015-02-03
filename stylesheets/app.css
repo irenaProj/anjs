@@ -10661,3 +10661,9 @@ th.hide-for-touch {
   height: 20em;
   width: 100%;
 }
+
+/* line 1, ../scss/examples/_examples-angular.scss */
+.coffee-shop-example {
+  width: 100%;
+  height: 40em;
+}
