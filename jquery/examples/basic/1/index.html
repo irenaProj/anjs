@@ -4,13 +4,65 @@
     <meta charset="UTF-8">
     <title>jQuery Example</title>
     <link rel="stylesheet" href="/stylesheets/app.css" />
+   <!--  <link rel="stylesheet" type="text/css" href="tooltip.css" /> -->
     <script src="/js/modernizr.js"></script>
+    <style type="text/css">
+        .section {
+            height: 6em; 
+            border-radius: 10px; 
+            margin: 12px;
+            border: 1px solid #A8A8A8;
+            box-shadow: 1px 1px 0.2em rgba(168, 168, 168, 0.8);
+        }
+
+        #tooltip_container {
+            color: #fff;
+            position: absolute;
+            padding: 20px;
+            max-width: 250px;
+            background-color: rgba(0, 0, 0, .85);
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            display: none;
+        }
+
+        .tooltip-html-source {
+            display: none;
+        }
+
+        .tooltip-image {
+            margin-left: -27px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" type="text/css" href="tooltip_ie.css" />
+    <![endif]-->
 </head>
 <body>
-    <div class="row">
+    <div class="row page">
         <div class="small-12 columns end">
-            <div class="example" style="height:100px;background-color: lightblue;padding:24px;"></div>
-        </div>        
+            <div class="small-12 columns end section" style="background-color: lightblue; ">
+                Top section <a href="#" class="example-tooltip" data-tip-type="text" data-tip-source="This is the logo tip">link</a>
+            </div>    
+            <div class="small-3 columns section" style="background-color: rgb(196, 242, 196);">
+                Left section 
+                <a href="#" data-tip-type="text" data-tip-source="This is a tooltip text" class="example-tooltip">link</a>
+            </div>    
+            <div class="small-3 columns section" style="background-color: lightgrey;">
+                Right section <a href="#" data-tip-type="html" data-tip-source="tooltip-right-section" class="example-tooltip">link</a>
+            </div>    
+        </div>
+        <div id="tooltip_container">
+            This is a tooltip
+        </div>
+        <div class="tooltip-html-source">
+            <div id="tooltip-right-section">
+                <img src="tooltip-info.png" style="float: left;" height="64" width="64" class="tooltip-image"/> <strong><em style="color: #ffe19a;">HTML formatted</em></strong> beautiful tooltip content, with an image
+                <div class="clear-all"></div>
+            </div>
+        </div>
     </div>
     
     <script type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>

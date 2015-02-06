@@ -18,6 +18,7 @@
         -->
     <script type="text/javascript" src="/js/sintaxHighlighter/shBrushJScript.js"></script>
     <script type="text/javascript" src="/js/sintaxHighlighter/shBrushXml.js"></script>
+    <script type="text/javascript" src="/js/sintaxHighlighter/shBrushCss.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                                 <a href=""></a>
                             </li>
 
-                            <li> <a href="#">Study Materials</a>
+                            <li> <a href="#">Study &amp; Practice</a>
 
                                 <div class="drop-down full-width hover-fade">
                                     <!-- full width drop down with 4 columns -->
@@ -94,7 +95,7 @@
 
                                 </div>
                             </li>
-                            <li> <a href="/qa-data/qa-main.html">Q&amp;A</a>
+                            <li> <a href="/qa-data/qa-main.html">Q &amp; A</a>
                             </li>
                         </ul>
 
@@ -112,180 +113,328 @@
         </div>
         <div class="small-12 medium-8 columns end">
             <section>
-                <h2></h2>
+                <h2>jQuery UI</h2>
                 <p>
-                    <h3></h3>
-                    <p>
-                        Basic
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
+                    <h3>Use jQuery to explode the circle</h3>
+                    <iframe class="jquery-example1" src="/jquery/examples/ui/1/index.html"></iframe>
                     <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
+                        <dd class="active"><a href="#panel1">script.js</a>
                         </dd>
-                        <dd><a href="#panel28">index.html</a>
+                        <dd><a href="#panel2">index.html</a>
+                        </dd>
+                        <dd><a href="#panel3">CSS</a>
                         </dd>
                     </dl>
                     <div class="tabs-content">
-                        <div class="content active" id="panel23">
+                        <div class="content active" id="panel1">
                             <pre class="brush: js">
+                                 $(document).ready(function(){
+                                    $('#circle').click(function(){
+                                        $(this).hide("explode", 1000); 
+                                    })
+                                })                            
                             </pre>
                         </div>
-                        <div class="content" id="panel24">
+                        <div class="content" id="panel2">
                             <pre class="brush: xml">
+                                &lt;body&gt;
+                                    <div class="row">
+                                        <div class="small-12 columns end">
+                                            <div id="circle"></div>
+                                        </div>        
+                                    </div>
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel3">
+                            <pre class="brush: css">
+                                #circle {
+                                    width: 200px;
+                                    height: 200px;
+                                    -moz-border-radius: 50%; 
+                                    -webkit-border-radius: 50%; 
+                                    border-radius: 50%;
+                                    background: #4679BD;
+                                }    
                             </pre>
                         </div>
                     </div>
                 </p>
                 <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
+                    <h3>Shopping Cart With Drag/Drop</h3>
+                    <iframe class="jquery-example2" src="/jquery/examples/ui/2/index.html"></iframe>
                     <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
+                        <dd class="active"><a href="#panel4">script.js</a>
                         </dd>
-                        <dd><a href="#panel28">index.html</a>
+                        <dd><a href="#panel5">index.html</a>
+                        </dd>
+                        <dd><a href="#panel6">CSS</a>
                         </dd>
                     </dl>
                     <div class="tabs-content">
-                        <div class="content active" id="panel23">
+                        <div class="content active" id="panel4">
                             <pre class="brush: js">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
-                        </dd>
-                        <dd><a href="#panel28">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
-                        </dd>
-                        <dd><a href="#panel28">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
-                        </dd>
-                        <dd><a href="#panel28">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-            </section>
-            <section>
-                <h2></h2>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
-                        </dd>
-                        <dd><a href="#panel28">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-            </section>
-            <section>
-                <h2></h2>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/jquery/examples/basic/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
-                        </dd>
-                        <dd><a href="#panel28">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-            </section>
-            <section>
-                <h2></h2>
-                <p>
+                                $(document).ready(function() {
+                                   $(".product").draggable({
+                                      'opacity': 0.3,
+                                      'revert': "valid",
+                                      'delay': 200,
+                                      'distance':4,
+                                      'helper':"clone"
+                                   });
+                                   
+                                   $("#cart").droppable({
+                                      'accept':".product",
+                                      'activeClass':"border",
+                                      'drop': function(e,ui){
+                                         $("#numItems").text(new Number($("#numItems").text())+1);
+                                         var ID = $(ui.draggable).attr("id");
+                                         var price = new Number($("#"+ID + " .price").text());
+                                         $("#totalPrice").text(new Number($("#totalPrice").text())+price);
+                                      }
+                                   });
 
+                                });
+                            </pre>
+                        </div>
+                        <div class="content" id="panel5">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                    <div class="row">
+                                        <div class="small-12 columns end">
+                                            <div style="position:relative;border:#000000 solid 2px;padding:6px;min-height:200px;width:570px;" id="shopping-cart">
+                                                <div style="position:absolute;top:0px;left:0px;width:120px;height:auto;padding:6px;font-family:verdana;font-size:12px;">
+                                                    <center>
+                                                        <img src="cart.jpg" id="cart"/>
+                                                        <p><span id="numItems">0</span> items in your cart.</p>
+                                                        <p>Your total is $<span id=totalPrice>0</span>.</p>
+                                                    </center>
+                                                </div>
+                                                <div style="position:relative;top:0px;left:120px;width:450px;height:auto;padding:6px;font-family:verdana;font-size:14px;">
+                                                    <center>
+                                                        <h3>Drag Items Into the Cart To Purchase Them</h3>
+                                                    </center>
+                                                    <p>
+                                                        <div class="product" id="ban"><img src="banana.jpg" align=left> Bananas
+                                                            <p>$<span class=price>1.99</span>
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                    </p>
+                                                    <p>
+                                                        <div class="product" id="app"><img src="apple.jpg" align=left> Apple
+                                                            <p>$<span class=price>0.99</span>
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                    </p>
+                                                    <p>
+                                                        <div class="product" id="kiw"><img src="kiwi.jpg" align=left> Kiwi
+                                                            <p>$<span class=price>2.79</span></p>
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel6">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
                 </p>
+            </section>
+            <section>
+                <h2>Basic jQuery</h2>
+                <p>
+                    <h3>Tooltips</h3>
+                    <iframe class="jquery-example1" src="/jquery/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel1">script.js</a>
+                        </dd>
+                        <dd><a href="#panel2">index.html</a>
+                        </dd>
+                        <dd><a href="#panel3">CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1">
+                            <pre class="brush: js">
+                                $(document).ready(function() {
+                                    $(".example-tooltip").mouseover(function(e) {
+                                        if ($(this).attr("data-tip-type") == "text") {
+                                            $("#tooltip_container").html($(this).attr("data-tip-source"));
+                                        }
+                                        else if ($(this).attr("data-tip-type") == "html") {
+                                            var elemToGet = "#" + $(this).attr("data-tip-source");
+                                            var newHTML = $(elemToGet).html();
+
+                                            $("#tooltip_container").html(newHTML);
+                                        }
+
+                                        $("#tooltip_container").css({"display": "block", "opacity": 0}).animate({opacity: 1}, 250);
+                                    }).mousemove(function(e) {
+                                        var tooltipWidth = $("#tooltip_container").outerWidth();
+                                        var tooltipHeight = $("#tooltip_container").outerHeight();
+                                        var pageWidth = $("body").width();
+
+                                        if (e.pageX > pageWidth / 2) {
+                                            $("#tooltip_container").css("left", (e.pageX - tooltipWidth + 20) + 'px')
+                                        }
+                                        else {
+                                            $("#tooltip_container").css("left", (e.pageX - 20) + 'px');
+                                        }
+
+                                        if (e.pageY > 100) {
+                                            $("#tooltip_container").css("top", (e.pageY - tooltipHeight - 20) + 'px');
+                                        }
+                                        else {
+                                            $("#tooltip_container").css("top", (e.pageY + 20) + 'px');
+                                        }
+
+                                    }).mouseout(function(e) {
+                                        $("#tooltip_container").animate({opacity: 0}, 250, function () {
+                                            $(this).css("display", "none").html("");
+                                        });        
+                                    });
+                                });                            
+                            </pre>
+                        </div>
+                        <div class="content" id="panel2">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                    <div class="row page">
+                                        <div class="small-12 columns end">
+                                            <div class="small-12 columns end section" style="background-color: lightblue; ">
+                                                Top section <a href="#" class="example-tooltip" data-tip-type="text" data-tip-source="This is the logo tip">link</a>
+                                            </div>    
+                                            <div class="small-3 columns section" style="background-color: rgb(196, 242, 196);">
+                                                Left section 
+                                                <a href="#" data-tip-type="text" data-tip-source="This is a tooltip text" class="example-tooltip">link</a>
+                                            </div>    
+                                            <div class="small-3 columns section" style="background-color: lightgrey;">
+                                                Right section <a href="#" data-tip-type="html" data-tip-source="tooltip-right-section" class="example-tooltip">link</a>
+                                            </div>    
+                                        </div>
+                                        <div id="tooltip_container">
+                                            This is a tooltip
+                                        </div>
+                                        <div class="tooltip-html-source">
+                                            <div id="tooltip-right-section">
+                                                <img src="tooltip-info.png" style="float: left;" height="64" width="64" class="tooltip-image"/> <strong><em style="color: #ffe19a;">HTML formatted</em></strong> beautiful tooltip content, with an image
+                                                <div class="clear-all"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel3">
+                            <pre class="brush: css">
+                                .section {
+                                    height: 6em; 
+                                    border-radius: 10px; 
+                                    margin: 12px;
+                                    border: 1px solid #A8A8A8;
+                                    box-shadow: 1px 1px 0.2em rgba(168, 168, 168, 0.8);
+                                }
+
+                                #tooltip_container {
+                                    color: #fff;
+                                    position: absolute;
+                                    padding: 20px;
+                                    max-width: 250px;
+                                    background-color: rgba(0, 0, 0, .85);
+                                    -webkit-border-radius: 12px;
+                                    -moz-border-radius: 12px;
+                                    border-radius: 12px;
+                                    display: none;
+                                }
+
+                                .tooltip-html-source {
+                                    display: none;
+                                }
+
+                                .tooltip-image {
+                                    margin-left: -27px;
+                                }
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+            </section>
+            <section>
+                <h2></h2>
+                <p>
+                    <h3></h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/jquery/examples/ui/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel7">script.js</a>
+                        </dd>
+                        <dd><a href="#panel8">index.html</a>
+                        </dd>
+                        <dd><a href="#panel9">CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel7">
+                            <pre class="brush: js">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel8">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel9">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <h3></h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/jquery/examples/ui/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel10">script.js</a>
+                        </dd>
+                        <dd><a href="#panel11">index.html</a>
+                        </dd>
+                        <dd><a href="#panel12">CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel10">
+                            <pre class="brush: js">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel11">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel12">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+            </section>
+            <section>
+                <h2></h2>
             </section>
         </div>
     </div>

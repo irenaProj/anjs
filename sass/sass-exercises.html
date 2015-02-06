@@ -16,7 +16,7 @@
             At least one brush. You need to include a brush for every
             language you want to highlight
         -->
-    <script type="text/javascript" src="/js/sintaxHighlighter/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/js/sintaxHighlighter/shBrushCss.js"></script>
     <script type="text/javascript" src="/js/sintaxHighlighter/shBrushXml.js"></script>
 </head>
 
@@ -39,7 +39,7 @@
                                 <a href=""></a>
                             </li>
 
-                            <li> <a href="#">Study Materials</a>
+                            <li> <a href="#">Study &amp; Practice</a>
 
                                 <div class="drop-down full-width hover-fade">
                                     <!-- full width drop down with 4 columns -->
@@ -94,7 +94,7 @@
 
                                 </div>
                             </li>
-                            <li> <a href="/qa-data/qa-main.html">Q&amp;A</a>
+                            <li> <a href="/qa-data/qa-main.html">Q &amp; A</a>
                             </li>
                         </ul>
 
@@ -112,15 +112,282 @@
         </div>
         <div class="small-12 medium-8 columns end">
             <section>
-                <h2></h2>
+                <h2>Basic Sass</h2>
                 <p>
+                    <h3>Directives</h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel1">index.html</a>
+                        </dd>
+                        <dd><a href="#panel2">Sass</a>
+                        </dd>
+                        <dd><a href="#panel3">Compiled CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                    <div class="row">
+                                        <div class="small-12 columns end example-1-item-1">Item 1</div>
+                                    </div>
+                                    <div class="row">        
+                                        <div class="small-12 columns end example-1-item-2">Item 2</div>        
+                                    </div>
+                                    <div class="row">        
+                                        <div class="small-12 columns end example-1-item-3">Item 3</div>        
+                                    </div>
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel2">
+                            <pre class="brush: css">
+                                $base-color: lightblue;
 
+                                @function example-1-calc-height($width: 5em) {
+                                    @return $width * 9 / 16;
+                                }
+
+                                @mixin example-1($example-1-font-size: 16px) {
+                                    $factor: $example-1-font-size / 8px;
+                                    font-size: $example-1-font-size;
+                                    background-color: darken($base-color, 15% * ($factor));
+                                    margin: $example-1-font-size 12px;
+                                    border-radius: $factor * 2px;
+                                    box-shadow: 1px * $factor 1px * $factor 0.2em * $factor rgba(0, 0, 0, 1 - 0.2 * $factor);
+                                    border: 1px solid darken($base-color, 25% * ($factor));
+                                  
+                                    @if $example-1-font-size <= 10px {
+                                        font-family: Arial, sans-serif;
+                                        width: 5em;
+                                        height: example-1-calc-height();
+                                                
+                                    }
+                                    @else if $example-1-font-size <= 16px {
+                                        font-family: Helvetica, sans-serif;
+                                        width: 6em;
+                                        height: example-1-calc-height(6em);
+                                    }
+                                    @else {
+                                        font-family: Verdana, sans-serif;
+                                        width: 7em;
+                                        height: example-1-calc-height(7em);
+                                    }
+                                }
+
+                                @for $i from 1 through 3 {
+                                    .example-1-item-#{$i} {
+                                        $example-1-font-size: 8px * $i;
+
+                                        @include example-1($example-1-font-size);
+                                    }
+                                }
+                            </pre>
+                        </div>
+                        <div class="content" id="panel3">
+                            <pre class="brush: css">
+                                /* line 36, ../scss/examples/_examples-sass.scss */
+                                .example-1-item-1 {
+                                  font-size: 8px;
+                                  background-color: #72bcd4;
+                                  margin: 8px 12px;
+                                  border-radius: 2px;
+                                  box-shadow: 1px 1px 0.2em rgba(0, 0, 0, 0.8);
+                                  border: 1px solid #4baac8;
+                                  font-family: Arial, sans-serif;
+                                  width: 5em;
+                                  height: 2.8125em;
+                                }
+
+                                /* line 36, ../scss/examples/_examples-sass.scss */
+                                .example-1-item-2 {
+                                  font-size: 16px;
+                                  background-color: #3a9fc0;
+                                  margin: 16px 12px;
+                                  border-radius: 4px;
+                                  box-shadow: 2px 2px 0.4em rgba(0, 0, 0, 0.6);
+                                  border: 1px solid #235e71;
+                                  font-family: Helvetica, sans-serif;
+                                  width: 6em;
+                                  height: 3.375em;
+                                }
+
+                                /* line 36, ../scss/examples/_examples-sass.scss */
+                                .example-1-item-3 {
+                                  font-size: 24px;
+                                  background-color: #296e85;
+                                  margin: 24px 12px;
+                                  border-radius: 6px;
+                                  box-shadow: 3px 3px 0.6em rgba(0, 0, 0, 0.4);
+                                  border: 1px solid #050d10;
+                                  font-family: Verdana, sans-serif;
+                                  width: 7em;
+                                  height: 3.9375em;
+                                }
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <h3>Directives</h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel4">index.html</a>
+                        </dd>
+                        <dd><a href="#panel5">Sass</a>
+                        </dd>
+                        <dd><a href="#panel6">Compiled CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel4">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel5">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel6">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <h3>Directives</h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel7">index.html</a>
+                        </dd>
+                        <dd><a href="#panel8">Sass</a>
+                        </dd>
+                        <dd><a href="#panel9">Compiled CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel7">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel8">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel9">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <h3>Directives</h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel10">index.html</a>
+                        </dd>
+                        <dd><a href="#panel11">Sass</a>
+                        </dd>
+                        <dd><a href="#panel12">Compiled CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel10">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel11">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel12">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <h3>Directives</h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel13">index.html</a>
+                        </dd>
+                        <dd><a href="#panel14">Sass</a>
+                        </dd>
+                        <dd><a href="#panel15">Compiled CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel13">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel14">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel15">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
                 </p>
             </section>
             <section>
                 <h2></h2>
                 <p>
-
+                    <h3>Directives</h3>
+                    <p>
+                        
+                    </p>            
+                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <dl class="tabs" data-tab>
+                        <dd class="active"><a href="#panel16">index.html</a>
+                        </dd>
+                        <dd><a href="#panel17">Sass</a>
+                        </dd>
+                        <dd><a href="#panel18">Compiled CSS</a>
+                        </dd>
+                    </dl>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel16">
+                            <pre class="brush: xml">
+                                &lt;body&gt;
+                                &lt;/body&gt;
+                            </pre>
+                        </div>
+                        <div class="content" id="panel17">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                        <div class="content" id="panel18">
+                            <pre class="brush: css">
+                            </pre>
+                        </div>
+                    </div>
                 </p>
             </section>
             <section>

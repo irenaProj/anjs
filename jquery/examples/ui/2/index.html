@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Example</title>
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <script src="/js/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="small-12 columns end">
+            <div style="position:relative;border:#000000 solid 2px;padding:6px;min-height:200px;width:570px;" id="shopping-cart">
+                <div style="position:absolute;top:0px;left:0px;width:120px;height:auto;padding:6px;font-family:verdana;font-size:12px;">
+                    <center>
+                        <img src="cart.jpg" id="cart"/>
+                        <p><span id="numItems">0</span> items in your cart.</p>
+                        <p>Your total is $<span id=totalPrice>0</span>.</p>
+                    </center>
+                </div>
+                <div style="position:relative;top:0px;left:120px;width:450px;height:auto;padding:6px;font-family:verdana;font-size:14px;">
+                    <center>
+                        <h3>Drag Items Into the Cart To Purchase Them</h3>
+                    </center>
+                    <p>
+                        <div class="product" id="ban"><img src="banana.jpg" align=left> Bananas
+                            <p>$<span class=price>1.99</span>
+                        </div>
+                        <br>
+                        <br>
+                    </p>
+                    <p>
+                        <div class="product" id="app"><img src="apple.jpg" align=left> Apple
+                            <p>$<span class=price>0.99</span>
+                        </div>
+                        <br>
+                        <br>
+                    </p>
+                    <p>
+                        <div class="product" id="kiw"><img src="kiwi.jpg" align=left> Kiwi
+                            <p>$<span class=price>2.79</span></p>
+                        </div>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

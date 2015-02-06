@@ -1,0 +1,42 @@
+
+$base-color: lightblue;
+
+@function example-1-calc-height($width: 5em) {
+    @return $width * 9 / 16;
+}
+
+@mixin example-1($example-1-font-size: 16px) {
+    $factor: $example-1-font-size / 8px;
+    font-size: $example-1-font-size;
+    background-color: darken($base-color, 15% * ($factor));
+    margin: $example-1-font-size 12px;
+    border-radius: $factor * 2px;
+    box-shadow: 1px * $factor 1px * $factor 0.2em * $factor rgba(0, 0, 0, 1 - 0.2 * $factor);
+    border: 1px solid darken($base-color, 25% * ($factor));
+  
+    @if $example-1-font-size <= 10px {
+        font-family: Arial, sans-serif;
+        width: 5em;
+        height: example-1-calc-height();
+                
+    }
+    @else if $example-1-font-size <= 16px {
+        font-family: Helvetica, sans-serif;
+        width: 6em;
+        height: example-1-calc-height(6em);
+    }
+    @else {
+        font-family: Verdana, sans-serif;
+        width: 7em;
+        height: example-1-calc-height(7em);
+    }
+}
+
+@for $i from 1 through 3 {
+    .example-1-item-#{$i} {
+        $example-1-font-size: 8px * $i;
+
+        @include example-1($example-1-font-size);
+    }
+}
+

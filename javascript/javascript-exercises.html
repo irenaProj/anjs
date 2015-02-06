@@ -44,7 +44,7 @@
                                 <a href=""></a>
                             </li>
 
-                            <li> <a href="#">Study Materials</a>
+                            <li> <a href="#">Study &amp; Practice</a>
 
                                 <div class="drop-down full-width hover-fade">
                                     <!-- full width drop down with 4 columns -->
@@ -99,7 +99,7 @@
 
                                 </div>
                             </li>
-                            <li> <a href="/qa-data/qa-main.html">Q&amp;A</a>
+                            <li> <a href="/qa-data/qa-main.html">Q &amp; A</a>
                             </li>
                         </ul>
 
@@ -876,12 +876,15 @@
                         </div>
                     </div>
                 </p>
+            </section>
+            <section>
+                <h2>Regular Expressions</h2>
                 <p>
                     <h3></h3>
                     <p>
-                        
+                        Return true if the characters a and b are separated by exactly 3 places anywhere in the string at least once (ie. "lane borrowed" would result in true because there is exactly three characters between a and b). Otherwise return false.
                     </p>            
-                    <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
+                    <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel23">script.js</a>
                         </dd>
@@ -891,10 +894,38 @@
                     <div class="tabs-content">
                         <div class="content active" id="panel23">
                             <pre class="brush: js">
+                                function ABCheck(e) {
+                                    if (e.keyCode === 13) {
+                                        var str = document.getElementById("input").value;
+                                        var outputElem = document.getElementById("output");
+                                        var re = /a...b/;
+
+                                        if (str.search(re) != -1) {
+                                            outputElem.innerHTML = "true";
+                                        } 
+                                        else {
+                                            outputElem.innerHTML = "false";
+                                        }        
+                                    }
+                                }
+
+                                document.getElementById("input").addEventListener("keypress", ABCheck);
                             </pre>
                         </div>
                         <div class="content" id="panel24">
                             <pre class="brush: xml">
+                                <div class="row">
+                                    <div class="small-12 medium-4 large-3 columns end">
+                                        <label>Input string to check and press &#9166;:<br/>
+                                            <input id="input" type="text" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-4 medium-3 large-2 columns end">
+                                        <div id="output"></div>
+                                    </div>
+                                </div>
                             </pre>
                         </div>
                     </div>
@@ -904,7 +935,7 @@
                     <p>
                         
                     </p>            
-                    <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
+                    <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel25">script.js</a>
                         </dd>
@@ -927,7 +958,7 @@
                     <p>
                         
                     </p>            
-                    <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
+                    <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel27">script.js</a>
                         </dd>
@@ -958,11 +989,11 @@
                         </dd>
                     </dl>
                     <div class="tabs-content">
-                        <div class="content active" id="panel23">
+                        <div class="content active" id="panel29">
                             <pre class="brush: js">
                             </pre>
                         </div>
-                        <div class="content" id="panel24">
+                        <div class="content" id="panel30">
                             <pre class="brush: xml">
                             </pre>
                         </div>

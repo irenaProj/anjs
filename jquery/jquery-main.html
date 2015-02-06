@@ -39,7 +39,7 @@
                                 <a href=""></a>
                             </li>
 
-                            <li> <a href="#">Study Materials</a>
+                            <li> <a href="#">Study &amp; Practice</a>
 
                                 <div class="drop-down full-width hover-fade">
                                     <!-- full width drop down with 4 columns -->
@@ -94,7 +94,7 @@
 
                                 </div>
                             </li>
-                            <li> <a href="/qa-data/qa-main.html">Q&amp;A</a>
+                            <li> <a href="/qa-data/qa-main.html">Q &amp; A</a>
                             </li>
                         </ul>
 
@@ -111,6 +111,7 @@
                 Used sources:
                 <ul>
                     <li>Mozilla Developer Network, JavaScript Reference, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">here</a> </li>
+                    <li>jQuery documentation, see <a href="http://api.jquery.com/">here</a> </li>
                     <li>Learning jQuery - Fourth Edition, by Jonathan Chaffer, Karl Swedberg, see <a href="http://www.amazon.com/Learning-jQuery-Edition-Jonathan-Chaffer/dp/178216314X">here</a></li>
                 </ul>
             </p>
@@ -121,13 +122,14 @@
         </div>
         <div class="small-12 medium-8 columns end">
             <section>
-                <h2></h2>
-                <p>                   
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                <h2>Optimizing selection</h2>
+                <p>        
+                    When using <tt>$</tt>, the whole page is searched for requested elements, to optimize the lookup we can minimize the lookup scope by supplying context:
+
+                    <pre class="brush: js">
+                        // Only search for "div" elements in ".firstSection"
+                        $("div", ".firstSection"); 
+                    </pre>
                 </p>
             </section>
             <section>
