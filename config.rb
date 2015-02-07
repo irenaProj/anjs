@@ -7,10 +7,10 @@ css_dir = "stylesheets"
 sass_dir = "scss"
 images_dir = "images"
 javascripts_dir = "js"
-generated_images_path = "img-dist"
-generated_images_dir = "img-dist"
-http_generated_images_path = "img-dist"
-http_generated_images_dir = "img-dist"
+# generated_images_path = "images"
+# generated_images_dir = "images"
+# http_generated_images_path = "images"
+# http_generated_images_dir = "images"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

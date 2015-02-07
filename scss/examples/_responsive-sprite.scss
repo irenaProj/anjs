@@ -1,0 +1,37 @@
+/* Mixin for creating a responsive sprite 
+* https://gist.github.com/apauly/7917906
+* 
+* $map - sprite map, created using sprite-map function
+* $img - name of the png file in the map
+* $map-width, $map-height - sprite map physical dimentions, these parameters should be
+*                           calculated rather than passed in - currently not working, code is commented below
+* $img-size-percent - required sprite size
+*
+*/
+@mixin responsive-sprite($map, $img, $img-size-percent: 100%){
+    $icon-file: sprite-file($map, $img);
+    $icon-width: image-width($icon-file);
+    $icon-height: image-height($icon-file);
+     
+/*    $sprite-width: $map-width;
+    $sprite-height: $map-height;
+*/     
+  
+    // Calculate sprite map dimentions - currently not working due to path issues  
+    $sprite-file: sprite-path($map);
+    $sprite-width: image-width($sprite-file);
+    $sprite-height: image-height($sprite-file);
+
+
+    $space-top: floor(nth(sprite-position($map, $img), 2));
+    @if $space-top == 0 {
+        $space-top: 0px
+    }
+     
+    width: $img-size-percent;
+    display: block;
+    height: 0;
+    padding-bottom: ($icon-height / $icon-width) * $img-size-percent;
+    background-size: percentage($sprite-width / $icon-width);
+    background-position: 0 percentage(-1 * $space-top / ( $sprite-height - $icon-height ));
+}

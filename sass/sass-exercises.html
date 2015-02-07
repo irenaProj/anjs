@@ -118,7 +118,7 @@
                     <p>
                         
                     </p>            
-                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <iframe class="sass-iframe-1" src="/sass/examples/basic/1/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel1">index.html</a>
                         </dd>
@@ -131,15 +131,17 @@
                         <div class="content active" id="panel1">
                             <pre class="brush: xml">
                                 &lt;body&gt;
-                                    <div class="row">
-                                        <div class="small-12 columns end example-1-item-1">Item 1</div>
-                                    </div>
-                                    <div class="row">        
-                                        <div class="small-12 columns end example-1-item-2">Item 2</div>        
-                                    </div>
-                                    <div class="row">        
-                                        <div class="small-12 columns end example-1-item-3">Item 3</div>        
-                                    </div>
+                                    <section class="sass-example-1">
+                                        <div class="row">
+                                            <div class="small-12 columns end example-1-item-1">Item 1</div>
+                                        </div>
+                                        <div class="row">        
+                                            <div class="small-12 columns end example-1-item-2">Item 2</div>        
+                                        </div>
+                                        <div class="row">        
+                                            <div class="small-12 columns end example-1-item-3">Item 3</div>        
+                                        </div>
+                                    </section>
                                 &lt;/body&gt;
                             </pre>
                         </div>
@@ -232,11 +234,8 @@
                     </div>
                 </p>
                 <p>
-                    <h3>Directives</h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <h3>Operations on lists</h3>
+                    <iframe class="sass-iframe-2" src="/sass/examples/basic/2/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel4">index.html</a>
                         </dd>
@@ -249,25 +248,111 @@
                         <div class="content active" id="panel4">
                             <pre class="brush: xml">
                                 &lt;body&gt;
+                                    <section class="sass-example-2">
+                                        <div class="row">
+                                            <div class="small-3 columns example-2-square"></div>
+                                            <div class="small-3 columns end example-2-rectangle"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-3 columns example-2-circle"></div>                
+                                            <div class="small-3 columns end example-2-triangle"></div>                
+                                        </div>
+                                    </section>
                                 &lt;/body&gt;
                             </pre>
                         </div>
                         <div class="content" id="panel5">
                             <pre class="brush: css">
+                                $shapes: square rectangle circle triangle;
+                                $colors: red blue green purple;
+
+                                $shape-color: zip($shapes, $colors);
+
+                                @function get-color($shape) {
+                                    @return #{nth(nth($shape-color, index($shapes, $shape)), 2)}
+                                }
+
+                                .example-2-square {
+                                    margin: 10px;
+                                    width: 150px;
+                                    height: 150px;
+                                    background-color: get-color(square);
+                                }
+
+                                .example-2-rectangle {
+                                    margin: 10px;
+                                    width: 300px;
+                                    height: 150px;        
+                                    background-color: get-color(rectangle);
+                                }
+
+                                .example-2-circle {
+                                    margin: 10px;
+                                    width: 150px;
+                                    height: 150px;
+                                    border-radius: 50%;
+                                    background-color: get-color(circle);
+                                }
+
+                                .example-2-triangle {
+                                    margin: 10px;
+                                    padding: 0 !important;
+                                    top: 35px;
+                                    left: 35px;
+                                    width: 0;
+                                    height: 0;
+                                    border-left: 120px solid transparent;
+                                    border-right: 120px solid transparent;
+                                    border-bottom: 120px solid get-color(triangle);
+                                }
                             </pre>
                         </div>
                         <div class="content" id="panel6">
                             <pre class="brush: css">
+                                /* line 55, ../scss/examples/_examples-sass.scss */
+                                .sass-example-2 .example-2-square {
+                                  margin: 10px;
+                                  width: 150px;
+                                  height: 150px;
+                                  background-color: red;
+                                }
+                                /* line 62, ../scss/examples/_examples-sass.scss */
+                                .sass-example-2 .example-2-rectangle {
+                                  margin: 10px;
+                                  width: 300px;
+                                  height: 150px;
+                                  background-color: blue;
+                                }
+                                /* line 69, ../scss/examples/_examples-sass.scss */
+                                .sass-example-2 .example-2-circle {
+                                  margin: 10px;
+                                  width: 150px;
+                                  height: 150px;
+                                  border-radius: 50%;
+                                  background-color: green;
+                                }
+                                /* line 77, ../scss/examples/_examples-sass.scss */
+                                .sass-example-2 .example-2-triangle {
+                                  margin: 10px;
+                                  padding: 0 !important;
+                                  top: 30px;
+                                  left: 35px;
+                                  width: 0;
+                                  height: 0;
+                                  border-left: 120px solid transparent;
+                                  border-right: 120px solid transparent;
+                                  border-bottom: 120px solid purple;
+                                }
                             </pre>
                         </div>
                     </div>
                 </p>
+            </section>
+            <section>
+                <h2>Compass</h2>
                 <p>
-                    <h3>Directives</h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <h3>Build triangles</h3>
+                    <iframe class="sass-iframe-2" src="/sass/examples/basic/3/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel7">index.html</a>
                         </dd>
@@ -280,25 +365,101 @@
                         <div class="content active" id="panel7">
                             <pre class="brush: xml">
                                 &lt;body&gt;
+                                    <section class="sass-example-3">
+                                        <div class="row">
+                                            <div class="small-3 columns triangle-top"></div>                
+                                            <div class="small-3 columns end triangle-bottom"></div>                
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-3 columns triangle-left"></div>
+                                            <div class="small-3 columns end triangle-right"></div>
+                                        </div>
+                                    </section>
                                 &lt;/body&gt;
                             </pre>
                         </div>
                         <div class="content" id="panel8">
                             <pre class="brush: css">
+                                .sass-example-3 {
+                                    @mixin triangle($point-direction) {
+                                        $opposite-direction: opposite-position($point-direction);
+                                        border: 100px solid transparent;
+                                        border-#{$opposite-direction}: 100px solid lightblue;
+                                        border-#{$point-direction}: 0;
+                                        width: 0;
+                                        height: 0;
+                                        margin: 10px;
+                                        padding: 0 !important;
+
+                                        @if $point-direction == left {
+                                            left: 40px;
+                                        }
+                                        @else if $point-direction == right {
+                                            left: 170px;
+                                        }
+                                    }
+
+                                    $triangle-directions: top bottom left right;
+
+                                    @each $triangle-direction in $triangle-directions {
+                                        .triangle-#{$triangle-direction} {
+                                            @include triangle(#{$triangle-direction});
+                                        }
+                                    }
+                                }                            
                             </pre>
                         </div>
                         <div class="content" id="panel9">
                             <pre class="brush: css">
+                                /* line 114, ../scss/examples/_examples-sass.scss */
+                                .sass-example-3 .triangle-top {
+                                  border: 100px solid transparent;
+                                  border-bottom: 100px solid lightblue;
+                                  border-top: 0;
+                                  width: 0;
+                                  height: 0;
+                                  margin: 10px;
+                                  padding: 0 !important;
+                                }
+                                /* line 114, ../scss/examples/_examples-sass.scss */
+                                .sass-example-3 .triangle-bottom {
+                                  border: 100px solid transparent;
+                                  border-top: 100px solid lightblue;
+                                  border-bottom: 0;
+                                  width: 0;
+                                  height: 0;
+                                  margin: 10px;
+                                  padding: 0 !important;
+                                }
+                                /* line 114, ../scss/examples/_examples-sass.scss */
+                                .sass-example-3 .triangle-left {
+                                  border: 100px solid transparent;
+                                  border-right: 100px solid lightblue;
+                                  border-left: 0;
+                                  width: 0;
+                                  height: 0;
+                                  margin: 10px;
+                                  padding: 0 !important;
+                                  left: 40px;
+                                }
+                                /* line 114, ../scss/examples/_examples-sass.scss */
+                                .sass-example-3 .triangle-right {
+                                  border: 100px solid transparent;
+                                  border-left: 100px solid lightblue;
+                                  border-right: 0;
+                                  width: 0;
+                                  height: 0;
+                                  margin: 10px;
+                                  padding: 0 !important;
+                                  left: 170px;
+                                }
                             </pre>
                         </div>
                     </div>
                 </p>
                 <p>
-                    <h3>Directives</h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <h3>Vertical Rhythm</h3>
+                    <iframe class="sass-iframe-3" src="/sass/examples/basic/4/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel10">index.html</a>
                         </dd>
@@ -311,25 +472,112 @@
                         <div class="content active" id="panel10">
                             <pre class="brush: xml">
                                 &lt;body&gt;
+                                    <section class="sass-example-4">
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h1>Compass Tutorials</h1>
+                                                <p>Compass is an open-source CSS authoring framework which uses the Sass stylesheet language to make writing stylesheets powerful and easy.</p>
+                                                <blockquote>Spriting with Compass</blockquote>
+                                                <p>Spriting has never been easier than it is with Compass. You place the sprite images in a folder, import them into your stylesheet, and then you can use the sprite in your selectors in one of several convenient ways.</p>
+                                            </div>
+                                        </div>
+                                    </section>
                                 &lt;/body&gt;
                             </pre>
                         </div>
                         <div class="content" id="panel11">
                             <pre class="brush: css">
+                                .sass-example-4 {
+                                    @import "compass/reset";
+                                    @import "compass";
+
+                                    $base-font-size: 16px;
+                                    $base-line-height: 24px;
+
+                                    @include establish-baseline;
+                                    @include debug-vertical-alignment();
+
+                                    .row {
+                                        width: 100%;
+                                        margin-left: 24px;
+                                        margin-right: auto;
+                                        margin-top: 0;
+                                        margin-bottom: 0;
+                                        max-width: 40rem;
+                                    }
+
+                                    h1 {
+                                        @include adjust-font-size-to(50px);
+                                        @include trailer(2, 50px);
+                                        @include trailing-border(10px, 1, 50px);
+                                    }
+
+                                    blockquote {
+                                        @include adjust-font-size-to(20px);
+                                        @include adjust-leading-to(1, 20px);
+                                        @include rhythm-borders(2px, 1, 20px);
+                                        width: -moz-fit-content;    
+                                        width: -webkit-fit-content;
+                                        width: fit-content;
+                                    }
+
+                                    p {
+                                        @include leader(1);
+                                        @include trailer(1);
+                                    }
+                                }                            
                             </pre>
                         </div>
                         <div class="content" id="panel12">
                             <pre class="brush: css">
+                                .
+                                .
+                                .
+                                /* line 140, ../scss/examples/_examples-sass.scss */
+                                .sass-example-4 .row {
+                                  width: 100%;
+                                  margin-left: 24px;
+                                  margin-right: auto;
+                                  margin-top: 0;
+                                  margin-bottom: 0;
+                                  max-width: 40rem;
+                                }
+                                /* line 149, ../scss/examples/_examples-sass.scss */
+                                .sass-example-4 h1 {
+                                  font-size: 3.125em;
+                                  line-height: 1.44em;
+                                  margin-bottom: 0.96em;
+                                  border-bottom-width: 0.2em;
+                                  border-bottom-style: solid;
+                                  padding-bottom: 0.28em;
+                                }
+                                /* line 155, ../scss/examples/_examples-sass.scss */
+                                .sass-example-4 blockquote {
+                                  font-size: 1.25em;
+                                  line-height: 1.2em;
+                                  line-height: 1.2em;
+                                  border-width: 0.1em;
+                                  border-style: solid;
+                                  padding: 1.1em;
+                                  width: -moz-fit-content;
+                                  width: -webkit-fit-content;
+                                  width: fit-content;
+                                }
+                                /* line 161, ../scss/examples/_examples-sass.scss */
+                                .sass-example-4 p {
+                                  margin-top: 1.5em;
+                                  margin-bottom: 1.5em;
+                                }
                             </pre>
                         </div>
                     </div>
                 </p>
+            </section>
+            <section>
+                <h2>Compas Sprite</h2>
                 <p>
-                    <h3>Directives</h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
+                    <h3>Responsive Sprite</h3>
+                    <iframe class="sass-iframe-2" src="/sass/examples/basic/5/index.html"></iframe>
                     <dl class="tabs" data-tab>
                         <dd class="active"><a href="#panel13">index.html</a>
                         </dd>
@@ -342,64 +590,146 @@
                         <div class="content active" id="panel13">
                             <pre class="brush: xml">
                                 &lt;body&gt;
+                                <section class="sprite-example">
+                                    <div class="row">
+                                        <div class="small-12 columns snow1">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="small-12 columns snow2">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="small-12 columns snow3">
+                                        </div>
+                                    </div>
+                                </section>
                                 &lt;/body&gt;
                             </pre>
                         </div>
                         <div class="content" id="panel14">
                             <pre class="brush: css">
+                                // Create sprite using Compass
+                                @import "compass/utilities/sprites";
+                                 
+                                // Required for correct operation, must be named same as the sprite
+                                $snow-spacing: 40px; 
+
+                                @import "snow/*.png"; 
+                                .sprite-example {
+                                    $map: $snow-sprites;
+
+                                    .snow1 { 
+                                        @include snow-sprite(snow1); 
+                                        @include responsive-sprite($map, snow1, 25%);
+                                        margin: 1em;
+                                    } 
+
+                                    .snow2 { 
+                                        @include snow-sprite(snow2); 
+                                        @include responsive-sprite($map, snow2, 25%);
+                                        margin: 1em;
+                                    } 
+
+                                    .snow3 { 
+                                        @include snow-sprite(snow3); 
+                                        @include responsive-sprite($map, snow3, 25%);
+                                        margin: 1em;
+                                    } 
+                                } 
+
+                                /* Mixin for creating a responsive sprite 
+                                * https://gist.github.com/apauly/7917906
+                                * 
+                                * $map - sprite map, created using sprite-map function
+                                * $img - name of the png file in the map
+                                * $map-width, $map-height - sprite map physical dimentions, these parameters should be
+                                *                           calculated rather than passed in - currently not working, code is commented below
+                                * $img-size-percent - required sprite size
+                                *
+                                */
+                                @mixin responsive-sprite($map, $img, $img-size-percent: 100%){
+                                    $icon-file: sprite-file($map, $img);
+                                    $icon-width: image-width($icon-file);
+                                    $icon-height: image-height($icon-file);
+                                     
+                                /*    $sprite-width: $map-width;
+                                    $sprite-height: $map-height;
+                                */     
+                                  
+                                    // Calculate sprite map dimentions - currently not working due to path issues  
+                                    $sprite-file: sprite-path($map);
+                                    $sprite-width: image-width($sprite-file);
+                                    $sprite-height: image-height($sprite-file);
+
+
+                                    $space-top: floor(nth(sprite-position($map, $img), 2));
+                                    @if $space-top == 0 {
+                                        $space-top: 0px
+                                    }
+                                     
+                                    width: $img-size-percent;
+                                    display: block;
+                                    height: 0;
+                                    padding-bottom: ($icon-height / $icon-width) * $img-size-percent;
+                                    background-size: percentage($sprite-width / $icon-width);
+                                    background-position: 0 percentage(-1 * $space-top / ( $sprite-height - $icon-height ));
+                                }                            
                             </pre>
                         </div>
                         <div class="content" id="panel15">
                             <pre class="brush: css">
+                                /* line 64, snow/*.png */
+                                .snow-sprite, .sprite-example .snow1, .sprite-example .snow2, .sprite-example .snow3 {
+                                  background-image: url('/images/snow-sb662f5911c.png');
+                                  background-repeat: no-repeat;
+                                }
+
+                                /* line 11, ../scss/examples/_examples-sprite.scss */
+                                .sprite-example .snow1 {
+                                  background-position: 0 0;
+                                  /*    $sprite-width: $map-width;
+                                      $sprite-height: $map-height;
+                                  */
+                                  width: 25%;
+                                  display: block;
+                                  height: 0;
+                                  padding-bottom: 14.0%;
+                                  background-size: 100%;
+                                  background-position: 0 0%;
+                                  margin: 1em;
+                                }
+                                /* line 17, ../scss/examples/_examples-sprite.scss */
+                                .sprite-example .snow2 {
+                                  background-position: 0 -208px;
+                                  /*    $sprite-width: $map-width;
+                                      $sprite-height: $map-height;
+                                  */
+                                  width: 25%;
+                                  display: block;
+                                  height: 0;
+                                  padding-bottom: 15.58099%;
+                                  background-size: 105.6338%;
+                                  background-position: 0 48.94118%;
+                                  margin: 1em;
+                                }
+                                /* line 23, ../scss/examples/_examples-sprite.scss */
+                                .sprite-example .snow3 {
+                                  background-position: 0 -425px;
+                                  /*    $sprite-width: $map-width;
+                                      $sprite-height: $map-height;
+                                  */
+                                  width: 25%;
+                                  display: block;
+                                  height: 0;
+                                  padding-bottom: 15.58099%;
+                                  background-size: 105.6338%;
+                                  background-position: 0 100%;
+                                  margin: 1em;
+                                }
                             </pre>
                         </div>
                     </div>
-                </p>
-            </section>
-            <section>
-                <h2></h2>
-                <p>
-                    <h3>Directives</h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe class="jquery-example1" src="/sass/examples/basic/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel16">index.html</a>
-                        </dd>
-                        <dd><a href="#panel17">Sass</a>
-                        </dd>
-                        <dd><a href="#panel18">Compiled CSS</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel16">
-                            <pre class="brush: xml">
-                                &lt;body&gt;
-                                &lt;/body&gt;
-                            </pre>
-                        </div>
-                        <div class="content" id="panel17">
-                            <pre class="brush: css">
-                            </pre>
-                        </div>
-                        <div class="content" id="panel18">
-                            <pre class="brush: css">
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-            </section>
-            <section>
-                <h2></h2>
-                <p>
-
-                </p>
-            </section>
-            <section>
-                <h2></h2>
-                <p>
-
                 </p>
             </section>
         </div>

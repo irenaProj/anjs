@@ -1,0 +1,28 @@
+// Create sprite using Compass
+@import "compass/utilities/sprites";
+ 
+// Required for correct operation, must be named same as the sprite
+$snow-spacing: 40px; 
+
+@import "snow/*.png"; 
+.sprite-example {
+    $map: $snow-sprites;
+
+    .snow1 { 
+        @include snow-sprite(snow1); 
+        @include responsive-sprite($map, snow1, 25%);
+        margin: 1em;
+    } 
+
+    .snow2 { 
+        @include snow-sprite(snow2); 
+        @include responsive-sprite($map, snow2, 25%);
+        margin: 1em;
+    } 
+
+    .snow3 { 
+        @include snow-sprite(snow3); 
+        @include responsive-sprite($map, snow3, 25%);
+        margin: 1em;
+    } 
+} 

@@ -10680,8 +10680,26 @@ th.hide-for-touch {
   height: 30em;
 }
 
-/* line 36, ../scss/examples/_examples-sass.scss */
-.example-1-item-1 {
+/* line 4, ../scss/examples/_examples-sass.scss */
+.sass-iframe-1 {
+  width: 100%;
+  height: 17em;
+}
+
+/* line 9, ../scss/examples/_examples-sass.scss */
+.sass-iframe-2 {
+  width: 100%;
+  height: 22em;
+}
+
+/* line 14, ../scss/examples/_examples-sass.scss */
+.sass-iframe-3 {
+  width: 100%;
+  height: 28em;
+}
+
+/* line 54, ../scss/examples/_examples-sass.scss */
+.sass-example-1 .example-1-item-1 {
   font-size: 8px;
   background-color: #72bcd4;
   margin: 8px 12px;
@@ -10692,9 +10710,8 @@ th.hide-for-touch {
   width: 5em;
   height: 2.8125em;
 }
-
-/* line 36, ../scss/examples/_examples-sass.scss */
-.example-1-item-2 {
+/* line 54, ../scss/examples/_examples-sass.scss */
+.sass-example-1 .example-1-item-2 {
   font-size: 16px;
   background-color: #3a9fc0;
   margin: 16px 12px;
@@ -10705,9 +10722,8 @@ th.hide-for-touch {
   width: 6em;
   height: 3.375em;
 }
-
-/* line 36, ../scss/examples/_examples-sass.scss */
-.example-1-item-3 {
+/* line 54, ../scss/examples/_examples-sass.scss */
+.sass-example-1 .example-1-item-3 {
   font-size: 24px;
   background-color: #296e85;
   margin: 24px 12px;
@@ -10717,4 +10733,252 @@ th.hide-for-touch {
   font-family: Verdana, sans-serif;
   width: 7em;
   height: 3.9375em;
+}
+
+/* line 72, ../scss/examples/_examples-sass.scss */
+.sass-example-2 .example-2-square {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+/* line 79, ../scss/examples/_examples-sass.scss */
+.sass-example-2 .example-2-rectangle {
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+  background-color: blue;
+}
+/* line 86, ../scss/examples/_examples-sass.scss */
+.sass-example-2 .example-2-circle {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: green;
+}
+/* line 94, ../scss/examples/_examples-sass.scss */
+.sass-example-2 .example-2-triangle {
+  margin: 10px;
+  padding: 0 !important;
+  top: 35px;
+  left: 35px;
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 120px solid purple;
+}
+
+/* line 129, ../scss/examples/_examples-sass.scss */
+.sass-example-3 .triangle-top {
+  border: 100px solid transparent;
+  border-bottom: 100px solid lightblue;
+  border-top: 0;
+  width: 0;
+  height: 0;
+  margin: 10px;
+  padding: 0 !important;
+}
+/* line 129, ../scss/examples/_examples-sass.scss */
+.sass-example-3 .triangle-bottom {
+  border: 100px solid transparent;
+  border-top: 100px solid lightblue;
+  border-bottom: 0;
+  width: 0;
+  height: 0;
+  margin: 10px;
+  padding: 0 !important;
+}
+/* line 129, ../scss/examples/_examples-sass.scss */
+.sass-example-3 .triangle-left {
+  border: 100px solid transparent;
+  border-right: 100px solid lightblue;
+  border-left: 0;
+  width: 0;
+  height: 0;
+  margin: 10px;
+  padding: 0 !important;
+  left: 40px;
+}
+/* line 129, ../scss/examples/_examples-sass.scss */
+.sass-example-3 .triangle-right {
+  border: 100px solid transparent;
+  border-left: 100px solid lightblue;
+  border-right: 0;
+  width: 0;
+  height: 0;
+  margin: 10px;
+  padding: 0 !important;
+  left: 170px;
+}
+
+/* line 135, ../scss/examples/_examples-sass.scss */
+.sass-example-4 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 100% 1.5em;
+  background-size: 100% 1.5em;
+  background-size: 100% 1.5em;
+  background-size: 100% 1.5em;
+  background-position: left top;
+}
+/* line 5, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 html, .sass-example-4 body, .sass-example-4 div, .sass-example-4 span, .sass-example-4 applet, .sass-example-4 object, .sass-example-4 iframe,
+.sass-example-4 h1, .sass-example-4 h2, .sass-example-4 h3, .sass-example-4 h4, .sass-example-4 h5, .sass-example-4 h6, .sass-example-4 p, .sass-example-4 blockquote, .sass-example-4 pre,
+.sass-example-4 a, .sass-example-4 abbr, .sass-example-4 acronym, .sass-example-4 address, .sass-example-4 big, .sass-example-4 cite, .sass-example-4 code,
+.sass-example-4 del, .sass-example-4 dfn, .sass-example-4 em, .sass-example-4 img, .sass-example-4 ins, .sass-example-4 kbd, .sass-example-4 q, .sass-example-4 s, .sass-example-4 samp,
+.sass-example-4 small, .sass-example-4 strike, .sass-example-4 strong, .sass-example-4 sub, .sass-example-4 sup, .sass-example-4 tt, .sass-example-4 var,
+.sass-example-4 b, .sass-example-4 u, .sass-example-4 i, .sass-example-4 center,
+.sass-example-4 dl, .sass-example-4 dt, .sass-example-4 dd, .sass-example-4 ol, .sass-example-4 ul, .sass-example-4 li,
+.sass-example-4 fieldset, .sass-example-4 form, .sass-example-4 label, .sass-example-4 legend,
+.sass-example-4 table, .sass-example-4 caption, .sass-example-4 tbody, .sass-example-4 tfoot, .sass-example-4 thead, .sass-example-4 tr, .sass-example-4 th, .sass-example-4 td,
+.sass-example-4 article, .sass-example-4 aside, .sass-example-4 canvas, .sass-example-4 details, .sass-example-4 embed,
+.sass-example-4 figure, .sass-example-4 figcaption, .sass-example-4 footer, .sass-example-4 header, .sass-example-4 hgroup,
+.sass-example-4 menu, .sass-example-4 nav, .sass-example-4 output, .sass-example-4 ruby, .sass-example-4 section, .sass-example-4 summary,
+.sass-example-4 time, .sass-example-4 mark, .sass-example-4 audio, .sass-example-4 video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 html {
+  line-height: 1;
+}
+/* line 24, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 ol, .sass-example-4 ul {
+  list-style: none;
+}
+/* line 26, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 28, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 caption, .sass-example-4 th, .sass-example-4 td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+/* line 30, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 q, .sass-example-4 blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 q:before, .sass-example-4 q:after, .sass-example-4 blockquote:before, .sass-example-4 blockquote:after {
+  content: "";
+  content: none;
+}
+/* line 32, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 a img {
+  border: none;
+}
+/* line 116, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+.sass-example-4 article, .sass-example-4 aside, .sass-example-4 details, .sass-example-4 figcaption, .sass-example-4 figure, .sass-example-4 footer, .sass-example-4 header, .sass-example-4 hgroup, .sass-example-4 main, .sass-example-4 menu, .sass-example-4 nav, .sass-example-4 section, .sass-example-4 summary {
+  display: block;
+}
+/* line 106, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
+.sass-example-4 html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+/* line 145, ../scss/examples/_examples-sass.scss */
+.sass-example-4 .row {
+  width: 100%;
+  margin-left: 24px;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 40rem;
+}
+/* line 154, ../scss/examples/_examples-sass.scss */
+.sass-example-4 h1 {
+  font-size: 3.125em;
+  line-height: 1.44em;
+  margin-bottom: 0.96em;
+  border-bottom-width: 0.2em;
+  border-bottom-style: solid;
+  padding-bottom: 0.28em;
+}
+/* line 160, ../scss/examples/_examples-sass.scss */
+.sass-example-4 blockquote {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  line-height: 1.2em;
+  border-width: 0.1em;
+  border-style: solid;
+  padding: 1.1em;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+/* line 169, ../scss/examples/_examples-sass.scss */
+.sass-example-4 p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Mixin for creating a responsive sprite 
+* https://gist.github.com/apauly/7917906
+* 
+* $map - sprite map, created using sprite-map function
+* $img - name of the png file in the map
+* $map-width, $map-height - sprite map physical dimentions, these parameters should be
+*                           calculated rather than passed in - currently not working, code is commented below
+* $img-size-percent - required sprite size
+*
+*/
+/* line 64, snow/*.png */
+.snow-sprite, .sprite-example .snow1, .sprite-example .snow2, .sprite-example .snow3 {
+  background-image: url('/images/snow-sb662f5911c.png');
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../scss/examples/_examples-sprite.scss */
+.sprite-example .snow1 {
+  background-position: 0 0;
+  /*    $sprite-width: $map-width;
+      $sprite-height: $map-height;
+  */
+  width: 25%;
+  display: block;
+  height: 0;
+  padding-bottom: 14.0%;
+  background-size: 100%;
+  background-position: 0 0%;
+  margin: 1em;
+}
+/* line 17, ../scss/examples/_examples-sprite.scss */
+.sprite-example .snow2 {
+  background-position: 0 -208px;
+  /*    $sprite-width: $map-width;
+      $sprite-height: $map-height;
+  */
+  width: 25%;
+  display: block;
+  height: 0;
+  padding-bottom: 15.58099%;
+  background-size: 105.6338%;
+  background-position: 0 48.94118%;
+  margin: 1em;
+}
+/* line 23, ../scss/examples/_examples-sprite.scss */
+.sprite-example .snow3 {
+  background-position: 0 -425px;
+  /*    $sprite-width: $map-width;
+      $sprite-height: $map-height;
+  */
+  width: 25%;
+  display: block;
+  height: 0;
+  padding-bottom: 15.58099%;
+  background-size: 105.6338%;
+  background-position: 0 100%;
+  margin: 1em;
 }
