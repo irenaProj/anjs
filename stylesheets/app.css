@@ -9130,6 +9130,11 @@ iframe {
   background: -webkit-linear-gradient(top, #d1d1d1 0%, #ECECEC 100%);
 }
 
+/* line 46, ../scss/components/_common-styles.scss */
+.tabs-content > .content.active {
+  background-color: #fff !important;
+}
+
 /*.button.info:focus, button.info:focus {
     background-color: $active-color !important;
     color: #000;

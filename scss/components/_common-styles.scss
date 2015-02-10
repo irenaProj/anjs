@@ -43,6 +43,10 @@ iframe {
     }
 }
 
+.tabs-content > .content.active {
+    background-color: #fff !important;
+}
+
 /*.button.info:focus, button.info:focus {
     background-color: $active-color !important;
     color: #000;
