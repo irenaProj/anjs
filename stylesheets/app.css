@@ -4758,8 +4758,11 @@ label.error {
 /* line 113, ../bower_components/foundation/scss/foundation/components/_joyride.scss */
 .joyride-tip-guide h1,
 .joyride-tip-guide h2,
+.joyride-tip-guide #page-content #page-content-title,
+#page-content .joyride-tip-guide #page-content-title,
 .joyride-tip-guide h3,
 .joyride-tip-guide h4,
+.joyride-tip-guide a[name^="TOCHeader"],
 .joyride-tip-guide h5,
 .joyride-tip-guide h6 {
   line-height: 1.25;
@@ -5391,16 +5394,16 @@ ul.pagination li {
   margin-bottom: 0;
 }
 /* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
+.panel h1, .panel h2, .panel #page-content #page-content-title, #page-content .panel #page-content-title, .panel h3, .panel h4, .panel a[name^="TOCHeader"], .panel h5, .panel h6, .panel p, .panel li, .panel dl {
   color: #333333;
 }
 /* line 68, ../bower_components/foundation/scss/foundation/components/_panels.scss */
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
+.panel h1, .panel h2, .panel #page-content #page-content-title, #page-content .panel #page-content-title, .panel h3, .panel h4, .panel a[name^="TOCHeader"], .panel h5, .panel h6 {
   line-height: 1;
   margin-bottom: 0.625rem;
 }
 /* line 70, ../bower_components/foundation/scss/foundation/components/_panels.scss */
-.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
+.panel h1.subheader, .panel h2.subheader, .panel #page-content .subheader#page-content-title, #page-content .panel .subheader#page-content-title, .panel h3.subheader, .panel h4.subheader, .panel a.subheader[name^="TOCHeader"], .panel h5.subheader, .panel h6.subheader {
   line-height: 1.4;
 }
 /* line 82, ../bower_components/foundation/scss/foundation/components/_panels.scss */
@@ -5422,16 +5425,16 @@ ul.pagination li {
   margin-bottom: 0;
 }
 /* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p, .panel.callout li, .panel.callout dl {
+.panel.callout h1, .panel.callout h2, .panel.callout #page-content #page-content-title, #page-content .panel.callout #page-content-title, .panel.callout h3, .panel.callout h4, .panel.callout a[name^="TOCHeader"], .panel.callout h5, .panel.callout h6, .panel.callout p, .panel.callout li, .panel.callout dl {
   color: #333333;
 }
 /* line 68, ../bower_components/foundation/scss/foundation/components/_panels.scss */
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
+.panel.callout h1, .panel.callout h2, .panel.callout #page-content #page-content-title, #page-content .panel.callout #page-content-title, .panel.callout h3, .panel.callout h4, .panel.callout a[name^="TOCHeader"], .panel.callout h5, .panel.callout h6 {
   line-height: 1;
   margin-bottom: 0.625rem;
 }
 /* line 70, ../bower_components/foundation/scss/foundation/components/_panels.scss */
-.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
+.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout #page-content .subheader#page-content-title, #page-content .panel.callout .subheader#page-content-title, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout a.subheader[name^="TOCHeader"], .panel.callout h5.subheader, .panel.callout h6.subheader {
   line-height: 1.4;
 }
 /* line 84, ../bower_components/foundation/scss/foundation/components/_panels.scss */
@@ -6684,13 +6687,13 @@ meta.foundation-mq-topbar {
   font-size: 16px;
 }
 /* line 204, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
-.top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
+.top-bar .name h1, .top-bar .name h2, .top-bar .name #page-content #page-content-title, #page-content .top-bar .name #page-content-title, .top-bar .name h3, .top-bar .name h4, .top-bar .name a[name^="TOCHeader"], .top-bar .name p, .top-bar .name span {
   line-height: 2.8125rem;
   font-size: 1.0625rem;
   margin: 0;
 }
 /* line 208, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
-.top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
+.top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name #page-content #page-content-title a, #page-content .top-bar .name #page-content-title a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name a[name^="TOCHeader"] a, .top-bar .name p a, .top-bar .name span a {
   font-weight: normal;
   color: #FFFFFF;
   width: 75%;
@@ -7569,8 +7572,10 @@ ol,
 li,
 h1,
 h2,
+#page-content #page-content-title,
 h3,
 h4,
+a[name^="TOCHeader"],
 h5,
 h6,
 pre,
@@ -7623,7 +7628,7 @@ p aside {
 
 /* Default header styles */
 /* line 252, ../bower_components/foundation/scss/foundation/components/_type.scss */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, #page-content #page-content-title, h3, h4, a[name^="TOCHeader"], h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -7634,7 +7639,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 /* line 262, ../bower_components/foundation/scss/foundation/components/_type.scss */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small, h2 small, #page-content #page-content-title small, h3 small, h4 small, a[name^="TOCHeader"] small, h5 small, h6 small {
   font-size: 60%;
   color: #6f6f6f;
   line-height: 0;
@@ -7646,7 +7651,7 @@ h1 {
 }
 
 /* line 270, ../bower_components/foundation/scss/foundation/components/_type.scss */
-h2 {
+h2, #page-content #page-content-title {
   font-size: 1.6875rem;
 }
 
@@ -7656,7 +7661,7 @@ h3 {
 }
 
 /* line 272, ../bower_components/foundation/scss/foundation/components/_type.scss */
-h4 {
+h4, a[name^="TOCHeader"] {
   font-size: 1.125rem;
 }
 
@@ -7886,7 +7891,7 @@ blockquote p {
 
 @media only screen and (min-width: 40.063em) {
   /* line 455, ../bower_components/foundation/scss/foundation/components/_type.scss */
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, #page-content #page-content-title, h3, h4, a[name^="TOCHeader"], h5, h6 {
     line-height: 1.4;
   }
 
@@ -7896,7 +7901,7 @@ blockquote p {
   }
 
   /* line 457, ../bower_components/foundation/scss/foundation/components/_type.scss */
-  h2 {
+  h2, #page-content #page-content-title {
     font-size: 2.3125rem;
   }
 
@@ -7906,7 +7911,7 @@ blockquote p {
   }
 
   /* line 459, ../bower_components/foundation/scss/foundation/components/_type.scss */
-  h4 {
+  h4, a[name^="TOCHeader"] {
     font-size: 1.4375rem;
   }
 
@@ -7994,13 +7999,14 @@ blockquote p {
   /* line 507, ../bower_components/foundation/scss/foundation/components/_type.scss */
   p,
   h2,
+  #page-content #page-content-title,
   h3 {
     orphans: 3;
     widows: 3;
   }
 
   /* line 514, ../bower_components/foundation/scss/foundation/components/_type.scss */
-  h2,
+  h2, #page-content #page-content-title,
   h3 {
     page-break-after: avoid;
   }
@@ -8068,14 +8074,14 @@ blockquote p {
   position: relative;
 }
 /* line 169, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
-.tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
+.tab-bar h1, .tab-bar h2, .tab-bar #page-content #page-content-title, #page-content .tab-bar #page-content-title, .tab-bar h3, .tab-bar h4, .tab-bar a[name^="TOCHeader"], .tab-bar h5, .tab-bar h6 {
   color: #FFFFFF;
   font-weight: bold;
   line-height: 2.8125rem;
   margin: 0;
 }
 /* line 175, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
-.tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
+.tab-bar h1, .tab-bar h2, .tab-bar #page-content #page-content-title, #page-content .tab-bar #page-content-title, .tab-bar h3, .tab-bar h4, .tab-bar a[name^="TOCHeader"] {
   font-size: 1.125rem;
 }
 
@@ -9090,6 +9096,81 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 106, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("https://www.google.com/fonts/specimen/Lora#charset");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("http://www.google.com/fonts/specimen/Open+Sans#charset");
+}
+/* line 31, ../scss/components/_anjs-typography.scss */
+h1 {
+  font-size: 2.827em;
+  line-height: 1.59179em;
+  margin-bottom: 16px;
+  font-family: "Lora", serif;
+  color: #492811;
+}
+
+/* line 38, ../scss/components/_anjs-typography.scss */
+h2, #page-content #page-content-title {
+  font-size: 1.999em;
+  line-height: 1.50075em;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-family: "Lora", serif;
+}
+
+/* line 45, ../scss/components/_anjs-typography.scss */
+h3 {
+  font-size: 1.414em;
+  line-height: 2.12164em;
+  margin-bottom: 16px;
+  font-family: "Lora", serif;
+}
+
+/* line 51, ../scss/components/_anjs-typography.scss */
+h4, a[name^="TOCHeader"] {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 24px;
+  font-family: "Lora", serif;
+}
+
+/* line 57, ../scss/components/_anjs-typography.scss */
+.byline-link, a.top-anchor {
+  font-size: 0.707em;
+  line-height: 2.12164em;
+  margin-bottom: 33px;
+  color: #000;
+}
+/* line 62, ../scss/components/_anjs-typography.scss */
+.byline-link:hover, a.top-anchor:hover, .byline-link:focus, a.top-anchor:focus, .byline-link:active, a.top-anchor:active {
+  color: #4d4d4d;
+}
+
+/* line 67, ../scss/components/_anjs-typography.scss */
+.debug-rhythm {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  -moz-background-size: 100% 1.5em;
+  -o-background-size: 100% 1.5em;
+  -webkit-background-size: 100% 1.5em;
+  background-size: 100% 1.5em;
+  background-position: left top;
+}
+
 /* line 7, ../scss/components/_common-styles.scss */
 .torn-page-large-section, .learning-tickets .lt-content {
   background-image: url('/images/crumpled_white_paper_texture_by_melemel-partial.jpg?1423545447');
@@ -9100,37 +9181,31 @@ th.hide-for-touch {
 }
 
 /* line 18, ../scss/components/_common-styles.scss */
-#page-content {
-  width: 30%;
-  margin-right: 15px;
-}
-
-/* line 23, ../scss/components/_common-styles.scss */
 iframe {
   background-color: white;
 }
 
-/* line 27, ../scss/components/_common-styles.scss */
+/* line 22, ../scss/components/_common-styles.scss */
 .anjs-active {
   background-color: #bdbdbd;
 }
 
-/* line 32, ../scss/components/_common-styles.scss */
+/* line 27, ../scss/components/_common-styles.scss */
 .button {
   box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: box-shadow 0.5s;
 }
-/* line 36, ../scss/components/_common-styles.scss */
+/* line 31, ../scss/components/_common-styles.scss */
 .button:hover {
   box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
-/* line 40, ../scss/components/_common-styles.scss */
+/* line 35, ../scss/components/_common-styles.scss */
 .button:active {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
   background: -webkit-linear-gradient(top, #d1d1d1 0%, #ECECEC 100%);
 }
 
-/* line 46, ../scss/components/_common-styles.scss */
+/* line 41, ../scss/components/_common-styles.scss */
 .tabs-content > .content.active {
   background-color: #fff !important;
 }
@@ -9144,6 +9219,16 @@ button.info, .button.info {
     background-color: $active-color !important;
     border-color: #a7a7a7;
 }*/
+/* Mixin for creating a responsive sprite 
+* https://gist.github.com/apauly/7917906
+* 
+* $map - sprite map, created using sprite-map function
+* $img - name of the png file in the map
+* $map-width, $map-height - sprite map physical dimentions, these parameters should be
+*                           calculated rather than passed in - currently not working, code is commented below
+* $img-size-percent - required sprite size
+*
+*/
 /**
  * SyntaxHighlighter
  * http://alexgorbatchev.com/SyntaxHighlighter
@@ -9658,17 +9743,18 @@ button.info, .button.info {
 
 /* line 5, ../scss/components/_menu.scss */
 .menu-row {
-  background-color: #333333;
-  height: 45px;
+  background-color: #492811;
+  height: 70px;
+  margin-bottom: 24px;
 }
 
-/* line 10, ../scss/components/_menu.scss */
+/* line 11, ../scss/components/_menu.scss */
 .menu {
   margin-bottom: 24px;
 }
 
 /* reset */
-/* line 15, ../scss/components/_menu.scss */
+/* line 16, ../scss/components/_menu.scss */
 .flat-mega-menu ul,
 .flat-mega-menu li,
 .flat-mega-menu a,
@@ -9687,7 +9773,7 @@ button.info, .button.info {
 }
 
 /* menu container */
-/* line 33, ../scss/components/_menu.scss */
+/* line 34, ../scss/components/_menu.scss */
 .flat-mega-menu {
   margin: 0 auto;
   /* margin for align container center */
@@ -9698,37 +9784,37 @@ button.info, .button.info {
   display: block;
   max-width: 1280px;
   /* container max-width 1280px */
-  min-height: 45px;
+  min-height: 70px;
   width: 100%;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   min-width: 180px;
 }
 
 /* ul tag layout */
-/* line 48, ../scss/components/_menu.scss */
+/* line 49, ../scss/components/_menu.scss */
 .flat-mega-menu > ul {
   float: left;
   width: 100%;
-  min-height: 45px;
-  background-color: #333333;
+  min-height: 70px;
+  background-color: #492811;
 }
 
 /* li tag layout */
-/* line 56, ../scss/components/_menu.scss */
+/* line 57, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li {
   float: left;
-  min-height: 45px;
-  line-height: 45px;
+  min-height: 70px;
+  line-height: 70px;
   color: #FFFFFF;
   border-left: 1px solid;
-  border-left-color: #666666;
+  border-left-color: #fdf8f5;
   min-width: 10%;
 }
 
 /* a tag layout */
-/* line 67, ../scss/components/_menu.scss */
+/* line 68, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li > a {
-  line-height: 45px;
+  line-height: 70px;
   color: #FFFFFF;
   text-align: center;
   width: 100%;
@@ -9738,27 +9824,27 @@ button.info, .button.info {
 }
 
 /* .title class layout */
-/* line 78, ../scss/components/_menu.scss */
+/* line 79, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > .title > a {
   text-transform: uppercase;
   font-size: 1.4em;
-  line-height: 45px;
+  line-height: 70px;
   padding-left: 20px;
   text-align: left;
   padding-right: 20px;
 }
 
-/* line 87, ../scss/components/_menu.scss */
+/* line 88, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > .title {
   border-left: none;
   min-width: 25%;
 }
 
 /* hover animation */
-/* line 93, ../scss/components/_menu.scss */
+/* line 94, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li:hover > a {
   background: #FFFFFF;
-  color: #555658;
+  color: #492811;
   /* animation */
   transition: background 0.3s linear 0s, color 0.3s linear 0s;
   -moz-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -9767,20 +9853,20 @@ button.info, .button.info {
   -webkit-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-/* line 104, ../scss/components/_menu.scss */
+/* line 105, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > .title:hover > a {
   background: inherit;
   color: inherit !important;
 }
 
 @media (min-width: 769px) {
-  /* line 110, ../scss/components/_menu.scss */
+  /* line 111, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > .title {
     display: none;
   }
 }
 /*------- Drop down layout start ------*/
-/* line 116, ../scss/components/_menu.scss */
+/* line 117, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down {
   position: absolute;
   background: #FFFFFF;
@@ -9794,24 +9880,24 @@ button.info, .button.info {
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 3px solid;
-  border-bottom-color: #333333;
+  border-bottom-color: #9c5524;
 }
 
-/* line 132, ../scss/components/_menu.scss */
+/* line 133, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down .drop-down {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 136, ../scss/components/_menu.scss */
+/* line 137, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down li {
   float: left;
   width: 100%;
   position: relative;
 }
 
-/* line 142, ../scss/components/_menu.scss */
+/* line 143, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down li a {
-  color: #555658;
+  color: #492811;
   font-size: 0.9em;
   text-align: left;
   padding: 10px 20px 10px 25px;
@@ -9825,30 +9911,30 @@ button.info, .button.info {
 }
 
 /* drop down hover animation */
-/* line 157, ../scss/components/_menu.scss */
+/* line 158, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down li:hover > a {
   color: #000000;
   padding-left: 30px;
 }
 
 /* default hover animation to show drop down */
-/* line 163, ../scss/components/_menu.scss */
+/* line 164, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li:hover .drop-down {
   display: block;
 }
 
-/* line 167, ../scss/components/_menu.scss */
+/* line 168, ../scss/components/_menu.scss */
 .flat-mega-menu ul li .drop-down li:hover > .drop-down {
   display: block;
 }
 
 /* .hover-fade animation to show drop down */
-/* line 172, ../scss/components/_menu.scss */
+/* line 173, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li .drop-down.hover-fade {
   display: none;
 }
 
-/* line 176, ../scss/components/_menu.scss */
+/* line 177, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li:hover > .drop-down.hover-fade,
 .flat-mega-menu > ul > li .drop-down li:hover > .drop-down.hover-fade {
   display: block;
@@ -9901,12 +9987,12 @@ button.info, .button.info {
   }
 }
 /* .hover-zoom animation to show drop down */
-/* line 194, ../scss/components/_menu.scss */
+/* line 195, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li .drop-down.hover-zoom {
   display: none;
 }
 
-/* line 198, ../scss/components/_menu.scss */
+/* line 199, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li:hover > .drop-down.hover-zoom,
 .flat-mega-menu > ul > li .drop-down li:hover > .drop-down.hover-zoom {
   display: block;
@@ -9969,12 +10055,12 @@ button.info, .button.info {
   }
 }
 /* .hover-expand animation to show drop down */
-/* line 216, ../scss/components/_menu.scss */
+/* line 217, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li .drop-down.hover-expand {
   display: none;
 }
 
-/* line 220, ../scss/components/_menu.scss */
+/* line 221, ../scss/components/_menu.scss */
 .flat-mega-menu > ul > li:hover > .drop-down.hover-expand,
 .flat-mega-menu > ul > li .drop-down li:hover > .drop-down.hover-expand {
   display: block;
@@ -10037,7 +10123,7 @@ button.info, .button.info {
   }
 }
 /* fontAwesome icons layout */
-/* line 238, ../scss/components/_menu.scss */
+/* line 239, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down li i {
   position: absolute;
   z-index: 999;
@@ -10046,11 +10132,11 @@ button.info, .button.info {
   bottom: 0;
   height: 16px;
   margin: auto;
-  color: #555658;
+  color: #492811;
 }
 
 /* level 2 .drop-down layout */
-/* line 250, ../scss/components/_menu.scss */
+/* line 251, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down .drop-down {
   left: 100%;
   top: -10px;
@@ -10058,23 +10144,23 @@ button.info, .button.info {
 }
 
 /*------- one column layout ----------*/
-/* line 257, ../scss/components/_menu.scss */
+/* line 258, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.one-column {
   width: 230px;
 }
 
-/* line 261, ../scss/components/_menu.scss */
+/* line 262, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down .drop-down.one-column {
   width: 200px;
 }
 
 /*-------- two column layout ---------*/
-/* line 266, ../scss/components/_menu.scss */
+/* line 267, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.two-column {
   width: 322px;
 }
 
-/* line 270, ../scss/components/_menu.scss */
+/* line 271, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.two-column ul {
   float: left;
   width: 160px;
@@ -10083,7 +10169,7 @@ button.info, .button.info {
 }
 
 /*--------- .full-width with 4 columns layout -----------*/
-/* line 278, ../scss/components/_menu.scss */
+/* line 279, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width {
   width: 100%;
   margin-left: 0;
@@ -10093,14 +10179,14 @@ button.info, .button.info {
   box-sizing: border-box;
 }
 
-/* line 287, ../scss/components/_menu.scss */
+/* line 288, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width ul {
   float: left;
   width: 25%;
   cursor: default;
 }
 
-/* line 293, ../scss/components/_menu.scss */
+/* line 294, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width ul li {
   margin: 0;
   padding: 6px 0;
@@ -10108,7 +10194,7 @@ button.info, .button.info {
   width: 100%;
 }
 
-/* line 300, ../scss/components/_menu.scss */
+/* line 301, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width ul li a {
   margin: 0;
   border: none;
@@ -10124,12 +10210,12 @@ button.info, .button.info {
 }
 
 /* hover animation */
-/* line 315, ../scss/components/_menu.scss */
+/* line 316, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width ul li:hover a {
   text-indent: 5px;
 }
 
-/* line 319, ../scss/components/_menu.scss */
+/* line 320, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.full-width ul li p {
   margin: 0;
   padding: 10px 10px 10px 11%;
@@ -10141,13 +10227,13 @@ button.info, .button.info {
 }
 
 /*---------- drop down with .social-bar class -------*/
-/* line 330, ../scss/components/_menu.scss */
+/* line 331, ../scss/components/_menu.scss */
 .flat-mega-menu .drop-down.social-bar {
   width: 200px;
 }
 
 /* hr tag layout */
-/* line 335, ../scss/components/_menu.scss */
+/* line 336, ../scss/components/_menu.scss */
 .flat-mega-menu hr {
   margin: 0;
   padding: 0;
@@ -10155,7 +10241,7 @@ button.info, .button.info {
 }
 
 /* image layout */
-/* line 342, ../scss/components/_menu.scss */
+/* line 343, ../scss/components/_menu.scss */
 .flat-mega-menu img {
   width: 100%;
   float: left;
@@ -10167,32 +10253,32 @@ button.info, .button.info {
 }
 
 /* image hover animation */
-/* line 353, ../scss/components/_menu.scss */
+/* line 354, ../scss/components/_menu.scss */
 .flat-mega-menu img:hover {
   opacity: 0.8;
 }
 
 /* h2 layout */
-/* line 358, ../scss/components/_menu.scss */
+/* line 359, ../scss/components/_menu.scss */
 .flat-mega-menu .menu-heading {
-  color: #535456;
+  color: #492811;
   font-size: 1.2em;
   font-weight: normal;
   padding: 15px 5px 0 10%;
 }
 
-/* line 365, ../scss/components/_menu.scss */
+/* line 366, ../scss/components/_menu.scss */
 .flat-mega-menu .menu-heading:not(:first-child) {
   margin-top: 2em;
 }
 
 /* .social-bar class layout */
-/* line 370, ../scss/components/_menu.scss */
+/* line 371, ../scss/components/_menu.scss */
 .flat-mega-menu .social-bar {
   position: relative;
 }
 
-/* line 374, ../scss/components/_menu.scss */
+/* line 375, ../scss/components/_menu.scss */
 .flat-mega-menu .social-bar ul {
   width: 262px;
   padding: 10px;
@@ -10203,7 +10289,7 @@ button.info, .button.info {
   right: 0;
 }
 
-/* line 384, ../scss/components/_menu.scss */
+/* line 385, ../scss/components/_menu.scss */
 .flat-mega-menu .social-bar ul li {
   float: left;
   width: 40px;
@@ -10212,7 +10298,7 @@ button.info, .button.info {
   padding: 0;
 }
 
-/* line 392, ../scss/components/_menu.scss */
+/* line 393, ../scss/components/_menu.scss */
 .flat-mega-menu .social-bar ul a {
   margin: 0;
   padding: 0;
@@ -10222,7 +10308,7 @@ button.info, .button.info {
   position: relative;
 }
 
-/* line 401, ../scss/components/_menu.scss */
+/* line 402, ../scss/components/_menu.scss */
 .flat-mega-menu .social-bar ul a i {
   text-align: center;
   padding: 0;
@@ -10245,14 +10331,14 @@ button.info, .button.info {
   background-image: linear-gradient(0deg, #e9e9e9 0%, #e9e9e9 100%);
 }
 
-/* line 423, ../scss/components/_menu.scss */
+/* line 424, ../scss/components/_menu.scss */
 .flat-mega-menu .social-bar ul a:hover i {
   background: #C7C7C7;
   color: #000000;
 }
 
 /* mobile button hide in desktop mode */
-/* line 429, ../scss/components/_menu.scss */
+/* line 430, ../scss/components/_menu.scss */
 .flat-mega-menu > label,
 .flat-mega-menu > input {
   display: none;
@@ -10261,16 +10347,16 @@ button.info, .button.info {
 /* media query */
 @media screen and (max-width: 768px) {
   /* li tag layout */
-  /* line 438, ../scss/components/_menu.scss */
+  /* line 439, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > li {
     width: 100%;
     border-left: none !important;
     border-right: none !important;
     border-bottom: 1px solid;
-    border-bottom-color: #666666;
+    border-bottom-color: #fff;
   }
 
-  /* line 446, ../scss/components/_menu.scss */
+  /* line 447, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > li:hover > a,
   .flat-mega-menu > ul > .login-form:hover,
   .flat-mega-menu > ul > .search-bar:hover {
@@ -10278,20 +10364,20 @@ button.info, .button.info {
   }
 
   /* .title class layout */
-  /* line 453, ../scss/components/_menu.scss */
+  /* line 454, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > .title a {
     text-align: center;
   }
 
   /* .full-width class layout */
-  /* line 458, ../scss/components/_menu.scss */
+  /* line 459, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down.full-width {
     position: relative;
     left: 0px !important;
   }
 
   /* all drop-downs layout */
-  /* line 464, ../scss/components/_menu.scss */
+  /* line 465, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down.one-column,
   .flat-mega-menu .drop-down.two-column,
   .flat-mega-menu .drop-down.full-width,
@@ -10310,7 +10396,7 @@ button.info, .button.info {
     -webkit-transform: scale(1, 1), rotateY(90deg);
   }
 
-  /* line 482, ../scss/components/_menu.scss */
+  /* line 483, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down .drop-down {
     border: none;
     border-top: 1px solid #E8E8E8;
@@ -10319,12 +10405,12 @@ button.info, .button.info {
     padding: 0;
   }
 
-  /* line 490, ../scss/components/_menu.scss */
+  /* line 491, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down .drop-down.one-column {
     padding-left: 20px;
   }
 
-  /* line 494, ../scss/components/_menu.scss */
+  /* line 495, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > li .drop-down.hover-expand,
   .flat-mega-menu > ul > li .drop-down.hover-fade,
   .flat-mega-menu > ul > li .drop-down.hover-zoom {
@@ -10332,7 +10418,7 @@ button.info, .button.info {
     border: none;
   }
 
-  /* line 501, ../scss/components/_menu.scss */
+  /* line 502, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > li:hover > .drop-down.hover-expand,
   .flat-mega-menu > ul > li:hover > .drop-down.hover-fade,
   .flat-mega-menu > ul > li:hover > .drop-down.hover-zoom,
@@ -10348,7 +10434,7 @@ button.info, .button.info {
     -webkit-animation: hover-default 0.2s linear 0s forwards;
   }
 
-  /* line 516, ../scss/components/_menu.scss */
+  /* line 517, ../scss/components/_menu.scss */
   .flat-mega-menu > ul > .login-form:hover,
   .flat-mega-menu > ul > .search-bar:hover,
   .flat-mega-menu > ul > li:hover > a {
@@ -10356,31 +10442,31 @@ button.info, .button.info {
     background: inherit;
   }
 
-  /* line 523, ../scss/components/_menu.scss */
+  /* line 524, ../scss/components/_menu.scss */
   .flat-mega-menu ul .login-form,
   .flat-mega-menu ul .search-bar {
     margin: 0;
     padding: 0;
   }
 
-  /* line 529, ../scss/components/_menu.scss */
+  /* line 530, ../scss/components/_menu.scss */
   .flat-mega-menu ul .login-form label {
     text-align: left;
     text-indent: 10px;
   }
 
-  /* line 534, ../scss/components/_menu.scss */
+  /* line 535, ../scss/components/_menu.scss */
   .flat-mega-menu ul .login-form table td {
     cursor: default;
   }
 
-  /* line 538, ../scss/components/_menu.scss */
+  /* line 539, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down.two-column ul,
   .flat-mega-menu .drop-down.full-width ul {
     width: 50%;
   }
 
-  /* line 543, ../scss/components/_menu.scss */
+  /* line 544, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down.one-column a,
   .flat-mega-menu .drop-down.two-column a {
     width: auto;
@@ -10388,30 +10474,30 @@ button.info, .button.info {
   }
 
   /* mobile button layout */
-  /* line 550, ../scss/components/_menu.scss */
+  /* line 551, ../scss/components/_menu.scss */
   .flat-mega-menu #mobile-button {
     position: absolute;
     display: none;
   }
 
-  /* line 555, ../scss/components/_menu.scss */
+  /* line 556, ../scss/components/_menu.scss */
   .flat-mega-menu > ul {
-    height: 45px;
+    height: 70px;
     overflow: hidden;
   }
 
   /* mobile button click to show drop down */
-  /* line 561, ../scss/components/_menu.scss */
+  /* line 562, ../scss/components/_menu.scss */
   .flat-mega-menu #mobile-button:checked + ul {
     height: auto;
     overflow: visible;
   }
 
   /* label tag layout */
-  /* line 567, ../scss/components/_menu.scss */
+  /* line 568, ../scss/components/_menu.scss */
   .flat-mega-menu > label {
     width: 60px;
-    height: 45px;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.1);
     display: block;
     margin: 0;
@@ -10420,13 +10506,13 @@ button.info, .button.info {
     top: 0;
     left: 0;
     text-align: center;
-    line-height: 45px;
+    line-height: 70px;
     font-size: 2em;
     color: #FFFFFF;
     cursor: pointer;
   }
 
-  /* line 584, ../scss/components/_menu.scss */
+  /* line 585, ../scss/components/_menu.scss */
   .flat-mega-menu > label i {
     -ms-user-select: none;
     -moz-user-select: none;
@@ -10434,13 +10520,13 @@ button.info, .button.info {
     -webkit-user-select: none;
   }
 
-  /* line 591, ../scss/components/_menu.scss */
+  /* line 592, ../scss/components/_menu.scss */
   .flat-mega-menu ul .title {
     padding-left: 60px;
   }
 
   /* collapse class layout */
-  /* line 596, ../scss/components/_menu.scss */
+  /* line 597, ../scss/components/_menu.scss */
   .flat-mega-menu .collapse .drop-down.one-column,
   .flat-mega-menu .collapse .drop-down.two-column,
   .flat-mega-menu .collapse .drop-down.full-width,
@@ -10459,7 +10545,7 @@ button.info, .button.info {
     -webkit-transform: scale(1, 1), rotateY(90deg);
   }
 
-  /* line 614, ../scss/components/_menu.scss */
+  /* line 615, ../scss/components/_menu.scss */
   .flat-mega-menu > .collapse > li:hover > .drop-down.hover-expand,
   .flat-mega-menu > .collapse > li:hover > .drop-down.hover-fade,
   .flat-mega-menu > .collapse > li:hover > .drop-down.hover-zoom,
@@ -10519,14 +10605,14 @@ button.info, .button.info {
 /* media query */
 @media screen and (max-width: 320px) {
   /* ul tag layout */
-  /* line 641, ../scss/components/_menu.scss */
+  /* line 642, ../scss/components/_menu.scss */
   .flat-mega-menu .drop-down.two-column ul,
   .flat-mega-menu .drop-down.full-width ul {
     width: 100%;
   }
 
   /* .search-bar layout */
-  /* line 647, ../scss/components/_menu.scss */
+  /* line 648, ../scss/components/_menu.scss */
   .flat-mega-menu ul .search-bar td {
     width: 100% !important;
     float: left;
@@ -10537,7 +10623,7 @@ button.info, .button.info {
     cursor: default;
   }
 
-  /* line 657, ../scss/components/_menu.scss */
+  /* line 658, ../scss/components/_menu.scss */
   .flat-mega-menu ul .search-bar input[type=text],
   .flat-mega-menu ul .search-bar input[type=submit] {
     width: 100%;
@@ -10546,25 +10632,25 @@ button.info, .button.info {
   }
 
   /* .login-form layout */
-  /* line 665, ../scss/components/_menu.scss */
+  /* line 666, ../scss/components/_menu.scss */
   .flat-mega-menu ul .login-form ul {
     padding: 20px;
   }
 
-  /* line 669, ../scss/components/_menu.scss */
+  /* line 670, ../scss/components/_menu.scss */
   .flat-mega-menu ul .login-form td {
     float: left;
     width: 100%;
     cursor: default;
   }
 
-  /* line 675, ../scss/components/_menu.scss */
+  /* line 676, ../scss/components/_menu.scss */
   .flat-mega-menu ul .login-form input[type=submit] {
     width: 100%;
   }
 
   /* .title class layout */
-  /* line 680, ../scss/components/_menu.scss */
+  /* line 681, ../scss/components/_menu.scss */
   .flat-mega-menu ul .title {
     padding-left: 0px;
     text-indent: 60px;
@@ -10572,20 +10658,53 @@ button.info, .button.info {
 }
 /* line 1, ../scss/components/_toc.scss */
 #page-content {
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 /* line 4, ../scss/components/_toc.scss */
 #page-content #page-content-title {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  font-color: #222222;
-  line-height: 1.4;
-  margin-top: 1.4;
-  margin-bottom: 0.5rem;
-  text-rendering: optimizeLegibility;
-  font-size: 2.3125rem;
+  color: #492811;
 }
 
+/* line 10, ../scss/components/_toc.scss */
+a[name^="TOCHeader"] {
+  line-height: 1.5;
+}
+
+/* line 2, ../scss/components/_bg-images.scss */
+.anjs-page .on-page-quill {
+  background-image: url("/images/on-page/quill-pen.png");
+  min-height: 500px;
+  display: block;
+  background-repeat: no-repeat;
+}
+/* line 9, ../scss/components/_bg-images.scss */
+.anjs-page .on-page-book {
+  background-image: url("/images/on-page/book.png");
+  background-repeat: repeat-y;
+  display: block;
+}
+
+/*// Create sprite using Compass
+@import "compass/utilities/sprites";
+ 
+// Required for correct operation, must be named same as the sprite
+$on-page-spacing: 40px; 
+
+@import "on-page/*.png"; 
+.anjs-page {
+    $map: $on-page-sprites;
+
+    .on-page-quill { 
+        @include on-page-sprite(quill-pen); 
+        @include responsive-sprite($map, quill-pen, 50%); 
+    } 
+
+    .on-page-book { 
+        @include on-page-sprite(book); 
+        @include responsive-sprite($map, book, 60%);
+    } 
+} 
+*/
 /* line 1, ../scss/qa/_qa-main.scss */
 .topics {
   border-right: 1px dotted #000;
@@ -10618,6 +10737,10 @@ button.info, .button.info {
 /* line 30, ../scss/qa/_qa-main.scss */
 .learning-tickets .question-ticket {
   margin-bottom: 24px;
+}
+/* line 34, ../scss/qa/_qa-main.scss */
+.learning-tickets .add-to-quiz {
+  margin-top: 12px;
 }
 
 /* line 2, ../scss/qa/_qa-add-ticket.scss */
@@ -10878,7 +11001,7 @@ button.info, .button.info {
 }
 /* line 5, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 .sass-example-4 html, .sass-example-4 body, .sass-example-4 div, .sass-example-4 span, .sass-example-4 applet, .sass-example-4 object, .sass-example-4 iframe,
-.sass-example-4 h1, .sass-example-4 h2, .sass-example-4 h3, .sass-example-4 h4, .sass-example-4 h5, .sass-example-4 h6, .sass-example-4 p, .sass-example-4 blockquote, .sass-example-4 pre,
+.sass-example-4 h1, .sass-example-4 h2, .sass-example-4 #page-content #page-content-title, #page-content .sass-example-4 #page-content-title, .sass-example-4 h3, .sass-example-4 h4, .sass-example-4 a[name^="TOCHeader"], .sass-example-4 h5, .sass-example-4 h6, .sass-example-4 p, .sass-example-4 blockquote, .sass-example-4 pre,
 .sass-example-4 a, .sass-example-4 abbr, .sass-example-4 acronym, .sass-example-4 address, .sass-example-4 big, .sass-example-4 cite, .sass-example-4 code,
 .sass-example-4 del, .sass-example-4 dfn, .sass-example-4 em, .sass-example-4 img, .sass-example-4 ins, .sass-example-4 kbd, .sass-example-4 q, .sass-example-4 s, .sass-example-4 samp,
 .sass-example-4 small, .sass-example-4 strike, .sass-example-4 strong, .sass-example-4 sub, .sass-example-4 sup, .sass-example-4 tt, .sass-example-4 var,
@@ -10974,16 +11097,6 @@ button.info, .button.info {
   margin-bottom: 1.5em;
 }
 
-/* Mixin for creating a responsive sprite 
-* https://gist.github.com/apauly/7917906
-* 
-* $map - sprite map, created using sprite-map function
-* $img - name of the png file in the map
-* $map-width, $map-height - sprite map physical dimentions, these parameters should be
-*                           calculated rather than passed in - currently not working, code is commented below
-* $img-size-percent - required sprite size
-*
-*/
 /* line 64, snow/*.png */
 .snow-sprite, .sprite-example .snow1, .sprite-example .snow2, .sprite-example .snow3 {
   background-image: url('/images/snow-sb662f5911c.png');

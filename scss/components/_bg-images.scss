@@ -1,0 +1,38 @@
+.anjs-page {
+    .on-page-quill { 
+        background-image: url('/images/on-page/quill-pen.png');
+        min-height: 500px;
+        display: block;
+        background-repeat: no-repeat;
+    } 
+
+    .on-page-book { 
+        background-image: url('/images/on-page/book.png');
+        background-repeat: repeat-y;
+        display: block;
+    } 
+} 
+
+
+
+/*// Create sprite using Compass
+@import "compass/utilities/sprites";
+ 
+// Required for correct operation, must be named same as the sprite
+$on-page-spacing: 40px; 
+
+@import "on-page/*.png"; 
+.anjs-page {
+    $map: $on-page-sprites;
+
+    .on-page-quill { 
+        @include on-page-sprite(quill-pen); 
+        @include responsive-sprite($map, quill-pen, 50%); 
+    } 
+
+    .on-page-book { 
+        @include on-page-sprite(book); 
+        @include responsive-sprite($map, book, 60%);
+    } 
+} 
+*/

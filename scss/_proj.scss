@@ -1,5 +1,7 @@
 // Custom typography
+@import "components/anjs-typography";
 @import "components/common-styles";
+@import "examples/responsive-sprite";
 
 // Code highlighter
 @import "components/sintaxHighlighter/shCore";
@@ -8,6 +10,7 @@
 // Components
 @import "components/menu";
 @import "components/toc";
+@import "components/bg-images";
 
 // QA section
 @import "qa/qa-main";
@@ -21,5 +24,4 @@
 @import "examples/examples-angular";
 @import "examples/examples-jquery";
 @import "examples/examples-sass";
-@import "examples/responsive-sprite";
 @import "examples/examples-sprite";

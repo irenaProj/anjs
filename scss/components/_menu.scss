@@ -1,10 +1,11 @@
-$lal-menu-min-height: 45px;
-$lal-menu-color: #333333;
-$lal-menu-text-color: #555658;
+$lal-menu-min-height: 70px;
+$lal-menu-color: #492811;
+$lal-menu-text-color: #492811;
 
 .menu-row {
 	background-color: $lal-menu-color;
 	height: $lal-menu-min-height;
+	margin-bottom: 24px;
 }
 
 .menu {
@@ -59,7 +60,7 @@ $lal-menu-text-color: #555658;
 	line-height: $lal-menu-min-height;
 	color: #FFFFFF;
 	border-left: 1px solid;
-	border-left-color: lighten($lal-menu-color, 20%);
+	border-left-color: lighten($lal-menu-color, 80%);
 	min-width: 10%;
 }
 
@@ -126,7 +127,7 @@ $lal-menu-text-color: #555658;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 3px solid;
-	border-bottom-color: $lal-menu-color;
+	border-bottom-color: lighten($lal-menu-color, 20%);
 }
 
 .flat-mega-menu .drop-down .drop-down {
@@ -356,7 +357,7 @@ $lal-menu-text-color: #555658;
 
 /* h2 layout */
 .flat-mega-menu .menu-heading {
-	color: #535456;
+	color: $lal-menu-text-color;
 	font-size: 1.2em;
 	font-weight: normal;
 	padding: 15px 5px 0 10%;
@@ -440,7 +441,7 @@ $lal-menu-text-color: #555658;
 	border-left: none !important;
 	border-right: none !important;
 	border-bottom: 1px solid;
-	border-bottom-color: lighten($lal-menu-color, 20%);
+	border-bottom-color: #fff;
 }
 
 .flat-mega-menu > ul > li:hover > a,

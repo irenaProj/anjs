@@ -8,17 +8,15 @@ var toc = {
         toc = document.getElementById("toc");
         pageNav = document.getElementById("page-content");
        
-        if (!toc) {
-            // Insert "Content" title
-            toc = document.createElement("div");
-            toc.id = "page-content-title";
-            toc.innerHTML = "Content";
-            
-            pageNav = document.getElementById("page-content");
-            pageNav.appendChild(toc);
-            
+        if (!toc) {                        
             toc = document.createElement("div");
             toc.id = "toc";
+
+            if (window.matchMedia("(min-width: 640px)").matches) {
+                toc.className += "on-page-quill";
+            } else {
+                toc.className += "on-page-book";
+            }           
                     
             pageNav.appendChild(toc);
             
@@ -78,6 +76,7 @@ var toc = {
                 pageTop = document.createElement("a");
                 pageTop.href = "#pageTopAnchor";
                 pageTop.innerHTML = "Back to top";
+                pageTop.className += "top-anchor";
 
                 backToTop.appendChild(pageTop);
                 heading.parentNode.insertBefore(backToTop, heading);        
@@ -113,3 +112,14 @@ var toc = {
 };
 
 $(document).ready(toc.onReady);
+$(window).resize(function() {
+    var toc = $("#toc");
+    
+    if (window.matchMedia("(min-width: 640px)").matches) {
+        toc.removeClass("on-page-book");
+        toc.addClass("on-page-quill");
+    } else {
+        toc.removeClass("on-page-quill");
+        toc.addClass("on-page-book");
+    }           
+});

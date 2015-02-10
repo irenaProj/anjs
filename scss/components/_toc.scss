@@ -1,14 +1,18 @@
 #page-content {
-    margin-bottom: 24px;
+    margin: 24px 0;
 
     #page-content-title {
-        font-family: $header-font-family;
-        font-weight: $header-font-weight;
-        font-color: $header-font-color;
-        line-height: $header-line-height;
-        margin-top: $header-line-height;
-        margin-bottom: $header-bottom-margin;
-        text-rendering: $header-text-rendering;
-        font-size: $h2-font-size;
+        @extend h2;
+        color: #492811;
     }
+}
+
+a[name^="TOCHeader"] {
+    @extend h4;
+    line-height: 1.5;
+
+}
+
+a.top-anchor {
+    @extend .byline-link;
 }
