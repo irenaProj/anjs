@@ -19,9 +19,9 @@
     <script type="text/javascript" src="/js/sintaxHighlighter/shBrushJScript.js"></script>
     <script type="text/javascript" src="/js/sintaxHighlighter/shBrushXml.js"></script>
     <style type="text/css">
-        iframe {
-            width: 100%;
-        }
+    iframe {
+        width: 100%;
+    }
     </style>
 </head>
 
@@ -116,29 +116,35 @@
         <div id="page-content" class="small-12 medium-4 columns end">
         </div>
         <div class="small-12 medium-8 columns end">
-            <section>
-                <h2>Conway's Game of Life</h2>
-                <iframe class="game-of-life-example" src="/javascript/examples/game-of-life/index.html"></iframe>
-            </section>
+            <div class="row">
+                <div class="columns torn-page-large-section">
+                    <section>
+                        <h2>Conway's Game of Life</h2>
+                        <iframe class="game-of-life-example" src="/javascript/examples/game-of-life/index.html"></iframe>
+                    </section>
+                </div>
+            </div>
             <section>
                 <h2>Basic Exercises</h2>
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript program to display the current day and time in the following format: <br/>
-                        Today is : Friday. <br/>
-                        Current time is : 4 PM : 50 : 22
-                    </p>            
-                    <iframe src="/javascript/examples/basic/date-time/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel1">script.js</a>
-                        </dd>
-                        <dd><a href="#panel2">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel1">
-                            <pre class="brush: js">
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript program to display the current day and time in the following format:
+                                <br/> Today is : Friday.
+                                <br/> Current time is : 4 PM : 50 : 22
+                            </p>
+                            <iframe src="/javascript/examples/basic/date-time/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel1">script.js</a>
+                                </dd>
+                                <dd><a href="#panel2">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel1">
+                                    <pre class="brush: js">
                                 (function() {
                                     // Today is : Friday. 
                                     // Current time is : 4 PM : 50 : 22
@@ -160,33 +166,37 @@
                                     window.setInterval(displayTime, 1000);
                                 })();
                             </pre>
-                        </div>
-                        <div class="content" id="panel2">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel2">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     <div id="date-and-time">
                                     </div>
                                     <script type="text/javascript" src="script.js"></script>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript program to rotate the string in right direction by periodically removing one letter from the end of the string and attaching it to the front.
-                    </p>            
-                    <iframe src="/javascript/examples/basic/misc/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel3">script.js</a>
-                        </dd>
-                        <dd><a href="#panel4">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel3">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript program to rotate the string in right direction by periodically removing one letter from the end of the string and attaching it to the front.
+                            </p>
+                            <iframe src="/javascript/examples/basic/misc/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel3">script.js</a>
+                                </dd>
+                                <dd><a href="#panel4">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel3">
+                                    <pre class="brush: js">
                                 window.onload = function rotateStringRight() {
                                     var elem = document.getElementById("rotateStr");
                                     var textNode = elem.childNodes[0];
@@ -202,32 +212,36 @@
 
                                 };                            
                             </pre>
-                        </div>
-                        <div class="content" id="panel4">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel4">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     <div id="rotateStr">sampleStr</div>
                                     <script type="text/javascript" src="script.js"></script>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript program to find 1st January be a Sunday between 2014 and 2050
-                    </p>            
-                    <iframe src="/javascript/examples/basic/misc/2/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel5">script.js</a>
-                        </dd>
-                        <dd><a href="#panel6">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel5">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript program to find 1st January be a Sunday between 2014 and 2050
+                            </p>
+                            <iframe src="/javascript/examples/basic/misc/2/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel5">script.js</a>
+                                </dd>
+                                <dd><a href="#panel6">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel5">
+                                    <pre class="brush: js">
                                 document.getElementById("submitBtn").addEventListener("click", outputYears);
 
                                 function outputYears(){
@@ -255,9 +269,9 @@
 
                                 }
                             </pre>
-                        </div>
-                        <div class="content" id="panel6">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel6">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     <div class="row">
                                         <div class="small-6 medium-3 columns end">
@@ -291,24 +305,28 @@
                                     <script type="text/javascript" src="script.js"></script>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. 
-                    </p>            
-                    <iframe src="/javascript/examples/basic/guess-game/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel7">script.js</a>
-                        </dd>
-                        <dd><a href="#panel8">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel7">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number.
+                            </p>
+                            <iframe src="/javascript/examples/basic/guess-game/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel7">script.js</a>
+                                </dd>
+                                <dd><a href="#panel8">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel7">
+                                    <pre class="brush: js">
                                 document.getElementById("guessValue").addEventListener("keypress", checkGuess);
                                 document.getElementById("minValue").addEventListener("keypress", changeHiddenNum);
                                 document.getElementById("maxValue").addEventListener("keypress", changeHiddenNum);
@@ -358,9 +376,9 @@
 
                                 window.onload = selectHiddenNum;
                             </pre>
-                        </div>
-                        <div class="content" id="panel8">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel8">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     <div class="row">
                                         <div class="small-8 medium-6 columns end">
@@ -395,27 +413,31 @@
                                     </div>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-             </section>
+                </div>
+            </section>
             <section>
                 <h2>Functions</h2>
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript function that reverse a number
-                    </p>    
-                    <iframe src="/javascript/examples/functions/1/index.html"></iframe>        
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel9">script.js</a>
-                        </dd>
-                        <dd><a href="#panel10">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel9">
-                            <pre class="brush: js">
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript function that reverse a number
+                            </p>
+                            <iframe src="/javascript/examples/functions/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel9">script.js</a>
+                                </dd>
+                                <dd><a href="#panel10">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel9">
+                                    <pre class="brush: js">
                                 function reverseNumber(e) {
                                     if (e.keyCode === 13) {
                                         var input = document.getElementById("input");
@@ -432,33 +454,37 @@
 
                                 document.getElementById("input").addEventListener("keypress", reverseNumber);
                             </pre>
-                        </div>
-                        <div class="content" id="panel10">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel10">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     Input number to reverse and press &#9166;:<br/>
                                     <input id="input" type="number" /><br/><br/>
                                     <div id="output"></div>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript function that checks whether a passed string is palindrome or not
-                    </p>            
-                    <iframe src="/javascript/examples/functions/2/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel11">script.js</a>
-                        </dd>
-                        <dd><a href="#panel12">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel11">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript function that checks whether a passed string is palindrome or not
+                            </p>
+                            <iframe src="/javascript/examples/functions/2/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel11">script.js</a>
+                                </dd>
+                                <dd><a href="#panel12">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel11">
+                                    <pre class="brush: js">
                                 function checkPalindrome(e) {
                                     if (e.keyCode === 13) {
                                         var str = document.getElementById("input").value;
@@ -500,33 +526,37 @@
 
                                 document.getElementById("input").addEventListener("keypress", checkPalindrome);
                             </pre>
-                        </div>
-                        <div class="content" id="panel12">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel12">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     Input string to check and press &#9166;:<br/>
                                     <input id="input" type="text" /><br/><br/>
                                     <div id="output"></div>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript function which returns the n rows by n columns identity matrix.
-                    </p>            
-                    <iframe src="/javascript/examples/functions/3/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel15">script.js</a>
-                        </dd>
-                        <dd><a href="#panel16">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel15">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript function which returns the n rows by n columns identity matrix.
+                            </p>
+                            <iframe src="/javascript/examples/functions/3/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel15">script.js</a>
+                                </dd>
+                                <dd><a href="#panel16">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel15">
+                                    <pre class="brush: js">
                                 function createIdentityMat(e) {
                                     if (e.keyCode === 13) {
                                         var num = parseInt(document.getElementById("input").value);
@@ -566,9 +596,9 @@
 
                                 document.getElementById("input").addEventListener("keypress", createIdentityMat);
                             </pre>
-                        </div>
-                        <div class="content" id="panel16">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel16">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     Input string to check and press &#9166;:<br/>
                                     <input id="input" type="number" /><br/><br/>
@@ -576,24 +606,28 @@
                                     <script type="text/javascript" src="script.js"></script>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript function to convert an amount to coins.
-                    </p>            
-                    <iframe src="/javascript/examples/functions/4/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel17">script.js</a>
-                        </dd>
-                        <dd><a href="#panel18">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel17">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript function to convert an amount to coins.
+                            </p>
+                            <iframe src="/javascript/examples/functions/4/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel17">script.js</a>
+                                </dd>
+                                <dd><a href="#panel18">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel17">
+                                    <pre class="brush: js">
                                 function calculateCoins(e) {
                                     if (e.keyCode === 13) {
                                         var num = parseFloat(document.getElementById("input").value);
@@ -631,9 +665,9 @@
 
                                 document.getElementById("input").addEventListener("keypress", calculateCoins);
                             </pre>
-                        </div>
-                        <div class="content" id="panel18">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel18">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     Input sum of money as a decimal number and press &#9166;:<br/>
                                     Used coins are: $2, $1, $0.5,  $0.20,  $0.10, $0.05<br/><br/>
@@ -642,51 +676,59 @@
                                     <script type="text/javascript" src="script.js"></script>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-                <p>
-                    <h3></h3>
-                    <p>
-                    </p>            
-                    <iframe src="/javascript/examples/basic/guess-game/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel19">script.js</a>
-                        </dd>
-                        <dd><a href="#panel20">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel19">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                            </p>
+                            <iframe src="/javascript/examples/basic/guess-game/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel19">script.js</a>
+                                </dd>
+                                <dd><a href="#panel20">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel19">
+                                    <pre class="brush: js">
                             </pre>
-                        </div>
-                        <div class="content" id="panel20">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel20">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
+                </div>
             </section>
             <section>
                 <h2>Recursion</h2>
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript function to output all substrings and subsequences of a string
-                    </p>            
-                    <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel13">script.js</a>
-                        </dd>
-                        <dd><a href="#panel14">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel13">
-                            <pre class="brush: js">                                
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript function to output all substrings and subsequences of a string
+                            </p>
+                            <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel13">script.js</a>
+                                </dd>
+                                <dd><a href="#panel14">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel13">
+                                    <pre class="brush: js">                                
                                 var substrings = [];
                                 var subsequences = [];
 
@@ -761,9 +803,9 @@
 
                                 document.getElementById("input").addEventListener("keypress", calculate);
                             </pre>
-                        </div>
-                        <div class="content" id="panel14">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel14">
+                                    <pre class="brush: xml">
                                 &lt;body&gt;
                                     <div class="row">
                                         <div class="small-12 medium-4 large-3 columns end">
@@ -784,24 +826,28 @@
                                     </div>
                                 &lt;/body&gt;
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>           
-                <p>
-                    <h3></h3>
-                    <p>
-                        Write a JavaScript program to get the first n Fibonacci numbers.
-                    </p>            
-                    <iframe src="/javascript/examples/recursion/2/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel21">script.js</a>
-                        </dd>
-                        <dd><a href="#panel22">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel21">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Write a JavaScript program to get the first n Fibonacci numbers.
+                            </p>
+                            <iframe src="/javascript/examples/recursion/2/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel21">script.js</a>
+                                </dd>
+                                <dd><a href="#panel22">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel21">
+                                    <pre class="brush: js">
                                 var sequence = [];
                                 var outputSequenceStr = ""; 
                                 var maxSeqLen = 30;
@@ -851,9 +897,9 @@
 
                                 document.getElementById("input").addEventListener("keypress", calculate);
                             </pre>
-                        </div>
-                        <div class="content" id="panel22">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel22">
+                                    <pre class="brush: xml">
                                 <div class="row">
                                     <div class="small-12 medium-4 large-3 columns end">
                                         <label>Input number and press &#9166;:<br/>
@@ -873,27 +919,31 @@
                                 <script src="/js/app.js"></script>
                                 <script type="text/javascript" src="script.js"></script>
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
+                </div>
             </section>
             <section>
                 <h2>Regular Expressions</h2>
-                <p>
-                    <h3></h3>
-                    <p>
-                        Return true if the characters a and b are separated by exactly 3 places anywhere in the string at least once (ie. "lane borrowed" would result in true because there is exactly three characters between a and b). Otherwise return false.
-                    </p>            
-                    <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel23">script.js</a>
-                        </dd>
-                        <dd><a href="#panel24">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+                                Return true if the characters a and b are separated by exactly 3 places anywhere in the string at least once (ie. "lane borrowed" would result in true because there is exactly three characters between a and b). Otherwise return false.
+                            </p>
+                            <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel23">script.js</a>
+                                </dd>
+                                <dd><a href="#panel24">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel23">
+                                    <pre class="brush: js">
                                 function ABCheck(e) {
                                     if (e.keyCode === 13) {
                                         var str = document.getElementById("input").value;
@@ -911,9 +961,9 @@
 
                                 document.getElementById("input").addEventListener("keypress", ABCheck);
                             </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel24">
+                                    <pre class="brush: xml">
                                 <div class="row">
                                     <div class="small-12 medium-4 large-3 columns end">
                                         <label>Input string to check and press &#9166;:<br/>
@@ -927,78 +977,92 @@
                                     </div>
                                 </div>
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel25">script.js</a>
-                        </dd>
-                        <dd><a href="#panel26">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+
+                            </p>
+                            <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel25">script.js</a>
+                                </dd>
+                                <dd><a href="#panel26">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel23">
+                                    <pre class="brush: js">
                             </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel24">
+                                    <pre class="brush: xml">
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel27">script.js</a>
-                        </dd>
-                        <dd><a href="#panel28">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel23">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+
+                            </p>
+                            <iframe src="/javascript/examples/reg-exp/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel27">script.js</a>
+                                </dd>
+                                <dd><a href="#panel28">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel23">
+                                    <pre class="brush: js">
                             </pre>
-                        </div>
-                        <div class="content" id="panel24">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel24">
+                                    <pre class="brush: xml">
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
-                <p>
-                    <h3></h3>
-                    <p>
-                        
-                    </p>            
-                    <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
-                    <dl class="tabs" data-tab>
-                        <dd class="active"><a href="#panel29">script.js</a>
-                        </dd>
-                        <dd><a href="#panel30">index.html</a>
-                        </dd>
-                    </dl>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel29">
-                            <pre class="brush: js">
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <p>
+                            <h3></h3>
+                            <p>
+
+                            </p>
+                            <iframe src="/javascript/examples/recursion/1/index.html"></iframe>
+                            <dl class="tabs" data-tab>
+                                <dd class="active"><a href="#panel29">script.js</a>
+                                </dd>
+                                <dd><a href="#panel30">index.html</a>
+                                </dd>
+                            </dl>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel29">
+                                    <pre class="brush: js">
                             </pre>
-                        </div>
-                        <div class="content" id="panel30">
-                            <pre class="brush: xml">
+                                </div>
+                                <div class="content" id="panel30">
+                                    <pre class="brush: xml">
                             </pre>
-                        </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
-                </p>
+                </div>
             </section>
         </div>
     </div>
