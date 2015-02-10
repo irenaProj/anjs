@@ -1,5 +1,5 @@
 angular.module("qa")
-    .constant("activeTopicClass", "info")
+    .constant("activeTopicClass", "anjs-active")
     .controller("topicListCtrl", function($scope, $filter, activeTopicClass, quiz) {
         var selectedTopic= null;
 

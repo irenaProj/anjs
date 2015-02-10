@@ -13,7 +13,7 @@
 
 .learning-tickets {
     .lt-content {
-        background-color: rgb(204, 227, 234);
+        @extend .torn-page-large-section;
     }
 
     .lt-answer {

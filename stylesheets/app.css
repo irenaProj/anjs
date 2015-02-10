@@ -2407,7 +2407,7 @@ select {
 /* line 216, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   border-style: solid;
-  border-width: 0;
+  border-width: 1px;
   cursor: pointer;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
@@ -2424,18 +2424,18 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  background-color: #008CBA;
-  border-color: #007095;
-  color: #FFFFFF;
+  background-color: #ECECEC;
+  border-color: #a7a7a7;
+  color: #333333;
   transition: background-color 300ms ease-out;
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #007095;
+  background-color: #bdbdbd;
 }
 /* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  color: #FFFFFF;
+  color: #333333;
 }
 /* line 223, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.secondary, .button.secondary {
@@ -2557,24 +2557,24 @@ button.round, .button.round {
 }
 /* line 240, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #008CBA;
-  border-color: #007095;
-  color: #FFFFFF;
+  background-color: #ECECEC;
+  border-color: #a7a7a7;
+  color: #333333;
   cursor: default;
   opacity: 0.7;
   box-shadow: none;
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #007095;
+  background-color: #bdbdbd;
 }
 /* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  color: #FFFFFF;
+  color: #333333;
 }
 /* line 178, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #008CBA;
+  background-color: #ECECEC;
 }
 /* line 241, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -9090,6 +9090,55 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 7, ../scss/components/_common-styles.scss */
+.torn-page-large-section, .learning-tickets .lt-content {
+  background-image: url('/images/crumpled_white_paper_texture_by_melemel-partial.jpg?1423545447');
+  background-position: top left;
+  box-shadow: 4px 4px 1em rgba(168, 168, 168, 0.8);
+  border-radius: 5px;
+  margin: 24px 0;
+}
+
+/* line 18, ../scss/components/_common-styles.scss */
+#page-content {
+  width: 30%;
+  margin-right: 15px;
+}
+
+/* line 23, ../scss/components/_common-styles.scss */
+iframe {
+  background-color: white;
+}
+
+/* line 27, ../scss/components/_common-styles.scss */
+.anjs-active {
+  background-color: #bdbdbd;
+}
+
+/* line 32, ../scss/components/_common-styles.scss */
+.button {
+  box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: box-shadow 0.5s;
+}
+/* line 36, ../scss/components/_common-styles.scss */
+.button:hover {
+  box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+}
+/* line 40, ../scss/components/_common-styles.scss */
+.button:active {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background: -webkit-linear-gradient(top, #d1d1d1 0%, #ECECEC 100%);
+}
+
+/*.button.info:focus, button.info:focus {
+    background-color: $active-color !important;
+    color: #000;
+}
+
+button.info, .button.info {
+    background-color: $active-color !important;
+    border-color: #a7a7a7;
+}*/
 /**
  * SyntaxHighlighter
  * http://alexgorbatchev.com/SyntaxHighlighter
@@ -10548,10 +10597,6 @@ th.hide-for-touch {
   display: block;
 }
 
-/* line 15, ../scss/qa/_qa-main.scss */
-.learning-tickets .lt-content {
-  background-color: #cce3ea;
-}
 /* line 19, ../scss/qa/_qa-main.scss */
 .learning-tickets .lt-answer {
   min-height: 100px;
