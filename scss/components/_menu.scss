@@ -156,7 +156,7 @@ $lal-menu-text-color: #492811;
 
 /* drop down hover animation */
 .flat-mega-menu .drop-down li:hover > a {
-	color: #000000;
+	color: $lal-menu-text-color;
 	padding-left: 30px;
 }
 
