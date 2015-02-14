@@ -1,4 +1,3 @@
 .sass-cache
 *.lock
-node-modules/
-comments/node-modules/
+**/node_modules/**
