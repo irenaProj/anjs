@@ -683,3 +683,9 @@ $lal-menu-text-color: #492811;
 	text-indent: 60px;
 }
 }
+
+@media screen and (min-width:768px) {
+	.css-menu {
+		margin-top: 30px !important;
+	}
+}

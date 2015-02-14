@@ -9229,6 +9229,21 @@ button.info, .button.info {
 * $img-size-percent - required sprite size
 *
 */
+/* line 3, ../scss/components/_info-page-styles.scss */
+.header-row {
+  margin-bottom: 24px;
+}
+
+/* line 8, ../scss/components/_info-page-styles.scss */
+.info-page a {
+  color: #492811;
+  text-decoration: underline;
+}
+/* line 13, ../scss/components/_info-page-styles.scss */
+.info-page a:hover {
+  color: #9c5524;
+}
+
 /**
  * SyntaxHighlighter
  * http://alexgorbatchev.com/SyntaxHighlighter
@@ -10656,6 +10671,12 @@ button.info, .button.info {
     text-indent: 60px;
   }
 }
+@media screen and (min-width: 768px) {
+  /* line 688, ../scss/components/_menu.scss */
+  .css-menu {
+    margin-top: 30px !important;
+  }
+}
 /* line 1, ../scss/components/_toc.scss */
 #page-content {
   margin: 24px 0;
@@ -10671,17 +10692,21 @@ a[name^="TOCHeader"] {
 }
 
 /* line 2, ../scss/components/_bg-images.scss */
-.anjs-page .on-page-quill {
+.anjs-page-common-bg-img .on-page-quill {
   background-image: url("/images/on-page/quill-pen.png");
   min-height: 500px;
   display: block;
   background-repeat: no-repeat;
 }
 /* line 9, ../scss/components/_bg-images.scss */
-.anjs-page .on-page-book {
+.anjs-page-common-bg-img .on-page-book {
   background-image: url("/images/on-page/book.png");
   background-repeat: repeat-y;
   display: block;
+}
+/* line 15, ../scss/components/_bg-images.scss */
+.anjs-page-common-bg-img h2, .anjs-page-common-bg-img #page-content #page-content-title, #page-content .anjs-page-common-bg-img #page-content-title, .anjs-page-common-bg-img h3 {
+  cursor: default;
 }
 
 /*// Create sprite using Compass
@@ -10691,7 +10716,7 @@ a[name^="TOCHeader"] {
 $on-page-spacing: 40px; 
 
 @import "on-page/*.png"; 
-.anjs-page {
+.anjs-page-common-bg-img {
     $map: $on-page-sprites;
 
     .on-page-quill { 

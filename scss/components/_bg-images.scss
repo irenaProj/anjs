@@ -1,4 +1,4 @@
-.anjs-page {
+.anjs-page-common-bg-img {
     .on-page-quill { 
         background-image: url('/images/on-page/quill-pen.png');
         min-height: 500px;
@@ -11,6 +11,10 @@
         background-repeat: repeat-y;
         display: block;
     } 
+
+    h2, h3 {
+        cursor: default;
+    }
 } 
 
 
@@ -22,7 +26,7 @@
 $on-page-spacing: 40px; 
 
 @import "on-page/*.png"; 
-.anjs-page {
+.anjs-page-common-bg-img {
     $map: $on-page-sprites;
 
     .on-page-quill { 

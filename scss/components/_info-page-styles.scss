@@ -1,0 +1,16 @@
+$color: #492811;
+
+.header-row {
+    margin-bottom: 24px;
+}
+
+.info-page {
+    a {
+        color: $color;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: lighten($color, 20%);
+    }
+}
