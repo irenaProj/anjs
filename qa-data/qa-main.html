@@ -74,7 +74,7 @@
 </head>
 
 <body ng-controller="qaCtrl">
-    <div class="menu-row">
+    <header class="menu-row">
         <div class="row">
             <div class="large-12 menu">
                 <nav>
@@ -165,23 +165,25 @@
                 </nav>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="small-12 medium-8 large-9 columns">
-            <quiz-summary />
+    </header>
+    <main>
+        <div class="row">
+            <div class="small-12 medium-8 large-9 columns">
+                <quiz-summary />
+            </div>
+            <div class="small-12 medium-4 large-3 columns end">
+                <a href="#/login" ng-click="setTicketsMgmtActive(true)" ng-hide="isAdminActive" class="button radius small right">Q&amp;A Admin</a>
+                <a href="#/qa" ng-click="setTicketsMgmtActive(false)" ng-show="isAdminActive" class="button radius small right">Back to Tickets</a>
+            </div>
         </div>
-        <div class="small-12 medium-4 large-3 columns end">
-            <a href="#/login" ng-click="setTicketsMgmtActive(true)" ng-hide="isAdminActive" class="button radius small right">Q&amp;A Admin</a>
-            <a href="#/qa" ng-click="setTicketsMgmtActive(false)" ng-show="isAdminActive" class="button radius small right">Back to Tickets</a>
+        <div class="row">
+            <div class="alert small-12 columns end" ng-show="data.error">
+                Error: {{data.error}}. Q&amp;A was not loaded.
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="alert small-12 columns end" ng-show="data.error">
-            Error: {{data.error}}. Q&amp;A was not loaded.
-        </div>
-    </div>
 
-    <ng-view />
+        <ng-view />
+    </main>
 
     <script src="/js/jquery-2.1.3.min.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
