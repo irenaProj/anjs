@@ -81,6 +81,10 @@
                                         </li>
                                         <!-- <li> <a href="/node/node-main.html">Learning Material</a> </li> -->
                                         <li> <a href="/node/node-exercises.html">Exercises</a> </li>
+                                        <li><span class="menu-heading">HTML</span>
+                                        </li>
+                                        <li> <a href="/html/html-main.html">Learning Material</a> </li>
+                                        <li> <a href="/html/html-exercises.html">Exercises</a> </li>
                                     </ul>
 
 
@@ -127,6 +131,77 @@
                 </div>
             </div>
             <div class="small-12 medium-8 columns end">
+                <section>
+                    <h2>CSS Counters</h2>
+                    <div class="row">
+                        <iframe class="example-iframe css-example-1" src="/css/examples/6/index.html"></iframe>
+                        <dl class="tabs" data-tab>
+                            <dd class="active"><a href="#panel9">CSS</a>
+                            </dd>
+                            <dd><a href="#panel10">index.html</a>
+                            </dd>
+                        </dl>
+                        <div class="tabs-content">
+                            <div class="content active" id="panel9">
+                                <pre class="brush: css">
+                                    ol {
+                                      counter-reset: section;                /* Creates a new instance of the
+                                                                                section counter with each ol
+                                                                                element */
+                                      list-style-type: none;
+                                    }
+                                    li:before {
+                                      counter-increment: section;            /* Increments only this instance
+                                                                                of the section counter */
+                                      content: counters(section,".") " ";    /* Adds the value of all instances
+                                                                                of the section counter separated
+                                                                                by a ".". */
+                                                                             /* if you need to support < IE8 then
+                                                                                make sure there is no space after 
+                                                                                the ',' */
+                                    }    
+                                </pre> 
+                            </div>
+                            <div class="content" id="panel10">
+                                <pre class="brush: xml">
+                                    <section>
+                                        <div class="row">
+                                            <div class="small-12 columns end">
+                                                <ol>
+                                                  <li>item</li>          <!-- 1     -->
+                                                  <li>item               <!-- 2     -->
+                                                    <ol>
+                                                      <li>item</li>      <!-- 2.1   -->
+                                                      <li>item</li>      <!-- 2.2   -->
+                                                      <li>item           <!-- 2.3   -->
+                                                        <ol>
+                                                          <li>item</li>  <!-- 2.3.1 -->
+                                                          <li>item</li>  <!-- 2.3.2 -->
+                                                        </ol>
+                                                        <ol>
+                                                          <li>item</li>  <!-- 2.3.1 -->
+                                                          <li>item</li>  <!-- 2.3.2 -->
+                                                          <li>item</li>  <!-- 2.3.3 -->
+                                                        </ol>
+                                                      </li>
+                                                      <li>item</li>      <!-- 2.4   -->
+                                                    </ol>
+                                                  </li>
+                                                  <li>item</li>          <!-- 3     -->
+                                                  <li>item</li>          <!-- 4     -->
+                                                </ol>
+                                                <ol>
+                                                  <li>item</li>          <!-- 1     -->
+                                                  <li>item</li>          <!-- 2     -->
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </pre>
+                            </div>   
+                        </div>                       
+                    </div>
+                </section>
                 <section>
                     <h2>Using Lettering.js</h2>
                     <div class="row">

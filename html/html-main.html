@@ -7,6 +7,16 @@
     <title>HTML - Summary Material</title>
     <link rel="stylesheet" href="/stylesheets/app.css" />
     <script src="/js/modernizr.js"></script>
+
+    <!--        SyntaxHighlight-->
+    <!-- Include required JS files -->
+    <script type="text/javascript" src="/js/sintaxHighlighter/shCore.js"></script>
+
+    <!--
+            At least one brush. You need to include a brush for every
+            language you want to highlight
+        -->
+    <script type="text/javascript" src="/js/sintaxHighlighter/shBrushXml.js"></script>
 </head>
 
 <body>
@@ -69,6 +79,10 @@
                                         </li>
                                         <!-- <li> <a href="/node/node-main.html">Learning Material</a> </li> -->
                                         <li> <a href="/node/node-exercises.html">Exercises</a> </li>
+                                        <li><span class="menu-heading">HTML</span>
+                                        </li>
+                                        <li> <a href="/html/html-main.html">Learning Material</a> </li>
+                                        <li> <a href="/html/html-exercises.html">Exercises</a> </li>
                                     </ul>
 
 
@@ -118,16 +132,16 @@
                 <div class="row">
                     <div class="columns torn-page-large-section">
                         <section>
-                            <h2><code>&lt;section&gt;</code> vs. <code>&lt;div&gt;</code></h2>
+                            <h2><tt>&lt;section&gt;</tt> vs. <tt>&lt;div&gt;</tt></h2>
                             <p>
                                 From the spec:
-                                <br /> The <code>section</code> element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.
+                                <br /> The <tt>section</tt> element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.
                             </p>
                             <p>
                                 <strong>Note: The section element is not a generic container element. When an element is needed for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead. A general rule is that the section element is appropriate only if the element's contents would be listed explicitly in the document's outline.</strong>
                             </p>
                             <p>
-                                The <code>div</code> element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.
+                                The <tt>div</tt> element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.
                             </p>
                             <p>
                                 <strong>Note: Authors are strongly encouraged to view the div element as an element of last resort, for when no other element is suitable. Use of the div element instead of more appropriate elements leads to poor accessibility for readers and poor maintainability for authors.</strong>
@@ -138,9 +152,138 @@
                 <div class="row">
                     <div class="columns torn-page-large-section">
                         <section>
-                            <h2><code>&lt;hr&gt;</code> Tag</h2>
+                            <h2><tt>&lt;hr&gt;</tt></h2>
                             <p>
                                 The &lt;hr&gt; tag defines a thematic break in an HTML page (e.g. a shift of topic), used to separate content (or define a change) in an HTML page.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;i&gt;</tt>, <tt>&lt;b&gt;</tt>, <tt>&lt;em&gt;</tt> and <tt>&lt;strong&gt;</tt></h2>
+                            <h3><tt>&lt;i&gt;</tt></h3>
+                            <p>
+                                Represents a range of text that is set off from the normal text for some reason, for example, technical terms, foreign language phrases, or fictional character thoughts.
+                            </p>
+                            <h3><tt>&lt;b&gt;</tt></h3>
+                            <p>
+                                Represents a span of text stylistically different from normal text, without conveying any special importance or relevance, such as keywords in a summary, product names in a review, etc.
+                            </p>
+                            <h3><tt>&lt;em&gt;</tt></h3>
+                            <p>
+                                Marks text that has stress emphasis, can be nested, with each level of nesting indicating a greater degree of emphasis.
+                            </p>
+                            <h3><tt>&lt;strong&gt;</tt></h3>
+                            <p>
+                                Gives text strong importance, and is typically displayed in bold.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2>Elements with self-contained outline</h2>
+                            <p>
+                                The following elements have self-contained outline, which means they create an outline sub-section:
+                                <ul>
+                                    <li><tt>&lt;article&gt;</tt></li>
+                                    <li><tt>&lt;aside&gt;</tt></li>
+                                    <li><tt>&lt;nav&gt;</tt></li>
+                                    <li><tt>&lt;section&gt;</tt></li>
+                                </ul>
+                                
+                                For example, the following markup:
+                                <pre class="brush: xml">
+                                    <h1>Title</h1>
+                                    <section>
+                                        <h2>Sub-title</h2>
+                                    </section>
+                                </pre>
+
+                                will produce the following outline:
+                                <ol>
+                                    <li>Title
+                                        <ol>
+                                            <li>Sub-title</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+
+                                Since the <tt>&lt;section&gt;</tt> tag has self-contained outline, the markup can be changed as following:
+                                <pre class="brush: xml">
+                                    <h1>Title</h1>
+                                    <section>
+                                        <h1>Sub-title</h1>
+                                    </section>
+                                </pre>
+
+                                which will produce the same outline.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns torn-page-large-section">
+                        <section>
+                            <h2><tt>&lt;&gt;</tt></h2>
+                            <p>
                             </p>
                         </section>
                     </div>
@@ -153,6 +296,11 @@
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/toc.js"></script>
+
+    <!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
 </body>
 
 </html>
